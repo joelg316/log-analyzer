@@ -15,11 +15,17 @@ from pprint import pprint
 # os.path.normpath() if needed for forward slashes on windows, but also works on Windows without
 workingDir = "/Users/joelg/Downloads/test/"
 # Script logging file
-logging.basicConfig(filename=workingDir + 'log_analyzer.log', level=logging.INFO)
+logging.basicConfig(filename=workingDir + 'unzip_CDT.log',
+                    level=logging.INFO,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 CDTname = "CDT-20211028-121205.zip"
 CDTfolder = CDTname[:-4] + "/"
 # print(CDTfolder)
+
+# !!! Do not mkdir() this path until after unzip function, because it runs based on whether CDTfolder exists
+outputDir = workingDir + CDTfolder + "log_search_output/"
+
 IMSSLogDir = "IMSVA/LogFile/Event3/"
 IMSSLogFile = "log.imss.20211028.0043"
 
@@ -27,7 +33,6 @@ maillogDir = "IMSVA/Logfile/Event5"
 maillogFile = "maillog"
 
 messageID = "20211028141353.A12EBDE048@mx2.sat.gob.mx"
-
 
 class Message(object):
     start_scan_time = ""
@@ -53,17 +58,35 @@ def unzip_CDT():
     if not os.path.isdir(workingDir + CDTfolder):
         # in CMD prompt: "C:/Program Files/7-Zip/7z.exe" x /Users/joelg/Downloads/test/CDT-20211028-121205.zip -p"trend" -o"/Users/joelg/Downloads/test/CDT-20211028-121205/" -aoa
         # -aoa will overwrite any conflicts
-        print(f"Unzipping CDT to {CDTfolder}...")
+        print(f"Unzipping CDT file to {CDTfolder}...")
+        logging.info(f"Unzipping CDT file to {CDTfolder}...")
         cmd = ["C:/Program Files/7-Zip/7z.exe", "x", workingDir + CDTname, "-ptrend", f"-o{workingDir + CDTfolder}",
                "-aoa"]
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
         process.wait()
         for line in process.stdout:
-            print(line.decode("utf-8").strip("\n"))
+            print(line.decode("utf-8").rstrip())
+            logging.info(line.decode("utf-8").rstrip())
     else:
-        #TODO: figure out why this warning is only written to log file, not to console as expected
-        logging.warning(f"{datetime.now()} CDT unzip destination folder {workingDir + CDTfolder} already exists")
+        print(f"{datetime.now()} CDT unzip destination folder {workingDir + CDTfolder} already exists, take no action")
+        logging.warning(f"{datetime.now()} CDT unzip destination folder {workingDir + CDTfolder} already exists, take no action")
 
+def updateLogger():
+    '''To update log output after CDT file is unzipped'''
+    # Create and change output folder for logs and search results to CDTfolder/log_search_output/
+    if not os.path.exists(outputDir):
+        os.mkdir(outputDir)
+
+    # Create new log file handler
+    fileh = logging.FileHandler(outputDir + 'log_search.log', 'a')
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    fileh.setFormatter(formatter)
+
+    # Replace existing log handlers
+    log = logging.getLogger()  # root logger
+    for hdlr in log.handlers[:]:  # remove all old handlers
+        log.removeHandler(hdlr)
+    log.addHandler(fileh)  # set the new handler
 
 def getMaillogs():
     os.chdir(workingDir + CDTfolder + maillogDir)
@@ -97,7 +120,7 @@ def getMaillogs():
         logging.warning("No maillog files found")
     #print(f"Result {result}")
     if result:
-        with open(workingDir + "___maillogs___.txt", "w", encoding="latin-1") as fo:
+        with open(outputDir + "___maillogs___.txt", "w", encoding="latin-1") as fo:
             fo.write("".join(result))
     return result
 
@@ -148,7 +171,7 @@ def getIMSSLogs():
 
     if result:
         # TODO: test this logic
-        with open(workingDir + "___log.imss___.txt", "w", encoding="latin-1") as fo:
+        with open(outputDir + "___log.imss___.txt", "w", encoding="latin-1") as fo:
             if message_starts[0] < message_IDs[0] and message_IDs[0] < message_ends[0]:
                 # Message ID is found between first message start and first message end
                 # What if it's not in the first message start? Mqybe need a for loop
@@ -263,19 +286,23 @@ def findMessageByExternalID(msgID):
 if __name__ == "__main__":
     # Gotta unzip CDT before anything else, function will only run if destination folder does not already exist
     unzip_CDT()
+    # Update log output from workingDir to CDTfolder/log_search_output
+    updateLogger()
 
     # Create new message object
     message = make_message()
     message.externalID = messageID
 
     findMessageByExternalID(message.externalID)
-    logging.info(
-        f"{datetime.now()} log.imss process ID: {message.IMSSprocID}, message external ID: {message.externalID}")
+    #logging.info(f"{datetime.now()} log.imss process ID: {message.IMSSprocID}, message external ID: {message.externalID}")
+
     message.maillogs = getMaillogs()
     message.IMSSLogs = getIMSSLogs()
-
     #logging.debug("".join(message.IMSSLogs))
+
     message.internalIDs = getInternalIDs(message.IMSSLogs)
     logging.info(f"Internal IDs: {''.join(message.internalIDs)}")
-    with open(workingDir + "___message___.json", "w") as f:
+
+    # Print all message information to json
+    with open(outputDir + "___message___.json", "w") as f:
         pprint(message.__dict__, indent=2, stream=f)

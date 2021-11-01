@@ -1,0 +1,504 @@
+Sep 27 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="44139" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 27 10:12:14 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.246262 s
+Sep 27 10:12:14 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Sep 27 10:12:14 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Sep 27 14:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="44139" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 27 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="44139" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 27 23:00:34 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 27 23:00:34 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="44139" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 27 23:00:34 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 27 23:00:34 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="91753" x-info="http://www.rsyslog.com"] start
+Sep 28 00:38:44 cpsscproimsp01 named[6265]: received control channel command 'reload all.foxhunter.trendmicro.com IN side-imss'
+Sep 28 00:38:44 cpsscproimsp01 named[6265]: zone all.foxhunter.trendmicro.com/IN/side-imss: loaded serial 928003844
+Sep 28 00:38:47 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 28 00:38:47 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="91753" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 28 00:38:47 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 28 00:38:47 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="15865" x-info="http://www.rsyslog.com"] start
+Sep 28 00:40:13 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 28 00:40:13 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="15865" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 28 00:40:13 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 28 00:40:13 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="31441" x-info="http://www.rsyslog.com"] start
+Sep 28 03:17:36 cpsscproimsp01 named[6265]: received control channel command 'reload all.foxhunter.trendmicro.com IN side-imss'
+Sep 28 03:17:36 cpsscproimsp01 named[6265]: zone all.foxhunter.trendmicro.com/IN/side-imss: loaded serial 928031736
+Sep 28 03:17:39 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 28 03:17:39 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="31441" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 28 03:17:39 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 28 03:17:39 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="121692" x-info="http://www.rsyslog.com"] start
+Sep 28 03:19:02 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 28 03:19:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="121692" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 28 03:19:02 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 28 03:19:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6755" x-info="http://www.rsyslog.com"] start
+Sep 28 09:33:50 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.226615 s
+Sep 28 09:50:54 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.230991 s
+Sep 28 09:50:54 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Sep 28 09:50:54 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Sep 28 11:57:39 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 28 11:57:39 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6755" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 28 11:57:39 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 28 11:57:39 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="48629" x-info="http://www.rsyslog.com"] start
+Sep 28 12:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="48629" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 28 14:00:01 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Sep 28 15:15:10 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.254632 s
+Sep 28 15:33:19 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.260376 s
+Sep 28 15:33:19 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Sep 28 15:33:19 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Sep 28 23:00:56 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 28 23:00:56 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="48629" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 28 23:00:56 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 28 23:00:56 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="55365" x-info="http://www.rsyslog.com"] start
+Sep 29 00:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="55365" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 29 00:40:06 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 29 00:40:06 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="55365" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 29 00:40:06 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 29 00:40:06 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="14014" x-info="http://www.rsyslog.com"] start
+Sep 29 03:44:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="14014" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 29 05:45:35 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.215226 s
+Sep 29 06:02:39 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.209381 s
+Sep 29 06:02:39 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Sep 29 06:02:40 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Sep 29 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="14014" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 29 12:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="14014" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 29 18:00:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="14014" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 29 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="14014" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 29 22:03:55 cpsscproimsp01 cmagent[35005]: cmagent need to restart service(imssd)
+Sep 29 22:04:09 cpsscproimsp01 cmagent[35005]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' stop) successfully
+Sep 29 22:04:26 cpsscproimsp01 cmagent[35005]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' start) successfully
+Sep 29 22:04:26 cpsscproimsp01 cmagent[35005]: restart service(imssd) successfully
+Sep 29 23:02:32 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 29 23:02:32 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="14014" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 29 23:02:32 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 29 23:02:32 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="107950" x-info="http://www.rsyslog.com"] start
+Sep 30 00:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="107950" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 30 03:15:07 cpsscproimsp01 named[6265]: received control channel command 'reload all.foxhunter.trendmicro.com IN side-imss'
+Sep 30 03:15:07 cpsscproimsp01 named[6265]: zone all.foxhunter.trendmicro.com/IN/side-imss: loaded serial 930031506
+Sep 30 03:15:10 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 30 03:15:10 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="107950" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 30 03:15:10 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 30 03:15:10 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="126369" x-info="http://www.rsyslog.com"] start
+Sep 30 03:16:35 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 30 03:16:35 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="126369" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 30 03:16:35 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 30 03:16:35 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="11791" x-info="http://www.rsyslog.com"] start
+Sep 30 11:08:47 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.569651 s
+Sep 30 11:26:55 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.567563 s
+Sep 30 11:26:55 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Sep 30 11:26:55 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Sep 30 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="11791" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 30 21:26:23 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.248295 s
+Sep 30 21:34:56 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.246617 s
+Sep 30 21:34:56 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Sep 30 21:34:56 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Sep 30 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="11791" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Sep 30 23:01:00 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Sep 30 23:01:00 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="11791" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Sep 30 23:01:00 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Sep 30 23:01:00 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="17206" x-info="http://www.rsyslog.com"] start
+Oct  1 07:26:01 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct  1 17:25:20 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.269982 s
+Oct  1 17:43:28 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.276782 s
+Oct  1 17:43:28 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct  1 17:43:28 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct  1 18:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="17206" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  1 23:01:04 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  1 23:01:04 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="17206" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  1 23:01:04 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  1 23:01:04 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="43584" x-info="http://www.rsyslog.com"] start
+Oct  2 00:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="43584" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  2 00:39:28 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.427745 s
+Oct  2 00:57:36 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.431007 s
+Oct  2 00:57:36 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct  2 00:57:36 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct  2 01:16:48 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.440217 s
+Oct  2 01:33:53 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.438734 s
+Oct  2 01:33:53 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct  2 01:33:53 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct  2 02:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="43584" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  2 03:28:27 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.236617 s
+Oct  2 03:41:53 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.235852 s
+Oct  2 03:41:53 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct  2 03:41:54 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct  2 04:14:17 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.363688 s
+Oct  2 04:32:12 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.372724 s
+Oct  2 04:32:12 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct  2 04:32:13 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct  2 07:12:01 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.215664 s
+Oct  2 07:23:08 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.207967 s
+Oct  2 07:23:08 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct  2 07:23:09 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct  2 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="43584" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  2 23:01:14 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  2 23:01:14 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="43584" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  2 23:01:14 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  2 23:01:14 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="128541" x-info="http://www.rsyslog.com"] start
+Oct  3 03:21:01 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.237810 s
+Oct  3 03:39:09 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.233342 s
+Oct  3 03:39:09 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct  3 03:39:10 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct  3 05:08:00 cpsscproimsp01 kernel: kjournald starting.  Commit interval 5 seconds
+Oct  3 05:08:00 cpsscproimsp01 kernel: EXT3-fs (dm-2): using internal journal
+Oct  3 05:08:00 cpsscproimsp01 kernel: EXT3-fs (dm-2): mounted filesystem with ordered data mode
+Oct  3 14:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="128541" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  3 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="128541" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  3 23:00:56 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  3 23:00:56 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="128541" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  3 23:00:57 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  3 23:00:57 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="26512" x-info="http://www.rsyslog.com"] start
+Oct  4 03:40:01 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct  4 18:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="26512" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  4 23:01:35 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  4 23:01:35 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="26512" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  4 23:01:35 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  4 23:01:35 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="60495" x-info="http://www.rsyslog.com"] start
+Oct  5 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="60495" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  5 16:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="60495" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  5 19:28:10 cpsscproimsp01 named[6265]: received control channel command 'reload all.foxhunter.trendmicro.com IN side-imss'
+Oct  5 19:28:10 cpsscproimsp01 named[6265]: zone all.foxhunter.trendmicro.com/IN/side-imss: loaded serial 1005192810
+Oct  5 19:28:13 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  5 19:28:13 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="60495" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  5 19:28:13 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  5 19:28:13 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="95733" x-info="http://www.rsyslog.com"] start
+Oct  5 19:29:39 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  5 19:29:39 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="95733" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  5 19:29:39 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  5 19:29:39 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="111481" x-info="http://www.rsyslog.com"] start
+Oct  5 23:00:53 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  5 23:00:53 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="111481" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  5 23:00:53 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  5 23:00:53 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="114620" x-info="http://www.rsyslog.com"] start
+Oct  6 14:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="114620" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  6 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="114620" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  6 23:00:52 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct  6 23:00:53 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  6 23:00:53 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="114620" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  6 23:00:53 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  6 23:00:53 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="7799" x-info="http://www.rsyslog.com"] start
+Oct  7 02:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="7799" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  7 06:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="7799" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  7 12:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="7799" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  7 16:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="7799" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  7 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="7799" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  7 23:00:45 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  7 23:00:45 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="7799" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  7 23:00:46 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  7 23:00:46 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6943" x-info="http://www.rsyslog.com"] start
+Oct  8 00:00:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6943" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  8 03:13:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6943" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  8 06:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6943" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  8 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6943" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  8 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6943" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  8 16:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6943" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  8 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6943" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  8 23:00:57 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  8 23:00:57 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="6943" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  8 23:00:57 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  8 23:00:57 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="118661" x-info="http://www.rsyslog.com"] start
+Oct  9 00:09:00 cpsscproimsp01 kernel: nfs: server 10.231.1.240 not responding, timed out
+Oct  9 00:10:01 cpsscproimsp01 kernel: nfs: server 10.231.1.240 not responding, still trying
+Oct  9 00:24:30 cpsscproimsp01 kernel: nfs: server 10.231.1.240 not responding, timed out
+Oct  9 00:24:30 cpsscproimsp01 kernel: NFS: state manager: check lease failed on NFSv4 server 10.231.1.240 with error 5
+Oct  9 00:24:30 cpsscproimsp01 kernel: nfs: server 10.231.1.240 not responding, timed out
+Oct  9 00:27:30 cpsscproimsp01 kernel: nfs: server 10.231.1.240 not responding, timed out
+Oct  9 00:27:30 cpsscproimsp01 kernel: NFS: state manager: check lease failed on NFSv4 server 10.231.1.240 with error 5
+Oct  9 00:29:03 cpsscproimsp01 kernel: nfs: server 10.231.1.240 not responding, timed out
+Oct  9 00:30:54 cpsscproimsp01 kernel: nfs: server 10.231.1.240 OK
+Oct  9 02:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="118661" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  9 06:21:14 cpsscproimsp01 named[6265]: received control channel command 'reload all.foxhunter.trendmicro.com IN side-imss'
+Oct  9 06:21:14 cpsscproimsp01 named[6265]: zone all.foxhunter.trendmicro.com/IN/side-imss: loaded serial 1009062114
+Oct  9 06:21:18 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  9 06:21:18 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="118661" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  9 06:21:18 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  9 06:21:18 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="120878" x-info="http://www.rsyslog.com"] start
+Oct  9 06:22:41 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  9 06:22:41 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="120878" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  9 06:22:41 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  9 06:22:41 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="5943" x-info="http://www.rsyslog.com"] start
+Oct  9 19:23:02 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct  9 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="5943" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  9 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="5943" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct  9 22:12:22 cpsscproimsp01 cmagent[118320]: cmagent need to restart service(imssd)
+Oct  9 22:12:55 cpsscproimsp01 cmagent[118320]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' stop) successfully
+Oct  9 22:13:12 cpsscproimsp01 cmagent[118320]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' start) successfully
+Oct  9 22:13:12 cpsscproimsp01 cmagent[118320]: restart service(imssd) successfully
+Oct  9 23:00:54 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct  9 23:00:54 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="5943" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct  9 23:00:54 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct  9 23:00:54 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="56095" x-info="http://www.rsyslog.com"] start
+Oct 10 03:19:10 cpsscproimsp01 named[6265]: received control channel command 'reload all.foxhunter.trendmicro.com IN side-imss'
+Oct 10 03:19:10 cpsscproimsp01 named[6265]: zone all.foxhunter.trendmicro.com/IN/side-imss: loaded serial 1010031910
+Oct 10 03:19:13 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 10 03:19:13 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="56095" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 10 03:19:13 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 10 03:19:13 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="69255" x-info="http://www.rsyslog.com"] start
+Oct 10 03:20:36 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 10 03:20:36 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="69255" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 10 03:20:36 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 10 03:20:36 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="84596" x-info="http://www.rsyslog.com"] start
+Oct 10 03:46:02 cpsscproimsp01 named[6265]: received control channel command 'reload all.foxhunter.trendmicro.com IN side-imss'
+Oct 10 03:46:02 cpsscproimsp01 named[6265]: zone all.foxhunter.trendmicro.com/IN/side-imss: loaded serial 1010034602
+Oct 10 03:46:05 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 10 03:46:05 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="84596" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 10 03:46:05 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 10 03:46:05 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="100350" x-info="http://www.rsyslog.com"] start
+Oct 10 03:47:29 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 10 03:47:29 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="100350" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 10 03:47:29 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 10 03:47:29 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="116462" x-info="http://www.rsyslog.com"] start
+Oct 10 05:06:00 cpsscproimsp01 kernel: kjournald starting.  Commit interval 5 seconds
+Oct 10 05:06:00 cpsscproimsp01 kernel: EXT3-fs (dm-2): using internal journal
+Oct 10 05:06:00 cpsscproimsp01 kernel: EXT3-fs (dm-2): mounted filesystem with ordered data mode
+Oct 10 23:00:52 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 10 23:00:52 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="116462" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 10 23:00:52 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 10 23:00:52 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110064" x-info="http://www.rsyslog.com"] start
+Oct 11 04:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110064" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 11 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110064" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 11 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110064" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 11 23:01:00 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 11 23:01:00 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110064" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 11 23:01:00 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 11 23:01:00 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="17477" x-info="http://www.rsyslog.com"] start
+Oct 12 13:25:01 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct 12 16:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="17477" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 12 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="17477" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 12 23:01:01 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 12 23:01:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="17477" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 12 23:01:01 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 12 23:01:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="47685" x-info="http://www.rsyslog.com"] start
+Oct 13 06:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="47685" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 13 18:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="47685" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 13 22:12:47 cpsscproimsp01 cmagent[85538]: cmagent need to restart service(imssd)
+Oct 13 22:13:20 cpsscproimsp01 cmagent[85538]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' stop) successfully
+Oct 13 22:13:36 cpsscproimsp01 cmagent[85538]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' start) successfully
+Oct 13 22:13:36 cpsscproimsp01 cmagent[85538]: restart service(imssd) successfully
+Oct 13 23:00:58 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 13 23:00:58 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="47685" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 13 23:00:58 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 13 23:00:58 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="82382" x-info="http://www.rsyslog.com"] start
+Oct 14 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="82382" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 14 16:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="82382" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 14 23:01:03 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 14 23:01:03 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="82382" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 14 23:01:03 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 14 23:01:03 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110994" x-info="http://www.rsyslog.com"] start
+Oct 15 03:43:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110994" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 15 09:53:01 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct 15 18:00:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110994" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 15 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110994" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 15 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110994" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 15 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110994" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 15 23:01:04 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 15 23:01:04 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110994" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 15 23:01:04 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 15 23:01:04 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110022" x-info="http://www.rsyslog.com"] start
+Oct 16 00:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110022" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 16 02:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110022" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 16 18:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110022" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 16 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110022" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 16 22:00:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110022" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 16 23:01:01 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 16 23:01:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="110022" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 16 23:01:01 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 16 23:01:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="99340" x-info="http://www.rsyslog.com"] start
+Oct 17 05:03:54 cpsscproimsp01 kernel: kjournald starting.  Commit interval 5 seconds
+Oct 17 05:03:54 cpsscproimsp01 kernel: EXT3-fs (dm-2): using internal journal
+Oct 17 05:03:54 cpsscproimsp01 kernel: EXT3-fs (dm-2): mounted filesystem with ordered data mode
+Oct 17 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="99340" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 17 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="99340" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 17 23:00:56 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 17 23:00:56 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="99340" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 17 23:00:56 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 17 23:00:56 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="128283" x-info="http://www.rsyslog.com"] start
+Oct 18 06:15:01 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct 18 18:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="128283" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 18 22:00:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="128283" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 18 23:00:35 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 18 23:00:35 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="128283" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 18 23:00:35 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 18 23:00:35 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="28976" x-info="http://www.rsyslog.com"] start
+Oct 19 03:16:57 cpsscproimsp01 named[6265]: received control channel command 'reload all.foxhunter.trendmicro.com IN side-imss'
+Oct 19 03:16:57 cpsscproimsp01 named[6265]: zone all.foxhunter.trendmicro.com/IN/side-imss: loaded serial 1019031657
+Oct 19 03:17:00 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 19 03:17:00 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="28976" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 19 03:17:01 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 19 03:17:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="43051" x-info="http://www.rsyslog.com"] start
+Oct 19 03:18:23 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 19 03:18:23 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="43051" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 19 03:18:23 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 19 03:18:23 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="58446" x-info="http://www.rsyslog.com"] start
+Oct 19 14:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="58446" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 19 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="58446" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 19 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="58446" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 19 23:01:07 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 19 23:01:07 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="58446" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 19 23:01:07 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 19 23:01:07 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] start
+Oct 20 00:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 20 02:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 20 03:08:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 20 04:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 20 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 20 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 20 12:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 20 14:00:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 20 18:00:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 20 22:12:53 cpsscproimsp01 cmagent[49607]: cmagent need to restart service(imssd)
+Oct 20 22:13:25 cpsscproimsp01 cmagent[49607]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' stop) successfully
+Oct 20 22:13:42 cpsscproimsp01 cmagent[49607]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' start) successfully
+Oct 20 22:13:42 cpsscproimsp01 cmagent[49607]: restart service(imssd) successfully
+Oct 20 23:00:59 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 20 23:00:59 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="35507" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 20 23:00:59 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 20 23:00:59 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="46379" x-info="http://www.rsyslog.com"] start
+Oct 21 01:30:01 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct 21 03:17:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="46379" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 21 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="46379" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 21 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="46379" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 21 23:00:44 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 21 23:00:44 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="46379" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 21 23:00:44 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 21 23:00:44 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="75548" x-info="http://www.rsyslog.com"] start
+Oct 22 03:33:49 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.386566 s
+Oct 22 03:42:21 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.387575 s
+Oct 22 03:42:21 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 22 03:42:22 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 22 15:14:37 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.237546 s
+Oct 22 15:31:42 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.229391 s
+Oct 22 15:31:42 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 22 15:31:42 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 22 18:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="75548" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 22 23:01:07 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 22 23:01:07 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="75548" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 22 23:01:07 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 22 23:01:07 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="100991" x-info="http://www.rsyslog.com"] start
+Oct 23 03:27:36 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.208142 s
+Oct 23 04:02:18 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.240864 s
+Oct 23 04:02:18 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 23 04:02:19 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 23 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="100991" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 23 23:00:42 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct 23 23:00:56 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 23 23:00:56 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="100991" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 23 23:00:56 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 23 23:00:56 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="121647" x-info="http://www.rsyslog.com"] start
+Oct 24 00:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="121647" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 24 05:02:03 cpsscproimsp01 kernel: kjournald starting.  Commit interval 5 seconds
+Oct 24 05:02:03 cpsscproimsp01 kernel: EXT3-fs (dm-2): using internal journal
+Oct 24 05:02:03 cpsscproimsp01 kernel: EXT3-fs (dm-2): mounted filesystem with ordered data mode
+Oct 24 15:21:47 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.621142 s
+Oct 24 15:38:51 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.609645 s
+Oct 24 15:38:51 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 24 15:38:51 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 24 16:15:07 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.755740 s
+Oct 24 16:32:12 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.751392 s
+Oct 24 16:32:12 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 24 16:32:12 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 24 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="121647" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 24 23:00:36 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 24 23:00:36 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="121647" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 24 23:00:36 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 24 23:00:36 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="8143" x-info="http://www.rsyslog.com"] start
+Oct 25 11:11:36 cpsscproimsp01 cmagent[42859]: cmagent need to restart service(imssd)
+Oct 25 11:12:10 cpsscproimsp01 cmagent[42859]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' stop) successfully
+Oct 25 11:12:26 cpsscproimsp01 cmagent[42859]: cmagent execute script('/opt/trend/imss'/script/'S99IMSS' start) successfully
+Oct 25 11:12:26 cpsscproimsp01 cmagent[42859]: restart service(imssd) successfully
+Oct 25 14:00:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="8143" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 25 23:00:37 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 25 23:00:37 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="8143" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 25 23:00:38 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 25 23:00:38 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="34327" x-info="http://www.rsyslog.com"] start
+Oct 26 00:04:28 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.308866 s
+Oct 26 00:17:16 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.308255 s
+Oct 26 00:17:16 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 26 00:17:16 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 26 08:11:56 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.451842 s
+Oct 26 08:30:05 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.449722 s
+Oct 26 08:30:05 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 26 08:30:06 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 26 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="34327" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 26 14:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="34327" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 26 19:19:01 cpsscproimsp01 auditd[1273]: Audit daemon rotating log files
+Oct 26 20:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="34327" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 26 23:00:46 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 26 23:00:46 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="34327" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 26 23:00:46 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 26 23:00:46 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="77649" x-info="http://www.rsyslog.com"] start
+Oct 27 00:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="77649" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 27 03:35:47 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:48 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:49 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:50 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:51 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:52 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:53 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:54 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:55 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:56 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:57 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:58 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:35:59 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 5
+Oct 27 03:36:00 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:01 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:02 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:03 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:04 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:05 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:06 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:07 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:08 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:09 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:10 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:11 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:12 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:13 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:14 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:15 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:16 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:17 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:18 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:19 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:20 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:21 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:22 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:23 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:24 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:25 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:26 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:27 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:28 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:29 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:30 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:31 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:32 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:33 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:34 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:35 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:36 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:37 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:38 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:39 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:40 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:41 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:36:42 cpsscproimsp01 kernel: set_rtc_mmss: can't update from 59 to 6
+Oct 27 03:41:01 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.393037 s
+Oct 27 03:45:17 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.392896 s
+Oct 27 03:45:17 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 27 03:45:17 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 27 04:17:17 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.330173 s
+Oct 27 04:26:54 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.336324 s
+Oct 27 04:26:54 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 27 04:26:55 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 27 07:10:06 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0613 03 spike_detect +0.287080 s
+Oct 27 07:18:38 cpsscproimsp01 ntpd[6702]: 0.0.0.0 061c 0c clock_step +0.281425 s
+Oct 27 07:18:38 cpsscproimsp01 ntpd[6702]: 0.0.0.0 0615 05 clock_sync
+Oct 27 07:18:39 cpsscproimsp01 ntpd[6702]: 0.0.0.0 c618 08 no_sys_peer
+Oct 27 08:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="77649" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 27 12:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="77649" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 27 14:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="77649" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 27 18:00:02 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="77649" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 27 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="77649" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 27 22:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="77649" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Oct 27 23:01:04 cpsscproimsp01 kernel: Kernel logging (proc) stopped.
+Oct 27 23:01:04 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="77649" x-info="http://www.rsyslog.com"] exiting on signal 15.
+Oct 27 23:01:04 cpsscproimsp01 kernel: imklog 5.8.10, log source = /proc/kmsg started.
+Oct 27 23:01:04 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="38573" x-info="http://www.rsyslog.com"] start
+Oct 28 10:00:01 cpsscproimsp01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="38573" x-info="http://www.rsyslog.com"] rsyslogd was HUPed

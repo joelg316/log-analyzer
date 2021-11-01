@@ -1,0 +1,1012 @@
+
+[DB_Maintain]
+VacuumAnalyzeWholeDbWeekDay = 6
+analyzeHour = 2
+analyzeMinute = 0
+enableAnalyze = on
+enableReindex = on
+enableVacuum = on
+enableVacuumAnalyzeWholeDb = on
+isMonthSched = 0
+monthDay = 1
+monthHour = 4
+monthMinute = 0
+vacuumHour = 3
+vacuumMinute = 0
+weekDay = 2
+weekHour = 17
+weekMinute = 15
+
+[General-Notification]
+Administrator = admin_idf@sat.gob.mx;sandra.arias.sat@ikusi.com;fermin.melgar.sat@ikusi.com
+ApplyEmailFailed = yes
+ApplyFailed_Message = 
+Server: %HOSTNAME%
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to apply to local scanner: %DOWNLOADVERSION%
+Errors: %UPDATEERROR%
+ApplyFailed_SNMPMessage = 
+Server: %HOSTNAME%
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to apply to local scanner: %DOWNLOADVERSION%
+Errors: %UPDATEERROR%
+ApplyFailed_Subject = IMSVA attempt to apply %COMPONENT&VERSION% to local scanner failed
+ApplySNMPFailed = no
+CPUEventEmail = no
+CPUEventSNMP = no
+CPUEvent_Message = CPU temperature exceeded the maximum value 
+%HOSTNAME%
+%IPADDR%
+CPUEvent_SNMPMessage = CPU temperature exceeded the maximum value
+CPUEvent_Subject = CPU temperature exceeded the maximum value
+Community = public
+ComplianceReminder_ExpireSubj = Your Regulatory Compliance license expired %EXPIREDAYS% day(s) ago.
+ComplianceReminder_FullExpireMsg = 
+Your Regulatory Compliance license expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+ComplianceReminder_FullNonExpireMsg = 
+Your Regulatory Compliance license will expire in %EXPIREDAYS% day(s).
+ComplianceReminder_NonExpireSubj = Your Regulatory Compliance license will expire in %EXPIREDAYS% day(s).
+ComplianceReminder_TrialExpireMsg = 
+Your Regulatory Compliance trial license expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+ComplianceReminder_TrialNonExpireMsg = 
+Your Regulatory Compliance trial license will expire in %EXPIREDAYS% day(s).
+DDASettingEmail = yes
+DDASettingSNMP = no
+DDA_Message = Scanning server: %HOSTNAME%
+Message ID: %XMAILID%
+Subject: %SUBJECT%
+Sender: %SENDER%
+Recipient(s): %RCPTS%
+Attachment(s): %FILENAME%
+Reason: %REASON%
+DDA_SNMPMessage = Scanning server: %HOSTNAME%
+Message ID: %XMAILID%
+Subject: %SUBJECT%
+Sender: %SENDER%
+Recipient(s): %RCPTS%
+Attachment(s): %FILENAME%
+Reason: %REASON%
+DDA_Subject = Message analysis is incomplete or invalid
+DKIMSignMsgCount = 5
+DKIMSignMsgDeliMinute = 10
+DKIMSignSettingEmail = yes
+DKIMSignSettingSNMP = no
+DKIMSign_Message = IMSVA is unable to add DKIM signatures for %TOTALMESSAGES% email messages during the last %INTERVAL%  minutes. Details are listed as follows:
+Server: %HOSTNAME% 
+Time: %DATE&TIME%
+Reason:%REASON%
+
+DKIMSign_SNMPMessage = Unable to add DKIM signatures to a total of %TOTALMESSAGES% email messages during the last %INTERVAL%  minutes. Details are listed as follows:
+Server: %HOSTNAME% 
+Time: %DATE&TIME%
+Reason:%REASON%
+
+DKIMSign_Subject = Unable to add DKIM signatures
+EUQ_EmailConent = 
+EUQ_EmailContent = Total spam mail count: %TOTAL_SPAM_COUNT% ( %TOTAL_SPAM_SIZE% MB, from %START_TIME% to %END_TIME%) 
+
+Estimado Usuario
+
+Un correo SPAM es un correo no solicitado, existen herramientas de seguridad que permiten la identificación de los mismos con la finalidad de protegerte.
+Existen correos no maliciosos que son enviados a una cuarentena SPAM para que el usuario pueda identificar si se tratan de correos validos 
+
+Para visualizarlos y poder validar estos correos favor de ingresar a la siguiente liga:
+
+https://cuarentenaspam.seguridad.sat.gob.mx:8446/loginPageNosso.imss
+
+En el siguiente enlace te compartimos una guía para el uso de la cuarentena SPAM:
+
+http://cifrado.seguridad.sat.gob.mx/imsva/Procedimientos_cuarentena_spam_v3.0.pdf
+
+Nota: Es posible agregar los remitentes que consideres necesarios a tu lista personalizada de excepciones (con un máximo de 50 remitentes)
+
+Cualquier duda o comentario favor de enviarlo al correo electrónico: soporte.seguridad@sat.gob.mx
+EUQ_EmailSubject = Cuarentena SPAM
+EUQ_EnableInlineAction = off
+EUQ_SchedDailyHr = 1
+EUQ_SchedDailyMin = 30
+EUQ_SchedHourlyHr_0 = 0
+EUQ_SchedHourlyHr_1 = 0
+EUQ_SchedHourlyHr_2 = 0
+EUQ_SchedHourlyHr_3 = 0
+EUQ_SchedHourlyHr_4 = 0
+EUQ_SchedHourlyHr_5 = 0
+EUQ_SchedHourlyNumber = 0
+EUQ_SchedType = 0
+EUQ_SchedWeeklyDay = 1
+EUQ_SchedWeeklyHr = 9
+EUQ_SchedWeeklyMin = 0
+EnableEUQ = yes
+EngineEmailFailed = yes
+EngineEmailSuccess = no
+EngineSNMPFailed = no
+EngineSNMPSuccess = no
+EngineUpdFailed_Message = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+EngineUpdFailed_SNMPMessage = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+EngineUpdFailed_Subject = IMSVA attempt to update to %COMPONENT&VERSION% failed
+EngineUpdSuccess_Message = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+EngineUpdSuccess_SNMPMessage = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+EngineUpdSuccess_Subject = IMSVA attempt to update to %COMPONENT&VERSION% successful
+FanEventEmail = no
+FanEventSNMP = no
+FanEvent_Message = Fan speed below the lowest value 
+%HOSTNAME%
+%IPADDR%
+FanEvent_SNMPMessage = Fan speed below the lowest value
+FanEvent_Subject = Fan speed below the lowest value
+FreeDataPartitionEmail = yes
+FreeDataPartitionSNMP = no
+FreeDataPartitionSize = 10000
+FreeDataPartition_Message = Free disk space of data partition on scanner is below threshold.
+FreeDataPartition_SNMPMessage = Free disk space of data partition on scanner is below threshold.
+FreeDataPartition_Subject = Free disk space of data partition on scanner is below threshold.
+FreeDiskEmail = no
+FreeDiskSNMP = no
+FreeDiskSize = 
+FreeDiskSpace_Message = The free disk space under %FOLDERPATH% on server %HOSTNAME% is %FREESPACE% MB, which is below the threshold.
+FreeDiskSpace_SNMPMessage = The free disk space under %FOLDERPATH% on server %HOSTNAME% is %FREESPACE% MB, which is below the threshold.
+FreeDiskSpace_Subject = Disk space below threshold.
+FreeMTAPartitionEmail = yes
+FreeMTAPartitionSNMP = no
+FreeMTAPartitionSize = 10000
+FreeMTAPartition_Message = Free disk space of MTA partition on scanner is below threshold.
+FreeMTAPartition_SNMPMessage = Free disk space of MTA partition on scanner is below threshold.
+FreeMTAPartition_Subject = Free disk space of MTA partition on scanner is below threshold.
+IBEReminder_ExpireSubj = Your Email Encryption license expired %EXPIREDAYS% day(s) ago.
+IBEReminder_FullExpireMsg = 
+Your Email Encryption license expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+IBEReminder_FullNonExpireMsg = 
+Your Email Encryption license will expire in %EXPIREDAYS% day(s).
+IBEReminder_NonExpireSubj = Your Email Encryption license will expire in %EXPIREDAYS% day(s).
+IBEReminder_TrialExpireMsg = 
+Your Email Encryption trial license expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+IBEReminder_TrialNonExpireMsg = 
+Your Email Encryption trial license will expire in %EXPIREDAYS% day(s).
+ImssReminder_ExpireSubj = Your license for Trend Micro Antivirus and Content Filter expired %EXPIREDAYS% day(s) ago.
+ImssReminder_FullExpireMsg = 
+Your license for Trend Micro Antivirus and Content Filter expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+ImssReminder_FullNonExpireMsg = 
+Your license for Trend Micro Antivirus and Content Filter will expire in %EXPIREDAYS% day(s).
+ImssReminder_NonExpireSubj = Your license for Trend Micro Antivirus and Content Filter will expire in %EXPIREDAYS% day(s).
+ImssReminder_TrialExpireMsg = 
+Your trial for Trend Micro Antivirus and Content Filter expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+ImssReminder_TrialNonExpireMsg = 
+Your trial for Trend Micro Antivirus and Content Filter will expire in %EXPIREDAYS% day(s).
+MailFrom = "Administrador Correo Externo C3CPN"<imsva_c3@sat.gob.mx>
+MessageFooter = 
+MessageHeader = 
+MsgDeliLessMsg = 500
+MsgDeliLessMsgEmail = yes
+MsgDeliLessMsgSNMP = no
+MsgDeliLessMsg_Message = The retry queue "%QUEUEPATH%" on server %HOSTNAME% contains %TOTALMESSAGES% messages, which exceeds the threshold.
+MsgDeliLessMsg_SNMPMessage = The retry queue "%QUEUEPATH%" on server %HOSTNAME% contains %TOTALMESSAGES% messages, which exceeds the threshold.
+MsgDeliLessMsg_Subject = Number of messages in retry queue exceeds threshold.
+MsgDeliMinute = 10
+MsgDeliMoreMsg = 500
+MsgDeliMoreMsgEmail = yes
+MsgDeliMoreMsgSNMP = no
+MsgDeliMoreMsg_Message = The delivery queue "%QUEUEPATH%" on server %HOSTNAME% contains %TOTALMESSAGES% messages, which exceeds the threshold.
+MsgDeliMoreMsg_SNMPMessage = The delivery queue "%QUEUEPATH%" on server %HOSTNAME% contains %TOTALMESSAGES% messages, which exceeds the threshold.
+MsgDeliMoreMsg_Subject = Number of messages in delivery queue exceeds threshold.
+NRSReminder_ExpireSubj = Your license for Email Reputation Service (ERS) expired %EXPIREDAYS% day(s) ago
+NRSReminder_FullExpireMsg = 
+Your license for Email Reputation Service (ERS) expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+NRSReminder_FullNonExpireMsg = 
+Your license for Email Reputation Service (ERS) will expire in %EXPIREDAYS% day(s).
+NRSReminder_NonExpireSubj = Your license for Email Reputation Service (ERS) will expire in %EXPIREDAYS% day(s)
+NRSReminder_TrialExpireMsg = 
+Your license for Email Reputation Service (ERS) expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+NRSReminder_TrialNonExpireMsg = 
+Your license for Email Reputation Service (ERS) will expire in %EXPIREDAYS% day(s).
+NotificationSMTPAddr = [127.0.0.1]:10026
+PSUEventEmail = no
+PSUEventSNMP = no
+PSUEvent_Message = One power supply unit failed 
+%HOSTNAME%
+%IPADDR%
+PSUEvent_SNMPMessage = One power supply unit failed
+PSUEvent_Subject = One power supply unit failed
+PatternEmailFailed = yes
+PatternEmailSuccess = no
+PatternSNMPFailed = no
+PatternSNMPSuccess = no
+PatternUpdFailed_Message = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+PatternUpdFailed_SNMPMessage = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+PatternUpdFailed_Subject = IMSVA attempt to update to %COMPONENT&VERSION% failed
+PatternUpdSuccess_Message = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+PatternUpdSuccess_SNMPMessage = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+PatternUpdSuccess_Subject = IMSVA attempt to update to %COMPONENT&VERSION% successful
+PolicyEmailFailed = no
+PolicyEmailSuccess = no
+PolicySNMPFailed = no
+PolicySNMPSuccess = no
+PreFltReminder_ExpireSubj = Your license for Cloud Pre-Filter  expired  %EXPIREDAYS% day(s) ago
+PreFltReminder_FullExpireMsg = 
+Your license for Cloud Pre-Filter expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+Cloud Pre-Filter will reject all email messages sent to it after the grace period expires.
+You need to renew your license or modify your MX records before the grace period expires to avoid having your email messages rejected.
+PreFltReminder_FullNonExpireMsg = 
+Your license for Cloud Pre-Filter will expire in %EXPIREDAYS% day(s).
+Cloud Pre-Filter will reject all email messages sent to it after your license expires.
+You need to renew your license or modify your MX records before the license expires to avoid having your email messages rejected.
+PreFltReminder_NonExpireSubj = Your license for Cloud Pre-Filter will expire in %EXPIREDAYS% day(s)
+PreFltReminder_TrialExpireMsg = 
+TYour license for Cloud Pre-Filter expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+Cloud Pre-Filter will reject all email messages sent to it after the grace period expires.
+You need to renew your license or modify your MX records before the grace period expires to avoid having your email messages rejected.
+PreFltReminder_TrialNonExpireMsg = 
+Your license for Cloud Pre-Filter will expire in %EXPIREDAYS% day(s).
+Cloud Pre-Filter will reject all email messages sent to it after your license expires.
+You need to renew your license or modify your MX records before the license expires to avoid having your email messages rejected.
+PreferredCharset = utf-8
+RAIDEventEmail = no
+RAIDEventSNMP = no
+RAIDEvent_Message = RAID device problem: %DEVICE% degraded 
+%HOSTNAME%
+%IPADDR%
+RAIDEvent_SNMPMessage = RAID device problem: %DEVICE% degraded
+RAIDEvent_Subject = RAID device problem: %DEVICE% degraded
+SNMPServer = 
+SNMPVersion = snmpv1
+SPSReminder_ExpireSubj = Your license for Spam Prevention Solution (SPS) expired %EXPIREDAYS% day(s) ago
+SPSReminder_FullExpireMsg = 
+Your license for Spam Prevention Solution (SPS) expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+SPSReminder_FullNonExpireMsg = 
+Your license for Spam Prevention Solution (SPS) will expire in %EXPIREDAYS% day(s).
+SPSReminder_NonExpireSubj = Your license for Spam Prevention Solution (SPS) will expire in %EXPIREDAYS% day(s)
+SPSReminder_TrialExpireMsg = 
+Your license for Spam Prevention Solution (SPS) expired %EXPIREDAYS% day(s) ago.
+Trend Micro has extended your license for an additional grace period that ends in %GRACEDAYS% day(s).
+SPSReminder_TrialNonExpireMsg = 
+Your license for Spam Prevention Solution (SPS) will expire in %EXPIREDAYS% day(s).
+ScannerService_Message = %SERVICENAME% is unavailable on server %HOSTNAME%.
+ScannerService_SNMPMessage = %SERVICENAME% is unavailable on server %HOSTNAME%.
+ScannerService_Subject = Service unavailable.
+ScannerSvcEmail = yes
+ScannerSvcMin = 5
+ScannerSvcSNMP = no
+SmartProtectionEventEmail = yes
+SmartProtectionEventSNMP = no
+SmartProtectionEvent_Message = No %REPUTATIONTYPE% Reputation Services can be accessed on the scanner (host name: %HOSTNAME%). Check your settings.
+SmartProtectionEvent_SNMPMessage = No %REPUTATIONTYPE% Reputation Services can be accessed on the scanner (host name: %HOSTNAME%). Check your settings.
+SmartProtectionEvent_Subject = Smart protection services unavailable on your server
+SmartScanSettingEmail = yes
+SmartScanSettingSNMP = no
+SmartScan_Message = IMSVA is unable to connect to the Smart Protection Network and has reverted to Conventional Scan. To re-enable Smart Scan, do the following:
+1. Log on to the IMSVA management console.
+2. Navigate to Policy > Scan Method.
+3. Select Smart Scan.
+4. Click Save.
+
+SmartScan_SNMPMessage = IMSVA is unable to connect to the Smart Protection Network and has reverted to Conventional Scan. To re-enable Smart Scan, do the following:
+1. Log on to the IMSVA management console.
+2. Navigate to Policy > Scan Method.
+3. Select Smart Scan.
+4. Click Save.
+
+SmartScan_Subject = Unable to connect to the Smart Protection Network
+SpamEmailFailed = yes
+SpamEmailSuccess = no
+SpamSNMPFailed = no
+SpamSNMPSuccess = no
+SpamUpdFailed_Message = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+SpamUpdFailed_SNMPMessage = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+SpamUpdFailed_Subject = IMSVA attempt to update to %COMPONENT&VERSION% failed
+SpamUpdSuccess_Message = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+SpamUpdSuccess_SNMPMessage = 
+Server: IMSVA Central Controller
+Time: %DATE&TIME%
+Component: %UPDATECOMPONENT%
+Version attempted to download: %DOWNLOADVERSION%
+Outcome: %UPDATERESULT%
+Errors: %UPDATEERROR%
+SpamUpdSuccess_Subject = IMSVA attempt to update to %COMPONENT&VERSION% successful
+SuspiciousObjectReloadEmail = yes
+SuspiciousObjectReloadSNMP = yes
+SuspiciousObjectReload_Message = IMSVA is unable to load local suspicious object lists.
+Host name: %HOSTNAME%
+If you continuously receive this message, contact Trend Micro technical support.
+
+SuspiciousObjectReload_SNMPMessage = IMSVA is unable to load local suspicious object lists.
+Host name: %HOSTNAME%
+If you continuously receive this message, contact Trend Micro technical support.
+
+SuspiciousObjectReload_Subject = Unable to load suspicious object lists
+SysNotificationInterval = 
+TrapType = 2
+WRSEventEmail = yes
+WRSEventSNMP = no
+WRSEvent_Message = IMSVA is unable to use Smart Protection Servers for Web Reputation queries and has reverted to Smart Protection Network.
+WRSEvent_SNMPMessage = IMSVA is unable to use Smart Protection Servers for Web Reputation queries and has reverted to Smart Protection Network.
+WRSEvent_Subject = Unable to use local sources for Web Reputation queries 
+last_digest_time = 2021:10:28:0
+
+[IBE]
+account = 
+account_status = 1
+contact_name = 
+dec_size_limit = 20
+default_sender = 
+domain_number = 0
+enable = no
+enable_outgoing_dec_excp = yes
+enable_outgoing_enc_excp = yes
+enc_size_limit = 10
+gateway_id = 
+ibe_db_pool_param = 5;100;5;300000
+max_rcpt_number = 100
+password = !CRYPT!313E1C0D5D722DF87533D1A4167DB4E62CEAD66253BC9D42BC25B3D2024
+phone_number = 
+
+[IP-Profiler]
+foxparser_pool_param = 1;5;1;3600000
+
+[Kerberos]
+KDC_admin_server = 
+KDC_port = 
+default_domain = 
+default_realm = 
+
+[LDAP]
+access_type = 0
+enabled_server = 0
+mail_attr = mail
+server_num = 1
+temp_num = 0
+
+[LDAP-Setting]
+DisableAutoChaseReference = y
+server-spn = 
+
+[LDAP_SVR_1]
+KDC_admin_server = 
+KDC_port = 
+LDAP_type = 0
+authentication = simple
+baseDN = DC=dssat,DC=sat,DC=gob,DC=mx
+default_domain = 
+default_realm = 
+description = ldap settings
+enable = yes
+enable_ldaps = no
+host = 10.228.192.135
+last_sync_time = 1635401269347
+ldap_cache_TTL_minutes = 1440
+password = !CRYPT!20C2A89CF2D0E80AC27B2F39EF7431B1E02117B1C59
+port = 3268
+server_cert = 
+server_cert_name = 
+userDN = dssat\NAVEGINT
+
+[LDAP_SVR_2]
+enable = no
+host = 10.51.115.11
+port = 3268
+
+[MessageModule]
+DefaultSourceCharset = utf-8
+LimitEntities = 64
+LimitHeaderParams = 100
+LimitHeaders = 500
+UseMailCharsetAsDestinationCharset = 0
+
+[NTP_Setting]
+enable_ntp = yes
+ntp_server = 10.228.192.19
+
+[Registration]
+ComplianceReminderDate = 2021-08-05
+EEImageProfile = EE-ITVS-M9X.000.0000|AP-ZZVS-E8X.000.0000
+IBEReminderDate = 
+ImssReminderDate = 2021-08-05
+LastStatusCheckDate = 1588298700
+LastStatusCheckDate2 = 1588298702
+LastStatusCheckDate3 = 1588298702
+LastStatusCheckDate4 = 1588298703
+LastStatusCheckDate5 = 
+LastStatusCheckDate6 = 1588298704
+NRSImageProfile = ST-TLMM-Z08.000.0000|SB-TRMM-Z08.000.0000|AS-ZZMM-M9V.000.0000|IM-ZZVS-M9X.000.0000|AP-ZZVS-E8X.000.0000|IM-DLVS-M9X.000.0000
+NRSReminderDate = 2021-08-05
+PrProductImageProfile = IM-DLVS-M9X.000.0000
+PrProductImageProfile2 = IM-DLVS-M9X.000.0000
+PrProductImageProfile3 = IM-DLVS-M9X.000.0000
+PrProductImageProfile4 = IM-DLVS-M9X.000.0000
+PrProductImageProfile5 = EE-ITVS-M9X.000.0000|AP-ZZVS-E8X.000.0000
+PrProductImageProfile6 = IM-DLVS-M9X.000.0000
+PrProductName = Trend Micro Antivirus and Content Filter
+PrProductName2 = Spam Prevention Solution (SPS)
+PrProductName3 = Email Reputation Service (ERS)
+PrProductName4 = Cloud Pre-Filter
+PrProductName5 = Trend Micro Email Encryption
+PrProductName6 = Regulatory Compliance
+PrServerRenewInstrURL = https://olr.trendmicro.com/redirect/product_renew_instruction.aspx
+PrServerURL = https://olr.trendmicro.com/redirect/product_register.aspx
+PrServerUpdateURL = http://licenseupdate.trendmicro.com/ollu/license_update.aspx
+PrServerUpgradeInstrURL = https://olr.trendmicro.com/redirect/product_purchase_instruction.aspx
+PrServerViewLicURL = https://olr.trendmicro.com/redirect/product_view_lic.aspx
+PreFilterReminderDate = 2021-08-05
+PrefilterImageProfile = IM-PFVS-M9X.000.0000|IM-ZZVS-M9X.000.0000|AP-ZZVS-E8X.000.0000|IM-DLVS-M9X.000.0000
+RCImageProfile = DL-ITVS-M9X.000.0000|AP-ZZVS-E8X.000.0000|IM-DLVS-M9X.000.0000
+SPSImageProfile = AS-ZZMM-M9V.000.0000|IM-ZZVS-M9X.000.0000|AP-ZZVS-E8X.000.0000|IM-DLVS-M9X.000.0000
+SPSReminderDate = 2021-08-05
+SessionTimeOut = 180
+VSAPIImageProfile = IM-AVVS-M9X.000.0000|IM-ZZVS-M9X.000.0000|AP-ZZVS-E8X.000.0000|IM-DLVS-M9X.000.0000
+cszLicProfileFile = 010113170E14116D110C1B096C626C690062196F09160A1E0C12621C1B170D62111317026D1802680C62100911191E0911106E0B1E1F1D0D166C141E0311001F2682C751E88E171C02A05CB9AF245278
+cszLicProfileFile2 = 010113170E14116D110C1B096C626C690062196F09160A1E0C12621C1B170D62111317026D1802680C62100911191E0911106E0B1E1F1D0D166C141E0311001F2682C751E88E171C02A05CB9AF245278
+cszLicProfileFile3 = 010113170E14116D110C1B096C626C690062196F09160A1E0C12621C1B170D62111317026D1802680C62100911191E0911106E0B1E1F1D0D166C141E0311001F2682C751E88E171C02A05CB9AF245278
+cszLicProfileFile4 = 010113170E14116D110C1B096C626C690062196F09160A1E0C12621C1B170D62111317026D1802680C62100911191E0911106E0B1E1F1D0D166C141E0311001F2682C751E88E171C02A05CB9AF245278
+cszLicProfileFile5 = 
+cszLicProfileFile6 = 010113170E14116D110C1B096C626C690062196F09160A1E0C12621C1B170D62111317026D1802680C62100911191E0911106E0B1E1F1D0D166C141E0311001F2682C751E88E171C02A05CB9AF245278
+product_name = InterScan Messaging Security Virtual Appliance
+product_version = 9.1
+
+[Report]
+dblog_purge_start_time = 4
+dbtrafsum_purge_by_day = 62
+first_day_of_week = 0
+trafficsum_bookmark = 0
+
+[TOC_MIGRATION]
+High = 2
+Low = 1
+Medium = 2
+Registered = 1
+Unknown = 0
+
+[Update]
+DayOfWeek1 = 3
+Debug = off
+DefaultServer = yes
+EnableUpdateSchedule = yes
+Frequency = 15
+HTTPAuthorization = :!CRYPT!103DB5FABB951FAEAE34F627A3B
+HTTPPort = 
+HTTPProxy = 
+Hour = 0:0
+Language = LANGUAGE_ENU
+Platform = Linux
+ProxyType = http
+TMASEServerurl = https://imsva91-p.activeupdate.trendmicro.com/activeupdate
+UpdateATSEEngine = yes
+UpdateDateATSEEngine = 10/11/2021 00:30:01
+UpdateDateIntellitrapException = 10/26/2021 04:45:13
+UpdateDateIntellitrapPattern = 10/29/2020 00:00:09
+UpdateDateSmartScanAgentPattern = 10/28/2021 01:45:22
+UpdateDateSpywarePattern = 10/28/2021 03:30:15
+UpdateDateTMASEEngine = 07/26/2021 00:30:10
+UpdateDateTMASEPattern = 10/28/2021 10:30:24
+UpdateDateTMUFEEngine = 
+UpdateDateVirusEngine = 03/04/2021 00:00:02
+UpdateDateVirusPattern = 10/27/2021 21:00:35
+UpdateIntellitrapException = yes
+UpdateIntellitrapPattern = yes
+UpdateServer = https://imsva91-p.activeupdate.trendmicro.com/activeupdate
+UpdateServerPort = 80
+UpdateSmartScanAgentPattern = yes
+UpdateSpywarePattern = yes
+UpdateTMASEEngine = yes
+UpdateTMASEPattern = yes
+UpdateTMUFEEngine = yes
+UpdateVirusEngine = yes
+UpdateVirusPattern = yes
+UseProxySetting = no
+User_Agent = 
+VersionATSEEngine = 21.572.1002
+VersionIntellitrapException = 1.865.00
+VersionIntellitrapPattern = 0.253.00
+VersionSmartScanAgentPattern = 17.157.00
+VersionSpywarePattern = 2.457.00
+VersionTMASEEngine = 8.600.1018
+VersionTMASEPattern = 26496.001
+VersionTMUFEEngine = 3.800.1010
+VersionVirusEngine = 12.500.1004
+VersionVirusPattern = 17.157.00
+user_defined_update_server = http://223.53.198.109:2828/tvcsdownload/activeupdate
+
+[adminui]
+port = 8445
+scannerid = 1
+
+[bif]
+BIFUrl = https://licenseupdate.trendmicro.com/fb/bifconnect.ashx
+Guid = 5542631b-5fd7-4af6-8ab3-648a6c15ca45
+LastUpdateTime = 2021-10-24 05:02:04
+
+[click_protection]
+ws_api_key = 1bc6a5df067c17bd9c6dbd3ed5c9f3f43f7dd236
+ws_conn_timeout = 10
+ws_expiry_time = 600
+ws_host = imsva91-ctp.trendmicro.com
+ws_port = 443
+ws_retry_count = 3
+ws_search_limit_one_time = 1000
+ws_search_limit_total = 10000
+ws_sec_key = !CRYPT!62BA7AF3EF354BC200A9CAADB5EACB2D6BBE1350C68BED5BC427801A95E99A53466D61854BFFDA59F6C39BCA130DAC5A93F4563773C
+ws_so_timeout = 30
+
+[cmagent]
+97421601D275-4DC8BDEA-3D5C-D124-BDBE = 97421601D275-4DC8BDEA-3D5C-D124-BDBE
+AC6E3C2E9FE4-4DFD98B7-610A-54EB-89B4 = AC6E3C2E9FE4-4DFD98B7-610A-54EB-89B4
+AEC23956041D-429D9071-B845-DCD2-6B34 = AEC23956041D-429D9071-B845-DCD2-6B34
+CFEA8F8E7E2B-422C9C75-BA06-37A7-5379 = CFEA8F8E7E2B-422C9C75-BA06-37A7-5379
+ConfigUrl = https://10.231.1.225:8445
+E84D19F09C0D-4D5C931E-30DB-2047-248F = E84D19F09C0D-4D5C931E-30DB-2047-248F
+EnableTMCMAgent = 1
+Proxy_Enable = 0
+Proxy_Password = !CRYPT!103DF02FA48B081EBB44F627A3B
+Proxy_Port = 
+Proxy_Server = 
+Proxy_Type = http
+Proxy_Username = 
+SSL_Enable = 1
+TMCM_Password = !CRYPT!20F1546085F8E0188D78E1C457492F1F4575A542B59
+TMCM_Server = 10.231.1.194
+TMCM_Server_Port = 443
+TMCM_Username = cmadmin
+enable_so_file = 0
+enable_so_url = 0
+so_sync_interval = 5
+
+[custom_defense]
+api_key = 
+last_id = 0
+last_sync = 0
+service_url = 
+
+[dda]
+DBLostOP = 1
+EnableProxy = 0
+MaxWaitingTime = 1800
+MaxWaitingTimeLimit = 1800
+ProxyPassword = 
+ProxyPort = 8080
+ProxyServer = 
+ProxyUserName = 
+RiskLevel = 1
+dda_enabled = 1
+dda_num = 1
+dda_url_enabled = 0
+
+[dda_server]
+dda_apikey_1 = 86ED276E-D31C-491B-8506-A806AC5D3422
+dda_host_1 = 10.228.195.7
+dda_port_1 = 443
+dda_pref_1 = 10
+dda_status_1 = 1
+dda_supp_url_1 = 1
+dda_urlbase_1 = /web_service/sample_upload
+
+[dkim]
+EnforcementASDL = googlegroups.com
+EnforcementEnable = 0
+WhiteListEnable = 0
+
+[dkim-sign]
+AUID_0 = 
+SDID_0 = sat.gob.mx
+bodyCanon_0 = simple
+bodyLength_0 = 
+dkimSignDomainEnable_0 = true
+dkim_domain_number = 1
+dkim_enabled = true
+dkim_version = 2
+dnsRecordName_0 = default._domainkey.sat.gob.mx
+dnsRecordValue_0 = v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsTo3taK0E2XjeYbnujaG0NlQx
+YfVF3cIm+Bhc4niJtoWHn5MaHtqBKg84g/FvpkHW4i9F3+Ewg79zMEhF58pB91/B
+9LbS7GvJ+ousoeeBpGogcitsAyEkAWlfTWR3qtTg3eZ+PFVx/1XJ3jN3T+/yeKFr
+Un0ZaWHj9H2Q4/GF8wIDAQAB
+domainName_0 = sat.gob.mx
+exemptDomain_0 = 
+headerCanon_0 = simple
+privateKey_0 = -----BEGIN RSA PRIVATE KEY-----
+MIICWwIBAAKBgQCsTo3taK0E2XjeYbnujaG0NlQxYfVF3cIm+Bhc4niJtoWHn5Ma
+HtqBKg84g/FvpkHW4i9F3+Ewg79zMEhF58pB91/B9LbS7GvJ+ousoeeBpGogcits
+AyEkAWlfTWR3qtTg3eZ+PFVx/1XJ3jN3T+/yeKFrUn0ZaWHj9H2Q4/GF8wIDAQAB
+AoGAOcqbJb6PEWpTdNr4Pr+4NbZnJK0DU+yd+u4JVdYLsbzLKoLmFsO0a9AMjNsM
+NnNf78+rJVeCsv/tTZgrFW850bsCJq0WlM0ocduNpYpElPtw0MenE023asUA0lwN
+y6LOcWGbUHrdrfpgbPrvodEus0rKq5PHzp+NL6lQ9xppJzkCQQDhy5s4pQPkf6mP
+0RIms5/4cXBX8EUEB9ryy6zOhZ9Q5ltJdX3/YvCW+d8F/QhVjtzKT31m/0ICv8R9
+ORt8u4S3AkEAw1s6Lm823KE3dxdvnJ1lK9cA/jkdXggxxWBc60v/vn9mrmqeIGNu
+V4CBmnHMVoIP1CXmz3FIKErOpUB4fC7kpQJATbusqmmU13tjwpE1cIFyVzOme3/K
+IsMZi3C3AzpZSJ6lWrrKL7u+HBvVvdgIoHvYYwXOpEDIVu3yFTIt1lkwLQJAY0S6
+HdpZkGdDnfqEtpqsTEimsognSh7z244J6W7m99AZR0vaKi8cZM5iDS8CXHseu/i+
+fm7b8c2BkCtgjgnuGQJAVtNCsEdOJAd7J0dopie8smFdfmmQRonYzHwvUaFZyVyK
+3DYnJnBVNbuawKs+ICCfWdGWlr61nffWkiqPLCuiQw==
+-----END RSA PRIVATE KEY-----
+
+selector_0 = default
+signing_headers = From,To,Date
+validPeriod_0 = 
+
+[dmarc]
+dmarc_feedback_hour = 2
+dmarc_version = 1
+enable_dmarc = false
+enable_feedback = false
+enable_xheader_insertion = false
+terminal_action_mapping_no_record = none
+terminal_action_mapping_none = none
+terminal_action_mapping_quarantine = quarantine
+terminal_action_mapping_reject = reject
+
+[email-scan]
+BypassMessagePartial = yes
+
+[ers]
+ers_approved_list = 10.10.60.115,217.156.52.83
+ers_enabled = no
+ers_standard_advance_option = advance
+rbl_reply_map_use_default = yes
+rbl_reply_map_use_standard_default = yes
+rbl_reply_map_user = 450,Service unavailable
+rbl_reply_map_user_standard = 450,Service unavailable
+update_ers_ac = IM-TNK7-KVAS6-863Z8-C5SLP-DVH8F-AMW8K
+
+[euq]
+Admin_Not_Spam = 1
+ReleaseAlt_EndUser = deliver
+customized_login_msg = Para acceder coloque en el campo “Nombre de usuario”  la palabra DSSAT seguida de una diagonal inversa y su RFC Corto
+ <br/>
+<br/>
+Ejemplo
+ <br/>
+<b>Nombre de usuario : DSSAT\RFC_CORTO</b> 
+ <br/>
+<br/>
+En el campo contraseña ingrese la que utiliza para acceder a su puesto de servicio 
+ <br/>
+ <br/>
+Cualquier duda favor de comunicarse a la cuenta soporte.seguridad@sat.gob.mx o a la extension 44595
+db_pool_param = 5;100;5;3600000
+digest_inline_action_key = 3a0044a2fcf231c6
+digest_timestamp = 2021-10-28
+enable = yes
+enable_all = yes
+enable_sso = no
+enable_sso_kerberos = no
+enable_sso_ntlm = no
+euq_auth_type = ldap
+euq_digest_url = 
+keep_days = 7
+ldap_auth_pool_param = 5;100;5;3600000
+ldap_oper_pool_param = 5;100;5;3600000
+max_approvedsenders = 50
+smtp_auth_domain_num = 0
+smtp_auth_ehlo_message = localhost.localdomain
+smtp_auth_response_timeout = 120
+
+[euqmaster]
+port = 8447
+scannerid = 1
+
+[general]
+big_mail_threshold = 65536
+connection_is_enable = no
+detection_aggressive_level = 4
+displayInactivatedNotice = no
+dlp_template_version = 3.1.1021
+enable_dl_maintain = 0
+enable_euq = 1
+ers_evt_log_path = /opt/trend/imss/log
+ers_evt_log_prefix = ers.imss
+event_log_path = /opt/trend/imss/log
+event_log_prefix = sysevt.imss
+first_wizard = 0
+internal_host_enable = no
+locale = en_US
+log_individual_split_when_size = 50
+log_level = debug
+log_max_days = 90
+log_type_delete_oldest_when_over = 2048
+maxMsgSizeInMB = 41
+maxRecipients = 1000
+message_trace_log_path = /opt/trend/imss/log
+message_trace_log_prefix = msgtra.imss
+mutex_lock_src_name = imss.flock
+mutex_lock_type = file_lock
+policy_evt_log_path = /opt/trend/imss/log
+policy_evt_log_prefix = polevt.imss
+proc_ctrl_interval_secs = 1
+proc_extended_proc_live_period_secs = 600
+proc_max_connections = 50000
+proc_max_worker_proc = 200
+proc_min_init_num = 30
+proc_proc_inc_num = 3
+proc_thread_per_proc = 0
+queue_notify = /opt/trend/imss/queue/notify
+queue_purge_by_day = 60
+queue_retry_count = 3
+received_ip_expression_default = .*.*\s*from\s+.*?\[(.+)\].*
+received_ip_expression_file_path = /config/received_ip_expression
+remove_duplicated_objs = yes
+scan_mode = 1
+smtp_mail_sender_sleep_time_secs = 10
+
+[graymail]
+graymail_ers_query_zone = r.ers.trendmicro.com
+
+[import]
+disabled_feature = 
+
+[imss_manager]
+AuMonitorInterval = 3
+EuqSynchInterval = 1
+MsgSynchInterval = 3
+PostSetInterval = 3
+QareaPurgeInterval = 6
+euq_pool_param = 1;1;0;3600000
+listen_port = 15505
+localfile_purge_interval = 120
+soap_server_thread_num = 3
+
+[ldap-cache]
+admin_passwd = !CRYPT!20C7B616D9274BF58AE03069DAFEEF7AB3C25484C0B
+admin_user = cn=manager,dc=ldapcache,dc=local
+baseDN = dc=ldapcache,dc=local
+host = 127.0.0.1
+ldap_cache_TTL_minutes = 1440
+ldap_sched_sync = 
+log_file_max_count = 5
+log_file_max_size = 10485760
+log_level = INFO
+sync_result = 
+sync_status = 0
+synchronizing = no
+
+[log]
+archivea = G
+archivea_unit = 34
+dblog_import_interval = 1
+dblog_purge_by_day = 60
+misc_file_rotate_by_size = 50
+misc_file_rotate_num = 3
+misc_file_rotate_prefix = log/debugFile.txt;log/catalina.out;log/apache_log;log/mod_jk.log;log/trace.log;log/mod_jk_widget.log;log/widget_log
+quota = M
+quota_unit = 56
+
+[notification_tag]
+replacement_msg = 
+
+[policy_server]
+EnableProxy = yes
+EnableTMCMAgent = yes
+HttpPort = 80
+HttpsPort = 443
+PolicyServerPort = 5060
+ProxyPort = 80
+ProxyPwd = ASDD
+ProxyServer = AAAAAA
+ProxyType = SOCKS5
+ProxyUser = ADFFSDFFFFFFF
+TMCMServer = ADFASDF
+backlog = 9999
+cachedSize = 25000
+dbChangePollIntervalInSecs = 180
+disableldap = yes
+expiryTime = 30000
+idleSize = 10
+keep-alive = yes
+maxSize = 100
+max_threads = 66
+poolSize = 25
+port = HTTPS
+protocol = HTTP
+recv_timeout_secs = 120
+refershTime = 3600
+send_timeout_secs = 120
+threads = 25
+
+[pop3]
+allowed_authentications = NTLM
+generic_greeting_msg = TrendMicro IMSVA POP3 Proxy
+max_top_cmd_lines = 0
+opt_multiline_cmds = 
+pop3_enable_proxy = no
+prohibited_commands = STLS
+service_timeout_secs = 120
+user_server_separator = #
+
+[pre-filter]
+bundle_name = prefilter_imss
+dc_name = 
+gw_pass = 
+gw_user = 
+imht_def_host = ws3.emailsecurity.trendmicro.com
+imht_def_service_status_addr = https://emsp-sp-us01-wsstatus.trendmicro.com:443/status
+imht_host = 
+imht_pass = 236263a483d766f9e40b111e00451641f523af79640099a0
+imht_port = 9000
+imht_service_status_addr = 
+imht_uri_charset = UTF-8
+region_name = 
+schedule_email_sync = 
+schedule_sync_full = yes
+spam_quar_area_blob = 15:27:Cloud Pre-Filter Quarantine:0:
+spam_quar_rule_blob = 99999
+
+[quarantine]
+archivelimit = 600
+archiveunit = G
+quatolimit = 100
+quatounit = G
+
+[smart_scan]
+auto_switch_back_to_conventional = 1
+crcz_update_interval_sec = 900
+failover_error_interval = 180
+failover_error_threshold = 10
+query_error_check_interval_sec = 30
+query_timeout_ms = 1500
+scan_method = 0
+use_local = 1
+uuid = E74AF3B7-37F5-4605-8567-A2A51ABC4FC7
+
+[smtp]
+blockEmptyMailFrom = no
+downstream_smtp_server_addr = 127.0.0.1
+downstream_smtp_server_port = 10026
+leave_temp_file = no
+open_to_all_connections = no
+quarantine_malform_email = yes
+service_timeout_secs = 120
+smtp_allow_client_ip = 127.0.0.1
+smtp_enable_proxy = yes
+smtp_greeting_msg = Welcome to the TrendMicro IMSVA SMTP Proxy
+
+[smtp_traffic_throttling]
+connection_blockedlog_record_interval = 300
+connection_config_reload_interval = 60
+connection_response_blocked_ip = action=421 4.7.5 Connection IP is blocked by SMTP Traffic Throttling of IMSVA
+connection_response_blocked_sender = action=421 4.7.5 Current Sender is blocked by SMTP Traffic Throttling of IMSVA
+
+[socket]
+num_sockets = 3
+proxy_pop3_server_ip = 0.0.0.0
+proxy_smtp_server_ip = 127.0.0.1
+
+[socket_1]
+proxy_port = 10025
+proxy_service = SMTP_SERVICE
+
+[socket_2]
+proxy_port = 110
+proxy_service = POP3_GENERIC_SERVICE
+
+[socket_3]
+proxy_port = 10024
+proxy_service = SMTP_REPROCESS_SERVICE
+
+[syslog_setting]
+log_buffer_size = 100
+log_sync_interval = 30
+monitor_interval = 30
+syslog_version = 121
+
+[virus]
+VSBCheckMultiInfection = 1
+VSBExtractAmgFlag = 0
+VSBIgnBadZipErr = 0
+VSBIgnCrcErr = 0
+VSBIgnExtractTooBigErr = 0
+VSBIgnMaxDecomErr = 0
+VSBIgnMaxEntityCountErr = 0
+VSBIgnNoSuppErr = 0
+VSBIgnZipFileCountErr = 0
+VSBIgnZipRatioErr = 0
+VSBScanJavaFlag = 1
+VSBScanMacroFlag = 1
+VSBScanSelectedEntityType = 0
+VSBSmartDecompressFlag = 1
+VSIAggressivePattern = 1
+VSICheckMultiInfectionLoopCount = 3
+VSIDecompressLayer = 20
+VSIEnvironmentLanguageId = 1
+VSIExtractFileCountLimit = 1000
+VSIExtractFileRatioLimit = 0
+VSIExtractFileSizeLimit = 52428800
+VSIMaxEntityCount = 0
+VSIMaxEntitySize = 0
+VSIMemoryDecompressSize = 2097152
+VSIOle2ScanLayer = 5
+VSIPrealloBufferSize = 1048576
+VSIRTFScanLayer = 5
+VSIScanMacroHeuristicLevel = 1
+VSIWholeMailScan = 0
+VSSPreferredEncoding = base64
+VSSPtnBaseNameList = ssaptn;tmblack;tmwhite
+VSSScanSelectedEntityType = inline;attachment;text;application
+VSSTempPath = /opt/trend/imss/temp/scan/
+
+[wrs]
+Adult = 16,1,2,8,11,9,25,5,26,6,3,4,10,14,15
+Business = 21,31,32,45,59,58,60
+CommunicationsAndSearch = 40,41,24,42,51,52,53,50,89
+General = 27,34,36,37,38,46,48,49,35,67,90
+InternetSecurity = 77,80,81,79,82,83,86,78,84,75,73,39,85,76,74,88,91,92,93,95
+Lifestyle = 30,44,18,19,20,29,54,55,61,63,64,65,66,68,22,33,47,87
+NetworkBandwidth = 23,56,72,70,71,57,43,69
+
+[wrsagent]
+auto_switch_back_to_spn = 1
+stop_external_query = 0
+tmufe_alter_rs_host = backup35.url.trendmicro.com
+use_local = 0

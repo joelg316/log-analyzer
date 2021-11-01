@@ -1,0 +1,24 @@
+#! /bin/sh
+
+if [ ! $# = 0 ]; then
+	exit 0
+fi
+
+trap "" SIGINT SIGQUIT
+
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/trend/imss/script:/opt/trend/imss/postfix/usr/sbin	# work around to fix bug IMSVA 8.0-00300, env variable PATH is lost when called from clish
+
+chmod u+x /opt/trend/imss/backup/uninstall.sh
+echo "Uninstalling IMSVA application..."
+/opt/trend/imss/backup/uninstall.sh >/dev/null 2>&1
+
+chmod u+x /mnt/backup/install.sh
+echo "Installing IMSVA application..."
+# Restore Postfix binaries.
+tar xjf /mnt/backup/imsva_rescue.tar.bz2 -C / > /dev/null 2>&1
+
+# When rescuing or unregistering a device, copy the original installer.ini back.
+# It means, IMSVA always uses internal adminDB when rescued or unregistered.
+test -f /mnt/backup/config/installer.ini.bak && cp -af /mnt/backup/config/installer.ini.bak /mnt/backup/config/installer.ini
+
+/mnt/backup/install.sh >/dev/null

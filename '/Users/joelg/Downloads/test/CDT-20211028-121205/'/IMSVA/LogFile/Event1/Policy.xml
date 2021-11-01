@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SAPolicy name="DLP_Policies" version="1" schemaVersion="2.0" command="overwrite" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<complianceTemplates command="overwrite">
+		<template name="A0D4C89A-69E3-4424-B3B7-9892B3D87820" displayName="HIPAA" description="Health Insurance Portability and Accountability Act">
+			<matchRule>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="HIC" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="HIC" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="HIC" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="HIC" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="HIC" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Home Address" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Home Address" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Home Address" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Address-Keyword" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Address-Keyword" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Address-Keyword" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Home Address"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Address-Keyword"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="Common Medical Terms" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="HIC" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Home Address"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="HIC" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Address-Keyword"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="HIC" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="UB04 Form Keyword"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="HCFA (CMS) 1500 Form" operation="OR"/>
+			</matchRule>
+		</template>
+		<template name="264EB49A-B90F-4fa3-9C7B-8EE60F583520" displayName="PCI-DSS" description="The Payment Card Industry Data Security Standard">
+      <matchRule>
+				<buildingBlock sourceType="ENTITY" entityHits="2" sourceName="Credit Card Number"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Partial Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Expiry-Date-Keyword" operation="AND"/>
+			</matchRule>
+		</template>
+    <template name="81D9B431-FF97-496b-9F87-8CE266739738" displayName="SB-1386" description="California law regulating the privacy of personal information">
+      <matchRule>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+      </matchRule>
+      <matchRule operation="OR">
+        <buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+      </matchRule>
+      <matchRule operation="OR">
+        <buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+      </matchRule>
+      <matchRule operation="OR">
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+      </matchRule>
+      <matchRule operation="OR">
+        <buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+      </matchRule>
+      <matchRule operation="OR">
+        <buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+      </matchRule>
+      <matchRule operation="OR">
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Cal DL# /Cal ID#" operation="AND"/>
+      </matchRule>
+      <matchRule operation="OR">
+        <buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Cal DL# /Cal ID#" operation="AND"/>
+      </matchRule>
+      <matchRule operation="OR">
+        <buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+        <buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Cal DL# /Cal ID#" operation="AND"/>
+      </matchRule>
+    </template>
+		<template name="2BE10D04-FC41-4126-8F61-1FE01E8B5409" displayName="US PII" description="Personally Identifiable Information">
+			<matchRule>
+				<buildingBlock sourceType="ENTITY" entityHits="5" sourceName="Credit Card Number"/>
+				<buildingBlock sourceType="ENTITY" entityHits="5" sourceName="SSN" operation="OR"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Home Address" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Home Address" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Home Address" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Address-Keyword" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Address-Keyword" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Address-Keyword" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Phone Number" operation="AND"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Email Address" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Date-Keyword" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Date-Keyword" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Date-Keyword" operation="AND"/>
+			</matchRule>
+			<matchRule operation="OR">
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Place-Keyword"/>
+				<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+				<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Date-Keyword" operation="AND"/>
+			</matchRule>
+		</template>
+		<template name="34F19876-6E0E-44df-AE7E-2AC18A4208C8" displayName="GLBA" description="Gramm-Leach-Bliley Financial Services Modernization Act of 1999">
+		  <matchRule>
+			<buildingBlock sourceType="ENTITY" entityHits="5" sourceName="Credit Card Number"/>
+			<buildingBlock sourceType="ENTITY" entityHits="5" sourceName="ABA Routing Number" operation="OR"/>
+			<buildingBlock sourceType="ENTITY" entityHits="10" sourceName="SSN" operation="OR"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="ABA Routing Number"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="ABA Routing Number" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="SSN" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Credit Card Number" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="ABA Routing Number" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="ABA Routing Number" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="ABA Routing Number" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="American Name"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+			<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Date-Keyword" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword1"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+			<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Date-Keyword" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="KEYWORD" sourceName="American-Name-Keyword2"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+			<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Date-Keyword" operation="AND"/>
+		  </matchRule>
+		  <matchRule operation="OR">
+			<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Place-Keyword"/>
+			<buildingBlock sourceType="ENTITY" entityHits="1" sourceName="Full Date" operation="AND"/>
+			<buildingBlock sourceType="KEYWORD" sourceName="US-Birth-Date-Keyword" operation="AND"/>
+		  </matchRule>
+		</template>
+		<template name="73DD02A3-9A73-4f42-83F4-A647A84057D5" displayName="Personal information (100hits)">
+            <matchRule>
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (100)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Address" sourceType="ENTITY" entityHits="100" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (100)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Phone Number" sourceType="ENTITY" entityHits="100" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (100)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Date" sourceType="ENTITY" entityHits="100" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (100)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Email Address" sourceType="ENTITY" entityHits="100" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (100)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Credit Card Number" sourceType="ENTITY" entityHits="100" />
+            </matchRule>
+        </template>
+        <template name="4E6E4645-7FE4-40d3-BB77-4C825CB5CF93" displayName="Personal information (10hits)">
+            <matchRule>
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (10)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Address" sourceType="ENTITY" entityHits="10" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (10)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Phone Number" sourceType="ENTITY" entityHits="10" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (10)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Date" sourceType="ENTITY" entityHits="10" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (10)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Email Address" sourceType="ENTITY" entityHits="10" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (10)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Credit Card Number" sourceType="ENTITY" entityHits="10" />
+            </matchRule>
+        </template>
+        <template name="3FF6C312-D8E5-4226-8CF4-29082E0F7997" displayName="Personal information (50hits)">
+            <matchRule>
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Address" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Phone Number" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Date" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Email Address" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in Chinese character (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Credit Card Number" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+        </template>
+        <template name="FE085A9A-B9EC-4b7e-A525-552222E7CB22" displayName="Personal information (one-byte katakana 50hits)">
+            <matchRule>
+                <buildingBlock operation="" sourceName="Japan - Last Name in one-byte katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Address" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in one-byte katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Phone Number" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in one-byte katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Date" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in one-byte katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Email Address" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in one-byte katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Credit Card Number" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+        </template>
+        <template name="1A8D86A7-BF78-4443-9A75-184BD39C8FCF" displayName="Personal information (hiragana 50hits)">
+            <matchRule>
+                <buildingBlock operation="" sourceName="Japan - Last Name in hiragana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Address" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in hiragana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Phone Number" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in hiragana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Date" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in hiragana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Email Address" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in hiragana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Credit Card Number" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+        </template>
+        <template name="1CDAC7C9-439F-42ee-828A-5EEFC070534D" displayName="Personal information (katakana 50hits)">
+            <matchRule>
+                <buildingBlock operation="" sourceName="Japan - Last Name in katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Address" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Phone Number" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="JP Date" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Email Address" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+            <matchRule operation="OR">
+                <buildingBlock operation="" sourceName="Japan - Last Name in katakana (50)" sourceType="KEYWORD" />
+                <buildingBlock operation="AND" sourceName="Credit Card Number" sourceType="ENTITY" entityHits="50" />
+            </matchRule>
+        </template>
+	</complianceTemplates>
+</SAPolicy>

@@ -1,0 +1,4 @@
+# default sendmail regex: ([0-9]+) 5\.7\.1 .* Rejected: .* listed at ([A-Za-z_/./-]+)
+# default postfix regex: ([0-9]+) Service unavailable; Client host .* blocked using ([A-Za-z_/./-]+)
+([0-9]+) Service unavailable; Client host .* blocked using ([A-Za-z_/./-]+)
+([0-9]+) Service temporarily unavailable; .* deferred using ([A-Za-z/./-]+)

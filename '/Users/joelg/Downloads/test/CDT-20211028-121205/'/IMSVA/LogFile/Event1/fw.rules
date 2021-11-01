@@ -1,0 +1,86 @@
+<cfg>
+    
+	<HEAD_CHECK>
+        
+		<timestamp value=""/>
+    
+	</HEAD_CHECK>
+    
+	<webaccess>
+        
+		<status value="all"/>
+        
+		<port value="8445,tcp,E"/>
+    
+	</webaccess>
+    
+	<sshaccess>
+        
+		<status value="all"/>
+        
+		<port value="22,tcp,E"/>
+    
+	</sshaccess>
+    
+	<postfix_port_list>
+        
+		<port value="2500,tcp,E"/>
+	    
+	</postfix_port_list>
+    
+	<trust_ip_list>
+        
+		<number value="4"/>
+        
+    
+		<ip1 value="10.231.1.225"/>
+		<ip2 value="10.231.1.226"/>
+		<ip3 value="10.231.1.227"/>
+		<ip4 value="99.90.40.253"/>
+	</trust_ip_list>
+    
+	<fix_port_list>
+        
+		<number value="11"/>
+        
+		<port1 value="53,tcp,I"/>
+        
+		<port2 value="53,udp,I"/>
+        
+		<port3 value="5060,tcp,I"/>
+        
+		<port4 value="5432,tcp,I"/>
+        
+		<port5 value="8009,tcp,I"/>
+        
+		<port6 value="8446,tcp,E"/>
+        
+		<port7 value="8447,tcp,E"/>
+        
+		<port8 value="15505,tcp,I"/>
+        
+		<port9 value="389,tcp,I"/>
+        
+		<port10 value="15506,tcp,I"/>
+        
+		<port11 value="10040,tcp,I"/>
+    
+	</fix_port_list>
+    
+	<changeable_port_list>
+        
+		<number value="2"/>
+        
+		<port1 value="25,tcp,E"/>
+        
+    
+		<port2 value="110,tcp,E"/>
+	</changeable_port_list>
+    
+	<TAIL_CHECK>
+        
+		<timestamp value=""/>
+    
+	</TAIL_CHECK>
+
+</cfg>

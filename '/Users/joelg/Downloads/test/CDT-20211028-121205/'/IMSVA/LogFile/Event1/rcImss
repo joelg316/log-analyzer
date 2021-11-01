@@ -1,0 +1,324 @@
+#!/bin/bash
+#
+# IMSSCTL		This shell script takes care of starting and stopping
+#		        the entire IMSx Application.
+#
+# chkconfig: 345 99 10
+# description: imssctl is the controller of IMSx App. \
+# vim:shiftwidth=4:tabstop=4:expandtab
+
+IMSS_HOME=/opt/trend/imss
+
+export PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH:$IMSS_HOME/postfix/usr/sbin/:$IMSS_HOME/postfix/usr/bin/:$IMSS_HOME/postfix/usr/libexec/postfix
+
+DB=$IMSS_HOME/script/dbctl.sh
+POSTFIX=$IMSS_HOME/script/postfix
+ADMINUI=$IMSS_HOME/script/S99ADMINUI
+CMAGENT=$IMSS_HOME/script/S99CMAGENT
+
+POLICY=$IMSS_HOME/script/S99POLICY
+IMSS=$IMSS_HOME/script/S99IMSS
+FOXDNS=$IMSS_HOME/script/S99FOXDNS
+BIND=$IMSS_HOME/bind/bindctl.sh
+FOXPROXY=$IMSS_HOME/script/foxproxyd
+MONITOR=$IMSS_HOME/script/S99MONITOR
+SCHEDULED=$IMSS_HOME/script/S99SCHEDULED
+MANAGER=$IMSS_HOME/script/S99MANAGER
+SMTPCONN=$IMSS_HOME/script/S99SMTPCONNAGENT
+DTASAGENT=$IMSS_HOME/script/S99DTASAGENT
+TLSAGENT=$IMSS_HOME/script/S99TLSAGENT
+DELIVERY=$IMSS_HOME/script/S99DELIVERY
+RTSTAT=$IMSS_HOME/script/rtstat.sh
+MAILTRAFFIC=$IMSS_HOME/script/mailtraffic.sh
+APACHE=$IMSS_HOME/script/Apache.sh
+TOMCAT=$IMSS_HOME/script/S99EUQ
+UPDATE=$IMSS_HOME/script/S99UPDATE
+MSGTRACING=$IMSS_HOME/script/S99MSGTRACING
+OPENLDAP=$IMSS_HOME/script/openldap.sh
+IBES=$IMSS_HOME/script/ibe_server.sh
+LOGTRANSFER=$IMSS_HOME/script/S99LOGTRANSFER
+DKIM=$IMSS_HOME/script/S99DKIM
+OPENDKIM=$IMSS_HOME/script/S99OPENDKIM
+OPENDMARC=$IMSS_HOME/script/S99OPENDMARC
+EUQ=$IMSS_HOME/script/S99EUQ
+LSM=$IMSS_HOME/script/S99LOCALSERVERMGMT
+# for generate timezone script
+GENTZD=$IMSS_HOME/script/gentzd.sh
+TZDFILE=$IMSS_HOME/UI/adminUI/ROOT/javascripts/tzd.js
+
+PS_CMD="ps -ef --width 1000"
+
+# set foxproxy process name
+if [ -f /etc/trend-release ]; then
+	FOX_PROXY_NAME=TmFoxFilter
+else
+	FOX_PROXY_NAME=TmFoxProxy
+fi
+
+# For SEG TT 229064, ntpd is not stopped by this script.
+NTPD=$IMSS_HOME/script/S99NTPD
+
+if [ -f /etc/trend-release ]; then
+	trap "" SIGINT
+	trap "unlock" EXIT
+
+	. $IMSS_HOME/script/imssfunctions
+	. /etc/init.d/functions
+
+	lock
+fi
+
+start()
+{
+    if [ -f /etc/trend-release ]; then
+        echo "Starting IMSVA Application..."
+    else
+        echo "Starting IMSS Application..."
+    fi
+    
+    $IBES start&
+    $MONITOR start
+    $MSGTRACING start
+    $OPENLDAP start
+    sh $GENTZD > $TZDFILE
+    chown imss $TZDFILE
+    chgrp imss $TZDFILE
+    chmod 750 $TZDFILE
+    if [ -d /var/queue_temp/ ] ; then
+        $IMSS_HOME/bin/close_handle_sh "nohup rm -rf /var/queue_temp/ > /dev/null 2>&1 &"
+    fi
+    $SMTPCONN start
+    $DTASAGENT start
+    $TLSAGENT start
+    $DELIVERY start
+    $LOGTRANSFER start
+    $DKIM start
+    $OPENDKIM start
+    $OPENDMARC start
+    $LSM start
+		
+    touch /var/lock/subsys/rcImss
+    if [ -f /etc/trend-release ]; then
+        echo "IMSVA Application has been started."
+    else
+        echo "IMSS Application has been started."
+    fi
+    echo_success
+    echo
+}
+stop_others()
+{
+    # Stop all services except for adminUI and DB.
+    $MONITOR stop
+    $MANAGER stop
+    $RTSTAT stop
+    $MAILTRAFFIC stop
+    $CMAGENT stop
+    $MSGTRACING stop
+    $EUQ stop
+    $FOXPROXY stop
+    $POSTFIX stop
+    $SMTPCONN stop
+    $TLSAGENT stop
+    $DELIVERY stop
+    $LOGTRANSFER stop	
+    $IMSS stop
+    $BIND stop
+    $FOXDNS stop
+    $POLICY stop
+    $SCHEDULED stop
+    $UPDATE stop
+    $OPENLDAP stop
+    $IBES stop
+    $DTASAGENT stop
+    $DKIM stop 
+    $OPENDKIM stop
+    $OPENDMARC stop
+    $LSM stop
+    # For SEG TT 229064, try to stop ntpd.
+    # No need to explicitly start ntpd because manager will try to start ntpd when manager itself is started. 
+    if [ -f /etc/trend-release ]; then
+        $NTPD stop
+    fi
+}
+stop_others_hang()
+{
+    $MANAGER stop
+    $RTSTAT stop
+    $MAILTRAFFIC stop
+    $CMAGENT stop
+    $MSGTRACING stop
+    $FOXPROXY stop
+    $IMSS stop
+    $FOXDNS stop
+    $POLICY stop
+    $SCHEDULED stop
+    $UPDATE stop
+    $SMTPCONN stop
+    $DTASAGENT stop
+    $TLSAGENT stop
+    $DELIVERY stop
+    $LOGTRANSFER stop
+    $DKIM stop
+    $OPENDKIM stop
+    $OPENDMARC stop
+    $LSM stop
+}
+
+#[SEGTT-247440] Child IMSVA went down, Parent IMSVA cannot receive mail.
+#restart these tasks,because they may hang on db.
+restart_others_hang()
+{
+    #MANAGER will be restarted in monmain.cpp.
+    #$MANAGER restart
+    $RTSTAT restart
+    
+    $IMSS_HOME/script/is_master.sh
+    if [ $? -eq 1 ] ; then
+        $MAILTRAFFIC restart
+    fi
+    
+    #some user may not use cmagent,so firstly we have to test whether have to restart cmagent
+    CMAGENT_ID=`$PS_CMD | grep imsscmagent | grep -v grep | awk '{ print $2 }'`
+    if test "$CMAGENT_ID";then
+        echo "imsscmagent is running,restart it."
+        $CMAGENT restart
+    fi
+    $MSGTRACING restart
+    FOXPROX_ID=`$PS_CMD | grep ${FOX_PROXY_NAME} | grep -v grep | awk '{ print $2 }'`
+    if test "$FOXPROX_ID";then
+        echo "${FOX_PROXY_NAME} is running,restart it."
+        $FOXPROXY restart
+    fi
+    
+    $IMSS restart
+    $FOXDNS restart
+    $POLICY restart
+    $SCHEDULED stop
+    $SCHEDULED start
+    $UPDATE restart
+    $LOGTRANSFER restart
+    $LSM restart
+    #some user may not use EUQ,so firstly we have to test whether have to restart EUQ
+    EUQ_ID=`$PS_CMD | grep "euqUI\/conf\/server.xml start" | grep -v grep | awk '{ print $2 }'`
+    if test "$EUQ_ID";then
+        echo "euq is running,restart it."
+        $EUQ restart
+    fi
+    
+
+    #some user may not use SMTP Traffic Throttling,so firstly we have to test whether have to restart smtp conn agent
+    SMTPCONN_ID=`$PS_CMD | grep "bin/smtp_conn_agent" | grep -v grep | awk '{ print $2 }'`
+    if test "$SMTPCONN_ID";then
+        echo "SMTP Traffic Throttling is running,restart it."
+        $SMTPCONN restart
+    fi
+    $DTASAGENT restart    
+    $TLSAGENT restart
+    #some user may not use dps,so firstly we have to test whether have to restart dps
+    DPS_ID=`$PS_CMD | grep "bin/imssdps" | grep -v grep | awk '{ print $2 }'`
+    if test "$DPS_ID";then
+        echo "Delivery policy server is running,restart it."
+        $DELIVERY restart
+    fi
+    #some user may not use dkim signature,so firstly we have to test whether have to restart dkim
+    DKIM_ID=`$PS_CMD | grep "bin/dkim" | grep -v grep | awk '{ print $2 }'`
+    if test "$DKIM_ID";then
+        echo "DKIM signature is running,restart it."
+        $DKIM restart
+    fi
+}
+stop()
+{
+    if [ -f /etc/trend-release ]; then
+        echo "Stopping IMSVA Application..."
+    else
+        echo "Stopping IMSS Application..."
+    fi
+    
+    stop_others
+    $ADMINUI stop
+    $DB stop
+    rm -f /var/lock/subsys/rcImss
+    
+    if [ -f /etc/trend-release ]; then
+        echo "IMSVA Application has been stopped"
+    else
+        echo "IMSS Application has been stopped"
+    fi
+    echo_success
+    echo
+}
+restart_others()
+{
+    sleep 5
+    stop_others
+    $DB reload
+    start
+}
+
+start_others()
+{
+    $SMTPCONN start
+    $DELIVERY start
+    $TLSAGENT start 
+    $POSTFIX start
+    $CMAGENT start
+    $DKIM start
+    $OPENDKIM start
+    $OPENDMARC start
+    $ADMINUI start
+    $SCHEDULED start
+    $FOXDNS start
+    $BIND start
+    $IMSS start
+    $POLICY start
+    $EUQ start
+    $MSGTRACING start
+    $MONITOR start
+    $OPENLDAP start
+    $IBES start&
+    $LOGTRANSFER start
+    $LSM start
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    stop_others)
+        stop_others
+        ;;
+    stop_others_hang)
+        stop_others_hang
+        ;;
+    start-others)
+        start_others
+        ;;
+    restart)
+        stop
+        start
+        # Fix for case IMSVA 8.5-000180
+        if [ -f /etc/trend-release ]; then
+            service crond restart
+        fi
+        ;;
+    restart_others)
+        restart_others
+        ;;
+    restart_others_hang)
+        restart_others_hang
+        ;;
+    status)
+        status imssmgrmon
+        status imssmgr
+        status imssd
+        status imssps
+        exit $?
+        ;;
+    *)
+        echo $0 "start|stop|stop_others|restart|restart_others|restart_others_hang|status"
+esac

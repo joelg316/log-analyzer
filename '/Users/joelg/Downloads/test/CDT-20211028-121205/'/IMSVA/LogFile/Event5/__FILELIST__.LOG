@@ -1,0 +1,12 @@
+/opt/trend/imss/postfix/etc/postfix/main.cf = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/main.cf
+/opt/trend/imss/postfix/etc/postfix/master.cf = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/master.cf
+/var/log/maillog = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/maillog
+/var/log/maillog.1 = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/maillog.1
+/var/log/maillog.2 = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/maillog.2
+/var/log/maillog.3 = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/maillog.3
+/var/log/maillog.4 = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/maillog.4
+/var/log/messages = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/messages
+/var/log/messages.1 = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/messages.1
+/var/log/messages.2 = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/messages.2
+/var/log/messages.3 = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/messages.3
+/var/log/messages.4 = /var/app_data/imss/cdt/20211028-121205/IMSVA/LogFile/Event5/messages.4

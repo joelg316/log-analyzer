@@ -1,0 +1,1213 @@
+root{
+    IDS_DEFAULT_TABLE {
+        IDS_MESSAGE_NOT_FOUND   { "Could not find the message identifier \'{0}\'." }
+    }
+
+    general {
+	    envNotSet       { "The environment variable {0} is not set" }
+		memoryAllocFail { "Memory allocation failure.  See internal error log for details" }
+		internalError   { "An internal error has occurred.  See internal error log for details" }
+	}
+
+    configfileTable {
+		fileNotFound  { "Could not open the configuration file {0}" }
+		paramNotFound { "Could not find paramter {0} in section {1} in file {2}" }
+		noParamsFound { "No parameters were found in section {1} in file{2}" }
+	}
+    DDA_NOTIFICATION {
+        ERR_INTERNAL_FILE  { "File operation error" }
+        ERR_INTERNAL_DB    { "Database operation error" }
+        ERR_COMM_CLIENT    { "Client connection error" }
+        ERR_COMM_NETWORK   { "Network connection error" }
+        ERR_COMM_SERVER    { "Server connection error" }
+        ERR_REPORT_INVALID { "Invalid analysis report" }
+        }
+    DKIM_SIGN_NOTIFICATION {
+        NOTIFICATION_PREFIX  { "The following errors occur on domain" }
+        }    
+    IDG_IMSS_UTIL{
+		AU_MANUAL_VSAPI_ENGINE_SUCCESS  { "Manual update - Virus Scan Engine {0} was successfully downloaded." }
+		AU_MANUAL_ATSE_ENGINE_SUCCESS  { "Manual update - Advanced Threat Scan Engine {0} was successfully downloaded." }
+		AU_MANUAL_VSAPI_PATTERN_SUCCESS  { "Manual update - Virus Pattern {0} was successfully downloaded." }
+		AU_MANUAL_SMART_SCAN_PATTERN_SUCCESS  { "Manual update - Smart Scan Agent Pattern {0} was successfully downloaded." }
+		AU_MANUAL_SPYWARE_PATTERN_SUCCESS  { "Manual update - Spyware Pattern {0} was successfully downloaded." }
+		AU_MANUAL_INTELLITRAP_PATTERN_SUCCESS  { "Manual update - Intellitrap Pattern {0} was successfully downloaded." }
+		AU_MANUAL_INTELLITRAP_EXCEPTION_SUCCESS  { "Manual update - Intellitrap Exception Pattern {0} was successfully downloaded." }
+		AU_MANUAL_TMASE_ENGINE_SUCCESS  { "Manual update - Antispam Engine {0} was successfully downloaded." }
+		AU_MANUAL_TMASE_PATTERN_SUCCESS  { "Manual update - Antispam Pattern {0} was successfully downloaded." }
+		AU_MANUAL_TMUFE_ENGINE_SUCCESS  { "Manual update - URL Filtering Engine {0} downloaded successfully." }
+		AU_MANUAL_VSAPI_ENGINE_FAILED  { "Manual update - Unable to download Virus Scan Engine." }
+		AU_MANUAL_ATSE_ENGINE_FAILED  { "Manual update - Unable to download Advanced Threat Scan Engine." }
+		AU_MANUAL_VSAPI_PATTERN_FAILED  { "Manual update - Unable to download Virus Pattern." }
+		AU_MANUAL_SMART_SCAN_PATTERN_FAILED  { "Manual update - Unable to download Smart Scan Agent Pattern." }
+		AU_MANUAL_SPYWARE_PATTERN_FAILED  { "Manual update - Unable to download Spyware Pattern." }
+		AU_MANUAL_INTELLITRAP_PATTERN_FAILED  { "Manual update - Unable to download Intellitrap Pattern." }
+		AU_MANUAL_INTELLITRAP_EXCEPTION_FAILED  { "Manual update - Unable to download Intellitrap Exception Pattern." }
+		AU_MANUAL_TMASE_ENGINE_FAILED  { "Manual update - Unable to download Antispam Engine." }
+		AU_MANUAL_TMASE_PATTERN_FAILED  { "Manual update - Unable to download Antispam Pattern." }
+		AU_MANUAL_TMUFE_ENGINE_FAILED  { "Manual update - Unable to download URL Filtering Engine." }
+		AU_SCHEDULE_VSAPI_ENGINE_SUCCESS  { "Schedule update - Virus Scan Engine {0} was successfully downloaded." }
+		AU_SCHEDULE_ATSE_ENGINE_SUCCESS  { "Schedule update - Advanced Threat Scan Engine {0} was successfully downloaded." }
+		AU_SCHEDULE_VSAPI_PATTERN_SUCCESS  { "Schedule update - Virus Pattern {0} was successfully downloaded." }
+		AU_SCHEDULE_SMART_SCAN_PATTERN_SUCCESS  { "Schedule update - Smart Scan Agent Pattern {0} was successfully downloaded." }
+		AU_SCHEDULE_SPYWARE_PATTERN_SUCCESS  { "Schedule update - Spyware Pattern {0} was successfully downloaded." }
+		AU_SCHEDULE_INTELLITRAP_PATTERN_SUCCESS  { "Schedule update - Intellitrap Pattern {0} was successfully downloaded." }
+		AU_SCHEDULE_INTELLITRAP_EXCEPTION_SUCCESS  { "Schedule update - Intellitrap Exception Pattern {0} was successfully downloaded." }
+		AU_SCHEDULE_TMASE_ENGINE_SUCCESS  { "Schedule update - Antispam Engine {0} was successfully downloaded." }
+		AU_SCHEDULE_TMASE_PATTERN_SUCCESS  { "Schedule update - Antispam Pattern {0} was successfully downloaded." }
+		AU_SCHEDULE_TMUFE_ENGINE_SUCCESS  { "Schedule update - URL Filtering Engine {0} downloaded successfully." }
+		AU_SCHEDULE_VSAPI_ENGINE_FAILED  { "Schedule update - Unable to download Virus Scan Engine." }
+		AU_SCHEDULE_ATSE_ENGINE_FAILED  { "Schedule update - Unable to download Advanced Threat Scan Engine." }
+		AU_SCHEDULE_VSAPI_PATTERN_FAILED  { "Schedule update - Unable to download Virus Pattern." }
+		AU_SCHEDULE_SMART_SCAN_PATTERN_FAILED  { "Schedule update - Unable to download Smart Scan Agent Pattern." }
+		AU_SCHEDULE_SPYWARE_PATTERN_FAILED  { "Schedule update - Unable to download Spyware Pattern." }
+		AU_SCHEDULE_INTELLITRAP_PATTERN_FAILED  { "Schedule update - Unable to download Intellitrap Pattern." }
+		AU_SCHEDULE_INTELLITRAP_EXCEPTION_FAILED  { "Schedule update - Unable to download Intellitrap Exception Pattern." }
+		AU_SCHEDULE_TMASE_ENGINE_FAILED  { "Schedule update - Unable to download Antispam Engine." }
+		AU_SCHEDULE_TMASE_PATTERN_FAILED  { "Schedule update - Unable to download Antispam Pattern." }
+		AU_SCHEDULE_TMUFE_ENGINE_FAILED  { "Schedule update - Unable to download URL Filtering Engine." }
+		AU_ROLLBACK_VSAPI_ENGINE_SUCCESS  { "Manual Rollback - Virus Scan Engine has been successfully rolled back to version {0}." }
+		AU_ROLLBACK_ATSE_ENGINE_SUCCESS  { "Manual Rollback - Advanced Threat Scan Engine has been successfully rolled back to version {0}." }
+		AU_ROLLBACK_VSAPI_PATTERN_SUCCESS  { "Manual Rollback - Virus Pattern has been successfully rolled back to version {0}." }
+		AU_ROLLBACK_SMART_SCAN_PATTERN_SUCCESS  { "Manual Rollback - Smart Scan Agent Pattern has been successfully rolled back to version {0}." }
+		AU_ROLLBACK_SPYWARE_PATTERN_SUCCESS  { "Manual Rollback - Spyware Pattern has been successfully rolled back to version {0}." }
+		AU_ROLLBACK_INTELLITRAP_PATTERN_SUCCESS  { "Manual Rollback - Intellitrap Pattern has been successfully rolled back to version {0}." }
+		AU_ROLLBACK_INTELLITRAP_EXCEPTION_SUCCESS  { "Manual Rollback - Intellitrap Exception Pattern has been successfully rolled back to version {0}." }
+		AU_ROLLBACK_TMASE_ENGINE_SUCCESS  { "Manual Rollback - Antispam Engine has been successfully rolled back to version {0}." }
+		AU_ROLLBACK_TMASE_PATTERN_SUCCESS  { "Manual Rollback - Antispam Pattern has been successfully rolled back to version {0}." }
+		AU_ROLLBACK_TMUFE_ENGINE_SUCCESS  { "Manual Rollback - URL Filtering Engine rolled back to version {0} successfully." }
+		AU_ROLLBACK_VSAPI_ENGINE_FAILED  { "Manual Rollback - Unable to roll back Virus Scan Engine." }
+		AU_ROLLBACK_ATSE_ENGINE_FAILED  { "Manual Rollback - Unable to roll back Advanced Threat Scan Engine." }
+		AU_ROLLBACK_VSAPI_PATTERN_FAILED  { "Manual Rollback - Unable to roll back Virus Pattern." }
+		AU_ROLLBACK_SMART_SCAN_PATTERN_FAILED  { "Manual Rollback - Unable to roll back Smart Scan Agent Pattern." }
+		AU_ROLLBACK_SPYWARE_PATTERN_FAILED  { "Manual Rollback - Unable to roll back Spyware Pattern." }
+		AU_ROLLBACK_INTELLITRAP_PATTERN_FAILED  { "Manual Rollback - Unable to roll back Intellitrap Pattern." }
+		AU_ROLLBACK_INTELLITRAP_EXCEPTION_FAILED  { "Manual Rollback - Unable to roll back Intellitrap Exception Pattern." }
+		AU_ROLLBACK_TMASE_ENGINE_FAILED  { "Manual Rollback - Unable to roll back Antispam Engine." }
+		AU_ROLLBACK_TMASE_PATTERN_FAILED  { "Manual Rollback - Unable to roll back Antispam Pattern." }
+		AU_ROLLBACK_TMUFE_ENGINE_FAILED  { "Manual Rollback - Unable to roll back URL Filtering Engine." }
+
+		AU_APPLY_VSAPI_ENGINE_FAILED  { "ActiveUpdate Exception - Apply Virus Scan Engine %VERSION% to local scanner failed." }
+		AU_APPLY_ATSE_ENGINE_FAILED  { "ActiveUpdate Exception - Apply Advanced Threat Scan Engine %VERSION% to local scanner failed." }
+		AU_APPLY_VSAPI_PATTERN_FAILED  { "ActiveUpdate Exception - Apply Virus Pattern %VERSION% to local scanner failed." }
+		AU_APPLY_SPYWARE_PATTERN_FAILED  { "ActiveUpdate Exception - Apply Spyware Pattern %VERSION% to local scanner failed." }
+		AU_APPLY_INTELLITRAP_PATTERN_FAILED  { "ActiveUpdate Exception - Apply Intellitrap Pattern %VERSION% to local scanner failed." }
+		AU_APPLY_INTELLITRAP_EXCEPTION_FAILED  { "ActiveUpdate Exception - Apply Intellitrap Exception Pattern %VERSION% to local scanner failed." }
+		AU_APPLY_TMASE_ENGINE_FAILED  { "ActiveUpdate Exception - Apply Antispam Engine %VERSION% to local scanner failed." }
+		AU_APPLY_TMASE_PATTERN_FAILED  { "ActiveUpdate Exception - Apply Antispam Pattern %VERSION% to local scanner failed." }
+		AU_APPLY_TMUFE_ENGINE_FAILED  { "ActiveUpdate Exception - Unsuccessful in applying URL Filtering Engine %VERSION% to local scanner." }
+		AU_APPLY_SMART_SCAN_PATTERN_FAILED  { "ActiveUpdate Exception - Unsuccessful in applying Smart Scan Agent Pattern %VERSION% to local scanner." }
+
+
+		AU_CPNT_TITLE_SCAN_ENGINE  { "Virus Scan Engine" }
+		AU_CPNT_TITLE_VIRUS_PATTERN  { "Virus Pattern" }
+		AU_CPNT_TITLE_SPYWARE_PATTERN  { "Spyware Pattern" }
+		AU_CPNT_TITLE_INTELLITRAP_PATTERN  { "Intellitrap Pattern" }
+		AU_CPNT_TITLE_INTELLITRAP_EXCEPTION  { "Intellitrap Exception Pattern" }
+		AU_CPNT_TITLE_TMASE_ENGINE  { "Antispam Engine" }
+		AU_CPNT_TITLE_TMASE_PATTERN  { "Antispam Pattern" }
+		AU_CPNT_TITLE_TMASE_PATCH  { "Antispam Incremental Pattern" }
+		AU_CPNT_TITLE_TMUFE_ENGINE  { "URL Filtering Engine" }
+		AU_CPNT_TITLE_ATSE_ENGINE  { "Advanced Threat Scan Engine" }
+		AU_CPNT_TITLE_SMART_SCAN_AGENT_PATTERN  { "Smart Scan Agent Pattern" }
+
+        AU_CPNT_SUCCESS_MSG { "{0} version {1} was successfully updated.\n" }
+        AU_SERVER_TIMEOUT_MSG { "ActiveUpdate was unable to connect to the network. Please check whether the network connection is functional and then try again.\n" }
+        AU_MSG_UNKNOWN { "Unknown" }
+        AU_MSG_SUCCESSFUL { "SUCCESSFUL" }
+        AU_MSG_FAILED { "FAILED" }
+        AU_VERIFY_ERR { "Pattern Update: Unable to verify the downloaded file: {0}\n" }
+        AU_PTN_READERR { "Pattern Update: Unable to get the pattern information.\n" }
+        AU_VSAPI_ERR { "Pattern Update: Unable to get Virus Scan Engine information.\n" }
+        AU_FILE_CORRUPT { "Engine/Pattern Update: The downloaded file is corrupt." }
+        AU_BUILDCACHE_ERR { "Unable to generate Antispam Pattern cache.\n" }
+        AU_GETVER_ERR { "Unable to get a version of {0} \n" }
+        AU_GETVER_ERR2 { "Unable to get a pattern version error (from the download server) for {0}.\n" }
+        AU_UPTODATE { "There is no newer version for {0}, it is already uptodate.\n" }
+        AU_READPROXY_ERR { "Unable to read the HTTP proxy entry from the central database.\n" }
+        AU_READPROXYAUTH_ERR { "Unable to get HTTP authorization: {0} \n" }
+        AU_LOCK_FAIL { "Pattern Update: Unable to download files. Another process is currently downloading files.\n" }
+        AU_UNLOCK_FAIL { "Pattern Update: Unable to unlock the file.\n" }
+        COPYFILEERR { "Unable to copy file {0}. You must manually copy file {1} to path {2}.\n" }
+        CHANGEMODEERR { "Unable to change ownership and group of the file \'{0}\'.\n" }
+        BACKUPFILEERR { "Unable to backup file {0}. You need to manually copy file {1} to path {2}.\n" }
+        UPDATEFILEERR { "Unable to update file {0}. You need to find the old scan engine file {1}.\n" }
+        AU_NOTIFY_TIMEFORMAT { "%m/%d/%Y %X" }
+
+        AU_APPLY_DOWNLOAD_FAILED { "Download component from database failed." }
+        AU_APPLY_UNZIP_FAILED { "Unzip the downloaded file for the component failed." }
+        AU_APPLY_CHECK_INTEGRITY_FAILED { "Check the component integrity failed." }
+        AU_APPLY_COPY_FAILED { "Failed to copy the component file to target folder." }
+        AU_APPLY_CHECK_SCANSRV_FAILED { "Check IMSS Scan Service status failed." }
+        AU_APPLY_CHECK_POLICYSRV_FAILED { "Check IMSS Policy Service status failed." }
+        AU_APPLY_CONFLICT { "Unable to apply new components. Another process is currently applying files." }
+        AU_APPLY_UNLOCK_FAILED { "Unable to unlock the file lock when applying the component." }
+        AU_APPLY_SCANSRV_STOP_FAILED { "IMSS Scan Service failed to stop. Manual restart required." }
+        AU_APPLY_POLICYSRV_STOP_FAILED { "IMSS Policy Service failed to stop. Manual restart required." }
+        AU_APPLY_SCANSRV_RESTART_FAILED { "IMSS Scan Service failed to restart. Manual restart required." }
+        AU_APPLY_POLICYSRV_RESTART_FAILED { "IMSS Policy Service failed to restart. Manual restart required." }
+
+        PUR_KEEPDAYERR { "You cannot keep pattern files for zero days or less.\n" }
+        PUR_INITIALERR { "Purge File: Unable to initialize. Error {0}.\n" }
+        PUR_GETTIMEERR { "Purge File: Unable to get the current time.\n" }
+        PUR_OPENDIRERR { "Purge File: Unable to open path {0}.\n" }
+        PUR_FILEACESSERR { "Purge File: Unable to access file \'{0}\'.\n" }
+        PUR_FILEDELERR { "Purge File: Unable to delete \'{0}\'.\n" }
+        PUR_FILEDELMSG { "Purge File: {0} has been deleted.\n" }
+        PUR_PREFIXERR { "Purge File: The prefix is empty.\n" }
+        PUR_PATHERR { "Purge File: The path is empty.\n" }
+        PUR_GETIMSSPARAERR { "Purge File: Unable to get entry [ {0} ]  {1} from the imss.ini file.\n" }
+        PUR_QUARMSG { "Purge File: Will use default value.\n" }
+        PUR_FILESMSG { "Purge File: The total number of purge {0} {1} files in folder {1}." }
+        PUR_FILES { "Purge {0} file(s) ...\n" }
+        PUR_QUARPATHERR { "Purge file: The quarantine path is empty.\n" }
+
+        GETEMANAGERPARAERR { "Unable to get {0} from the imss.ini file.\n" }
+
+        SPLITSTRING { "Unable to complete splitstring {0}.\n" }
+
+        GETOUTCOME { "Unable to get outcome. {0}  {1} .\n" }
+        ADDOUTCOME { "Unable to add outcome.\n" }
+        OUTCOMEEMPTY { "The outcome is empty.\n" }
+        OUTCOMEVALUE { "There is an outcome value {0} error.\n" }
+        OUTCOMENAME { " There is an outcome name {0} error.\n" }
+
+        TASKACTIVATE { "Unable to get task activate properties. {0} {1} \n" }
+        GETTASKEMPTY { "GetAllTaskName is empty .\n" }
+        GETALLTASKNAME { "Unable to get all task names.\n" }
+        GETTASKNAME { "The task list at {0} is empty.\n" }
+        GETTASKNAMEFAIL { "Unable to get all task names.\n" }
+        CREATETASK { "Unable to create task {0}.\n" }
+        TASKNAMEEXIST { "A task with the name \'{0}\' already exists. Please choose a different name.\n" }
+        GETTASKATTR1 { "Unable to get the task attributes at {0} {1}.\n" }
+        GETTASKATTR { "Unable to get task attributes from {0}.\n" }
+        GETTASKATTR2 { "Unable to get task attributes from {0}.\n" }
+        SETTASKATTR { "Unable to set task attributes at {0}.\n" }
+        GETALLTASK { "Unable to get all task names.\n" }
+        TASKNOEXIST {  "No task currently exists.\n" }
+        TASKNOEXIST1 { "No taskname exists in the rule {0}. \n" }
+        TASKNOEXIST2 { "The taskname {0} does not exist in rule {1}. \n" }
+        TASKNAMEONLY { "{0} is the only task in rule {1}, and it cannot be deleted.\n" }
+        DELETETASK { "Unable to delete the task. {0}\n" }
+        TASKDISABLE { "The Task {0} {1} has been disabled; InterScan MSS is unable to activate it.\n" }
+        TASKOVERRIDABLE { "Task {0} {1} cannot be overwritten; Interscan MSS is unable to activate it.\n" }
+        TASKINACTIVE { "Unable to set task as activetask.\n" }
+        TASKNOSETTING { "There are no settings in this task.\n" }
+
+        ACTIONNAMEEMPTY { "The action names field is empty.\n" }
+        GETACTIONNAME { "Unable to get action names. Error: \n" }
+        GETACTION { "Unable to get action. Error: \n" }
+        GETACTIONFAIL { "Unable to get action {0} .\n" }
+        GETACTIONTYPE { "Unable to get action. Type {0} error .\n" }
+        ACTIONLISTEMPTY { "The action list is empty.\n" }
+        ACTIONEXIST { " Action {0} already exists.\n" }
+        ACTIONSETTING { "Unable to get action settings. Error from {0} \n" }
+        DELETEACTION { "Unable to delete action {0}.\n" }
+        CREATEACTION { "Unable to create action {0}.\n" }
+
+        SETTYPE { "A setting type error {1} occured at {0}.\n" }
+        TYPEEXIST { "An exclusive action already exists in this filter action ( {0} ).\n" }
+        TYPEERROR { "There has been a type error at {0}. \n" }
+        FILTERTYPE { "There has been a filter_type {0} error.\n" }
+        FILTERTYPE1 { "This filter type only can be one of \n" }
+        UNKNOWNTYPE { "Unknown type : {0} \n" }
+
+        GETDNAME { "Unable to get display name from {0}.\n" }
+        DNAMEEMPTY { "The display name is empty.\n" }
+        DNAMEEXIST { "The display name {0} already exists.\n" }
+        DNAMEEXIST1 { "The display name already exists.\n" }
+        INAMEEMPTY { " {0}  is empty.\n" }
+        INAMEDELETE { "Unable to delete {0}.\n" }
+
+        POSSIBLENAME { "[Hint: This name needs to be one of the following values.]\n" }
+        USEFALIST { "[Hint: Use the falist {0} to get the correct value.]\n" }
+
+        CREATECLASS { "Unable to create the class. \n" }
+        OPENCLASS { "Unable to open class {0}.\n" }
+        GETCLASSNAME { "Unable to get class names. Error: \n" }
+
+        QUERYQUAR { "Unable to query the quarantine area. Use the DefaultArea in action {0}.\n" }
+        QUARNAME { "{0} does not exist in the quarantine area. Use the DefaultArea in action {1} .\n" }
+        QUAREXIST { "Quarantine Area {0} already exists.\n" }
+        QUARNOTEXIST { "Quarantine Area {0} does not exist.\n" }
+        QUARPATH { "Unable to get the path of Quarantine Area {0}.\n" }
+        QUARDELDEFAULT { "Unable to delete DefaultArea.\n" }
+        QUARDEL { "This quarantine area {0} currently contains messages. Please remove them before deleting the quarantine area.\n" }
+        QUAREMPTY { "Unable to get quarantine area keynames. The keynames are empty.\n" }
+        QUAREMPTY1 { "Unable to get quarantine area names from {0}.\n" }
+
+        FORMATERROR { "There is a format error at {0} .\n" }
+        PAIRID { "The pair_id is out of range .\n" }
+        HINT1 { "[Hint: Use the falist {0} to get the correct value].\n" }
+        INPUTEMPTY { "The input is empty.\n" }
+        INPUTERROR { "There has been an input error.\n" }
+
+        ORDER { " {0} is negtive or 0; do not change the order.\n" }
+        SETRULEORDER { "The attempt to set the rule order was unsuccessful.\n" }
+
+        GETADDRLIST { "The attempt to Getaddrlistsnamepair was unsuccessful.\n" }
+        ADDRNOTEXIST { " {0} does not exist in the Address Group.\n" }
+        ADDRGROUP { "The attempt to checkaddressgroup was unsuccessful.\n" }
+        ADDRINAMEEMPTY { "The addresslist iname is empty.\n" }
+        ADDRDNAMEEMPTY { "The addresslist display name is empty.\n" }
+        CREATEADDR { "The attempt to createaddrlist was unsuccessful at {0}.\n" }
+
+        POLICY1 { "Policy {0}: The Sender field is empty.\n" }
+        POLICY2 { "Policy {0}: This policy has only one route.\n" }
+        POLICY3 { "Policy {0}: The Receiver field is empty.\n" }
+        POLICY4 { "Policy {0}: The Sender field length is not equal to the Receiver field length.\n" }
+        POLICY5 { "The Get Sender field is empty.\n" }
+        POLICY6 { "The Get Receiver field is empty.\n" }
+
+        GETALLCONDITION { " The attempt to GetAllConditions {0} was unsuccessful. \n" }
+        ADDCONDITION { " There has been an AddCondition error at {0} \n" }
+
+        RULEINAME { "The Rule {0} is not empty.\n" }
+        DELETERULE { "The attempt to delete Rule {0} was unsuccessful.\n" }
+
+        SETALLENTRY { "tmsetallentry was unsuccessful at {0} .\n" }
+        SETALLENTRY1 { "tmsetallentry was unsuccessful.\n" }
+        DELETEVALUE { "tmregdeletevalue was unsuccessful at {0} {1}.\n" }
+        SETVALUE { "tmsetvalue was unsuccessful.\n" }
+        SETVALUE1 { "tmsetvalue was unsuccessful at {0} .\n" }
+        FILTERNOEXIST { "No filter exists in {0} {1} \n" }
+
+        CLOSEKEY { "tmregclosekey was unsuccessful at {0}\n" }
+        CLOSEKEY1 { "tmregclosekey was unsuccessful at root .\n " }
+        CLOSEKEY2 { "tmregclosekey was unsuccessful.\n " }
+        OPENKEY1 { "tmregopenkey was unsuccessful.\n" }
+        OPENKEY { "tmregopenkey was unsuccessful at {0}\n" }
+        OPENKEY2 { "Unable to open tmregkey at {0}\n" }
+
+        HANDLEEMPTY { "The handle is empty.\n" }
+
+        MIG_READIMSSINIERR { "There has been an error while reading the imss.ini file.\n" }
+        MIG_WRITEIMSSINIERR { "Unable to write to the imss.ini file. \n" }
+        MIG_WRITEIMSSINIERR1 { "Unable to write to the file {0}.\n" }
+        MIG_READIMSSINIERR1 { "Unable to read file {0}.\n " }
+        SETPARAERROR { " There has been a set {0} error.\n" }
+        GETPARAERROR { " Get {0} value is {1}.\n" }
+        GETPARAERROR1 { " Get {0} value is " }
+        SETPARAERROR2 { " Get {0} error.\n" }
+        SERIALFAIL { "Unable to register the serial number. There has been a set strSerialNumber error.\n" }
+        SERIALFAIL1 {"Unable to register the serial number; unable to write to the file {0}.\n" }
+        SERIALMSG {"The serial number is correct.\n" }
+        SERIALMSG1 {"The serial number is incorrect.\n" }
+        TRIALMSG {"Your eManager evaluation period has expired.\n " }
+        TRIALMSG3 {"Your eManager evaluation period has expired. {0} \n " }
+        TRIALMSG1 {"Your eManager evaluation period expires in {0} days.\n " }
+        TRIALMSG2 {"The evaluation period information is now being generated.\n" }
+        BACKUPEMANAGERFAIL {"Unable to backup the eManager rule setting file. The error code is {0}.\n" }
+        WRITEPORTFAIL { "Unable to write port {0} to file {1} was unsuccessful.\n" }
+        MIG_MSG { "The eManager migration is now finished.\n" };
+        MIG_NOEXISTMSG { "eManager for InterScan VirusWall does not exist.\n" };
+        MIG_FAILMSG { "The eManager migration was unsuccessful. The error code is {0}; check the log file. \n" };
+        MIG_MSG1 { "Warning! Check the log file.\n" }
+        MIG_MSG2 { "The eManager migration was unsuccessful. The error code is {0} .\n" }
+        MIG_UNINSTALLEMANAGER { "The process to remove eManager for InterScan VirusWall has started...\n" }
+        MIG_UNINSTALLOK { "eManager for InterScan VirusWall was successfully removed." }
+        MIG_UNINSTALLFAIL { "The attempt to remove eManager for InterScan VirusWall was unsuccessful. The error code is {0}" }
+        MIG_FAIL  { "{0}  was unsuccessful.\n" }
+        GETSPAMDBERR { "Unable to get spam database version  {0}. " }
+        GETSPAMDBERR1 { "Unable to get the spam database version. " }
+        GETSPAMDBERR2 { "Use the default filename {0}.\n" }
+        NOSPAMDBERR { "There is no spam database file in path {0}.\n " }
+        GETPATTERNERR { "Unable to get the virus pattern version. " }
+        GETENGINEERR { "Unable to get the scan engine version. " }
+
+        LPN_TOKEN_LOG { "log" }
+        LPN_TOKEN_QUARANTINE { "quarantine" }
+        LPN_TOKEN_TEMPORARY { "temporary" }
+        LPN_TOKEN_PATTERN { "pattern" }
+        REG_FAIL { "{0} was unsuccessful {1}. The error code is {2}.\n " }
+        REG_FAIL4 { "{0} was unsuccessful {1} {2}. The error code is {3}.\n " }
+        REG_FAIL1 { "{0} {1}.\n " }
+        REG_FAIL2 { "{0} was unsuccessful. The error code is {1}.\n " }
+        REG_FAIL3 { "{0} is incorrect when the name is {1} .\n " }
+        REG_EMPTY { "{0} is empty.\n" }
+        REG_NOSUBPOLICY { "This policy does not include any sub policies.\n" }
+        REG_SIZE1 { "{0} Sender size must be the same as the Receiver size.\n " }
+        REG_SIZE2 { "{0} Sender size is too large. It should be less than 100.\n " }
+        REG_POSITIVE { "Please enter a positive number.\n" }
+        REG_REFERENCE { "{0} name {1} is referred by {2} .\n" }
+        REG_IMPORTFORMATERR { "The format of the import file {0} is incorrect.\n" }
+        REG_ADDREMPTY { "Get address list names is empty.\n" }
+        REG_ADDREMPTY1 { "The address list is empty.\n" }
+        REG_NOEXIST { "{0} does not exist.\n" }
+        ERSAcNotReady { "ERS is unavailable now as the AC may not be ready on Trend Micro's ERS server. ERS will not be available until ERS server has synchronized this AC with the Product License Server. Please wait for two hours before checking the ERS." }
+        ERSDNSError { "Cannot activate Email Reputation. A blank or invalid DNS setting is preventing IMSS from performing activation of Email Reputation. Provide a valid DNS setting and try again." }
+
+        DB_MAINTAIN_ADMIN_ANALYZE_SUCCESS { "Admin DB Analyze finished successfully" }
+        DB_MAINTAIN_ADMIN_ANALYZE_FAILED { "Admin DB Analyze finished, {0} tables failed" }
+        DB_MAINTAIN_ADMIN_VACUUM_SUCCESS { "Admin DB Vacuum finished successfully" }
+        DB_MAINTAIN_ADMIN_VACUUM_FAILED { "Admin DB Vacuum finished, {0} tables failed" }
+        DB_MAINTAIN_ADMIN_REINDEX_SUCCESS { "Admin DB Reindex finished successfully" }
+        DB_MAINTAIN_ADMIN_REINDEX_FAILED { "Admin DB Reindex finished, {0} tables failed" }
+        DB_MAINTAIN_EUQ_ANALYZE_SUCCESS { "Euq DB on {0} Analyze finished successfully" }
+        DB_MAINTAIN_EUQ_ANALYZE_FAILED { "Euq DB on {0} Analyze failed" }
+        DB_MAINTAIN_EUQ_VACUUM_SUCCESS { "Euq DB on {0} Vacuum finished successfully" }
+        DB_MAINTAIN_EUQ_VACUUM_FAILED { "Euq DB on {0} Vacuum failed" }
+        DB_MAINTAIN_EUQ_REINDEX_SUCCESS { "Reindexed an EUQ database [IP address: {0}] [Port: {1}] [Database name: {2}]." }
+        DB_MAINTAIN_EUQ_REINDEX_FAILED { "Unable to reindex an EUQ database [IP address: {0}] [Port: {1}] [database name: {2}]." }
+        DB_MAINTAIN_VACUUM_ANALYZE_WHOLE_DB_SUCCESS { "Vacuum DB at {0} finished successfully" }
+        DB_MAINTAIN_VACUUM_ANALYZE_WHOLE_DB_FAILED { "Vacuum DB at {0} failed" }
+
+    }
+    UiDisplay{
+	    Delivered { "Delivered" }
+	    MandatedArchive { "Mandatory Archive" }
+		Reject { "Reject" }
+		Delete { "Delete" }
+		Quarantine { "Quarantine" }
+		Notify { "Notify" }
+		Bcc { "BCC" }
+		Readdress { "Readdress" }
+		Stamped { "Stamped" }
+		Archive { "Archive" }
+		VirusClean { "Virus Clean" }
+		DeleteAttachment { "Delete Attachment" }
+		Stamp { "Stamp" }
+		SubjectTagging { "Subject Tagging" }
+		Postpone { "Postpone" }
+		LogOnly { "Log Only" }
+		Handoff { "Handoff" }
+		And { "and" }
+		Comma { "," }
+		Ellipsis { "..." }
+    }
+    UiErrors{
+		OK  { "Operation completed successfully." }
+		CHECKING_NOT_PASSED  { "The checking requested by JAVA side was not passed." }
+		JNI_CSIDE_ERRC_FIRST  { "Placeholder value: should not be used." }
+		JNI_INPUT_INVALID  { "JNI received invalid input from JAVA side." }
+		JNI_CREATE_STRING_FAILED  { "Insufficient resources: string creation failed." }
+		JNI_CREATE_OBJ_FAILED  { "Insufficient resources: Java object creation failed." }
+		JNI_ADD_OBJ_FAILED  { "JNI function failed to add Java object to Java list." }
+		JNI_BACK_END_INCONSISTENT_ERROR  { "Internal error." }
+		JNI_GET_ARRAY_FAILED { "Insufficient resources: get array failed." }
+		JNI_NO_SUCH_FILTER { "Internal error: UI asked for a criteria which is not in the rule." }
+		JNI_NO_SUCH_ACTION { "Internal error: UI asked for an action which is not in the rule." }
+		JNI_NO_RESOURCE { " JNI could not allocate resource." }
+		JNI_RDBMS_INIT_FAILED { " Database initialization failed." }
+		JNI_JAVA_CLASS_NOT_FOUND { " The specified JAVA class not found." }
+		JNI_JAVA_CLASS_METHOD_NOT_FOUND { " The specified JAVA class method not found." }
+		JNI_DB_INIT_FAILED { " JNI init database failed." }
+		JNI_NO_IMSS_ON_MEM { "GlobalSettingOnMem return NULL instance." }
+		JNI_EUQ_NO_EADDR { "No end user email address returned." }
+		POLICY_RULE_ERRC_FIRST  { "Placeholder value: should not be used." }
+		MISSING_DATA  { "Data not found in the database." }
+		DATABASE_EXCEPTION  { "Database exception: unable to retrieve data from the database." }
+		INVALID_PARAMETER  { "Invalid parameter: unable to retrieve data from the database." }
+		CANNOT_DISABLE_RULE  { "Rule cannot be disabled." }
+		CANNOT_ENABLE_RULE  { "Rule cannot be enabled." }
+		ERR_C_INTERNAL_ERROR  { "Internal error: unable to retrieve data from the database." }
+		ERROR_INITIALIZING_RULE_CACHE  { "Error initializing the policy database cache." }
+		RULE_CONSTRUCTION_ERROR { "Rule creation from database failed." }
+	    ERROR_VALIDATING_LDAP_EXCEPTIONS { "Error validating LDAP group or user exceptions." }
+		NO_OWNER_SPECIFIED  { "No recipient specified." }
+		ADMIN_NOT_GROUP_OWNER  { "This administrator is not authorized to perform this operation." }
+		ADMIN_NOT_AUTHORIZED  { "This administrator is not authorized to perform this operation." }
+		NO_ADMIN_SPECIFIED  { "The specified administrator does not exist in the database." }
+		INVALID_RULE_VERSION  { "Unable to modify rule because a newer version exists." }
+		INVALID_RULE_NAME  { "The rule name you have entered cannot be saved. The prefix "OPP:" is reserved for Trend Micro Outbreak Prevention Policy rules and cannot be applied to user-created rules." }
+		INVALID_OBJECT_NAME  { "The object name you have entered cannot be saved. The prefix "OPP:" is reserved for Trend Micro Outbreak Prevention Policy objects and cannot be applied to user-created objects." }
+		POLICY_EMGR_ERRC_FIRST  { "Placeholder value: should not be used." }
+		POLICY_VIRUS_ERRC_FIRST  { "Placeholder value: should not be used." }
+		POLICY_SPAM_ERRC_FIRST  { "Placeholder value: should not be used." }
+		ERROR_SPAM_INVALID_APPROVED_SENDER_ADDRESS  { "The format of one or more of the approved sender addresses is incorrect." }
+		ERROR_SPAM_INVALID_EXEMPTION_RULE  { "The format of the text exemption rule is incorrect." }
+		ERROR_NAME_OBJECT_ACCESS_ADD  { "A duplicate name has been used." }
+		ERROR_NAME_OBJECT_ACCESS_UPDATE  { "A duplicate name has been used." }
+		ERROR_NAME_OBJECT_ACCESS_REMOVE  { "A duplicate name has been used." }
+		ERROR_NAME_OBJECT_ACCESS_INVALID_ADMIN  { "Illegal administrator identifier." }
+		ERROR_NAME_OBJECT_ACCESS_INVALID_OBJECT  { "Illegal object identifier." }
+		ERROR_RETRIEVING_LICENSE_INFO { "Could not retrieve product license information." }
+		POLICY_ADMIN_ERRC_FIRST  { "Placeholder value: should not be used." }
+		INVALID_LOGIN  { "Unknown administrator: login failure." }
+		INVALID_PASSWORD  { "Invalid password: login failure." }
+		POLICY_CACHE_ERRC_FIRST  { "Placeholder value: should not be used." }
+        ERROR_SETTING_LDAP_CACHE_RECORD { "Unable to cache LDAP query results." }
+        ERROR_GETTING_LDAP_CACHE_RECORD { "Unable to retrieve LDAP query results from cache." }
+        HEARTBEAT_TEST_FAILED { "No heartbeat response was returned from policy server." }
+        POLICY_SERVER_REROUTE_FAILED { "Unable to acquire new policy server." }
+        POLICY_RETRIEVE_FAILED { "Error retrieving policy request." }
+        RECIPIENT_ADDRESS_EMPTY { "Attempted to retrieve policy with empty recipient address." }
+		ERROR_READING_POLICY_SERVER_CLIENT_SETTINGS { "Error reading policy client settings." }
+        ERROR_READING_POLICY_SERVER_SETTINGS { "Error reading policy server settings." }
+        ERROR_SETTING_POLICY_SERVER_SETTINGS { "Error setting policy server settings." }
+		ERROR_SOAP_POLICY_AGENT { "Error contacting policy agent." }
+        ERROR_POLICY_AGENT_POLICY_SERVICE_START { "Error starting policy service from agent." }
+        ERROR_POLICY_AGENT_POLICY_SERVICE_STOP { "Error stopping policy service from agent." }
+        ERROR_CACHING_APPROVED_SENDER_INFO { "Error retrieving approved sender information from database." }
+
+		SCANNER_ERRC_FIRST  { "Placeholder value: should not be used." }
+		LOG_ERRC_FIRST  { "Placeholder value: should not be used." }
+		QUARANTINE_ERRC_FIRST  { "Placeholder value: should not be used." }
+		SYSTEM_ERRC_FIRST  { "Placeholder value: should not be used." }
+		LDAP_ERRC_FIRST  { "Placeholder value: should not be used." }
+		DATABASE_ERRC_FIRST  { "Placeholder value: should not be used." }
+		MISC_ERRC_FIRST  { "Placeholder value: should not be used." }
+		EUQ_ERRC_FIRST  { "Placeholder value: should not be used." }
+		PRODUCT_LICENSE_ERRC_FIRST  { "Placeholder value: should not be used." }
+		ERROR_READING_CONFIG_FILE  { "Operation failed because configuration file could not be read." }
+		ERROR_READING_CONFIG_FILE_PARAMETER  { "Operation failed because parameter could not be found in configuration file." }
+		ERROR_READING_LDAP_SETTINGS  { "Operation failed because LDAP settings could not be read." }
+		ERROR_SETTING_LDAP_SETTINGS  { "Operation failed because LDAP settings could not be written." }
+		ERROR_LDAP_CONNECTION_FAILED  { "Unable to initialize because LDAP connection failed." }
+		ERROR_INITIALIZING_LDAP_MODULE { "Failed to initialize LDAP module." }
+		ERROR_TEST_LDAP_CONNECTION_FAILED  { "Unable to initialize because LDAP test connection failed." }
+		ERROR_LDAP_CONNECTION_NOT_INITIALIZED  { "Unable to initialize LDAP connection." }
+		ERROR_ENABLING_MULTITHREAD_LDAP_USAGE  { "Unable to initialize multi-threaded LDAP connection." }
+		ERROR_KERBEROS_CREDENTIAL_VALIDATION_FAILED  { "Unable to validate user credential during Kerberos authentication." }
+		ERROR_TEST_KERBEROS_CREDENTIAL_VALIDATION_FAILED  { "Unable to validate User credential during Kerberos test authentication." }
+		ERROR_RETRIEVING_LDAP_GROUPS_UNDER_ADMIN  { "Unable to retrieve LDAP groups for administrator." }
+		ERROR_RETRIEVING_LDAP_MEMBERS  { "Unable to retrieve LDAP group members." }
+		ERROR_CHECKING_GROUP_MEMBERSHIP  { "Unable to verify group membership." }
+		ERROR_FINDING_LDAP_GROUPS  { "Unable to find LDAP groups.  The LDAP connection may have failed." }
+		ERROR_FINDING_LDAP_GROUPS_AND_USERS  { "Unable to find LDAP groups or users.  The LDAP connection may have failed." }
+        ERROR_LDAP_QUERY_RESULTS_OVERFLOW { "Too many query results returned.  Please refine the search criteria." }
+		ERROR_READING_KERBEROS_SETTINGS  { "Unable to read Kerberos settings from database." }
+		ERROR_SETTING_KERBEROS_SETTINGS  { "Unable to write Kerberos settings to database." }
+		ERROR_UPDATING_KRB5_CONF_FILE  { "Error updating krb5.conf Kerberos configuration file." }
+        ERROR_INCORRECT_NUMBER_OF_ATTRIBUTES_RETURNED { "Incorrect number of attributes returned from LDAP query." }
+		ERROR_EUQ_LOGIN_FAILED  { "Unable to log in. Please check that you have correctly typed your user name and password and try again." }
+		ERROR_READING_EUQ_SETTINGS  { "Unable to access the EUQ tool. Please contact your administrator." }
+		ERROR_EUQ_LOGIN_NOT_AUTHORIZED { "User or User's group is not authorized for EUQ access." }
+		ERROR_CONNECTING_TO_DATABASE  { "Unable to Initialize because a connection to the database could not be established." }
+		ERROR_READING_DB_COLUMN_DATA  { "" }
+		ERROR_RETRIEVING_ADMIN_ENTITIES_FROM_DB  { "Error retrieving managed groups for administrator." }
+		NO_DB_TYPE_SPECIFIED	 {"No database type specified."}
+		CANNOT_OPEN_FILE	 {"Unable to open the file."}
+		ERROR_GETTING_ENVIRONMENT_VARIABLE  { "Unable to read the IMSS_HOME environment variable." }
+		ERROR_DELETE_ADMINENTITY_TABLE  { "Database error while deleting administrator." }
+		ERROR_DELETE_PRIORITYLIST_TABLE  { "Database error while deleting administrator." }
+		ERROR_DELETE_IMSSAUTHADMIN_TABLE  { "Database error while deleting administrator." }
+		ERROR_DELETE_ADMINISTRATOR_TABLE  { "Database error while deleting administrator." }
+		ERROR_DELETE_ENTITYNAMEDOBJ_TABLE  { "Database error while deleting a shared object." }
+		ERROR_DELETE_NAMEDOBJ_TABLE  { "Database error while deleting a shared object." }
+		ERROR_DELETE_ENTITY_TABLE  { "Database error while deleting a managed group." }
+		ERROR_DELETE_NAMEDOBJ_IN_NAMEDOBJRULE  { "Database error while deleting a shared object." }
+		CANNOT_EDIT_NAMEDOBJ  { "Specified shared object is not editable by administrator." }
+		ERROR_UPDATE_ADMINISTRATOR_TABLE  { "Database error while updating administrator record." }
+		ERROR_UPDATE_IMSSAUTHADMIN_TABLE  { "Database error while updating auth info of a administrator." }
+		ERROR_INSERT_IMSSAUTHADMIN_TABLE  { "Database error while inserting administrator auth record." }
+		ERROR_INSERT_ADMINISTRATOR_TABLE  { "Trend Micro Email Security Services is unable to create Administrator account because an account with that user name already exists. Choose a different name and try again." }
+		ERROR_UPDATE_VERSIONNUMBER_POLICY  { "Database error while updating version number of a policy." }
+		ERROR_DELETE_POLICY_TABLE		  { "Database error while deleting a policy." }
+		ERROR_DELETE_ENTITYNAMEDOBJ_TABLE_REMOVENAMEDOBJ	{"Unable to delete named object because of an error deleting associated rows from tb_EntityNamedObj."}
+		ERROR_DELETE_NAMEDOBJ_TABLE_REMOVENAMEDOBJ			{"Unable to delete named object because of an error deleting the row from tb_NamedObj."}
+		CANNOT_EDIT_NAMEDOBJ_REMOVENAMEDOBJ					{"Unable to delete named object. The current administrator is not authorized to delete this object."}
+		ERROR_DELETE_NAMEDOBJ_NAMEDOBJRULE_REMOVENAMEDOBJ	{"Unable to delete named object. This object is still used by some rules."}
+		AU_ERRC_FIRST  { "Placeholder value: should not be used." }
+		ERROR_AU_INIT  { "Unable to load ActiveUpdate library." }
+		ERROR_AU_GET_IMSSHOME  { "Unable to get environment variable IMSS_HOME." }
+		ERROR_AU_CREATE_OBJECT  { "Unable to create Trend Micro Email Security Services ActiveUpdate object." }
+		ERROR_AU_VSAPI_ENGINE_FAILED  { "Unable to download vsapi engine." }
+		ERROR_AU_VSAPI_PATTERN_FAILED  { "Unable to download vsapi pattern." }
+		ERROR_AU_SPYWARE_PATTERN_FAILED  { "Unable to download spyware pattern." }
+		ERROR_AU_PIRANHA_PATTERN_FAILED  { "Unable to download piranha pattern." }
+		ERROR_AU_PIRANHA_ENGINE_FAILED  { "Unable to download piranha engine." }
+		ERROR_AU_UPTODATE  { "The downloaded engine/pattern is current." }
+		ERROR_AU_CANNOT_GET_GLOBAL_SETTING  { "Unable to get global setting from database." }
+		ERROR_AU_CANNOT_GET_AVAILABLE_VERSION  { "Unable to get available version from ActiveUpdate server." }
+		ERROR_AU_CANNOT_SET_GLOBAL_SETTING  { "Unable to set global setting to database." }
+		ERROR_AU_SERVER_CONNECT_FAILED { "Connection failed." }
+		ERROR_AU_DB_CONNECT_FAILED { "Database connection failed." }
+
+		ERROR_EMGR_KEYWORD_INTERNAL_ERROR {"Internal error processing Keyword List"}
+		ERROR_EMGR_KEYWORD_READ {"Unable to read Keyword List from database"}
+		ERROR_EMGR_KEYWORD_WRITE {"Unable to write Keyword List to database"}
+		ERROR_EMGR_KEYWORD_UPDATE {"Unable to update Keyword List in database"}
+		ERROR_EMGR_KEYWORD_REMOVE {"Unable to remove Keyword List from database"}
+		ERROR_EMGR_KEYWORD_CONSTRUCT {"Courupt Keyword List in database"}
+		ERROR_EMGR_KEYWORD_EXPRESSION_SYNTAX {"Error in syntax of Keyword expression"}
+		Info_Daemon_StopError		  { "TM EEEESS Daemon is stopped" }
+
+	}
+    TmaseFilter {
+        INFO_INITIALIZING         { "Initializing Trend Micro Antispam Engine {0} build {1}" }
+        INFO_INIT_RULEDIR         { "... rule file directory = {0}"}
+        INFO_INIT_CACHEDIR        { "... cache file directory = {0}"}
+        INFO_INIT_RULEVER         { "... rule file version = {0}"}
+        INFO_INIT_LOADRULE        { "... loading default rules"}
+        INFO_INITIALIZED          { "Trend Micro Antispam Engine successfully initialized." }
+        ERROR_INIT_FAILED         { "Trend Micro Antispam Engine failed initialization. rc:{0}" }
+        WARN_DFLT_CHARSET_MISSING { "TmaseFilter: \"DefaultSourceCharset\" not found in global settting. rc:{0}. Using \"us-ascii\" as default." }
+        ERROR_IMSS_HOME_MISING    { "TmaseFilter: \"imss_home\" not found in global settings. rc:{0}" }
+        ERROR_RULE_INTEGRITY      { "TmaseFilter: TMASE rule file integrity check failed" }
+        ERROR_LOADRULE            { "TmaseFilter: Loading default rules failed rc:{0}" }
+        ERROR_CREATE_REGEX        { "TmaseFilter: Error creating text exemption regular expression. rc:{0}" }
+        ERROR_TMASE_SCAN          { "TmaseFilter: TMASE scan error. rc:{0}" }
+        ERROR_REGEX_SCAN          { "TmaseFilter: Text exemption scan error. rc:{0}" }
+        ERROR_INIT_TMMSG          { "TmaseFilter: Error creating message parser." }
+        ERROR_PARSE_MSG           { "TmaseFilter: Error parsing message. rc:{0}" }
+        ERROR_TMASE_RECALCULATE   { "TmaseFilter: Error while determining if message is Spam. rc:{0}" }
+        ERROR_REGEX_COMPILE       { "Error compiling the regular expression: {0}  Offset: {1}  RegEx: {2}" }
+        ERROR_REGEX_STUDY         { "Error studying the regular expression: {0}" }
+        WARN_REGEX_STRTBL         { "Error locating the string table" }
+    }
+    AntiSpoofFilter {
+    		ANTISPOOF_DETECTED_SUSPICIOUS_IP { "Fake Internal Message [Suspicious IP: {0}]"}
+    }
+    eManagerFilter {
+		INFO_EMGR_INITIALIZED     { "Trend Micro Content-FIlter Engine successfully initialized" }
+		INFO_NO_ENTRIES_IN_KEYWORDLIST { "ContentFilter: No entries in keyword list" }
+		INFO_PASSWD_PROTECTED     { "ContentFilter: Password-protected attachement in message can't be scanned" }
+		INFO_SCAN_LIMIT_EXCEEDED  { "ContentFilter: Compresssed attachment exceedes decompression size or depth limit" }
+		INFO_CANT_EXTRACT_TEXT    { "ContentFilter: Unable to extract text from document. Attachment not scanned for content" }
+		WARN_DFLT_CHARSET_MISSING { "ContentFilter: \"DefaultSourceCharset\" not found in global settting. rc:{0}. Using \"us-ascii\" as default." }
+		WARN_LOG_LEVEL_MISING     { "ContentFilter: \"log_level\" not found in global settings. rc:{0}" }
+		WARN_NO_NAME_EXT_DATA     { "ContentFilter: No filename or extentions specified for \"Attachment is name or extension\" filter" }
+		WARN_NO_MIME_TYPE_DATA    { "ContentFilter: No mime types specified for \"Attachment is MIME content-type\" filter" }
+		WARN_NO_TRUE_TYPE_DATA    { "ContentFilter: No file types specified for \"Attachment is true file type\" filter" }
+		WARN_NO_HEADERS_SPECIFIED { "ContentFilter: No headers specified for \"Specified headers match keword expressions\" filter" }
+		ERROR_IMSS_HOME_MISING    { "ContentFilter: \"imss_home\" not found in global settings. rc:{0}" }
+		ERROR_EMGR_FUNC_FAILED    { "ContentFilter: \"{0}\" function failed. ErrorCode:{1}" }
+		ERROR_NOT_EMGR_FILTER_TYPE { "ContentFilter: \"multiIsTriggered\" method invoked with incorrect filter object" }
+		ERROR_NOT_KEYWORDLIST_TYPE { "ContentFilter: \"multiIsTriggered\" method invoked with incorrect NamedObjMgrForScanner object" }
+		ERROR_EMGR_ADD_FILTER     { "ContentFilter: \"eManagerFilterP::addFilterToScanOption\" function failed." }
+		ERROR_LOAD_EMHELPR_LIB    { "ContentFilter: Error loading em_helpr.dll" }
+		ERROR_EMGR_MSG_ENTITY_MISSING { "ContentFilter: Null msg object passed to \"eManagerFilter::scanMessage\""}
+	}
+	AuditLog {
+        AddRule                   { "Rule {0} added by {1} thru {2}" }
+		DisableInheritedRule      { "Rule {0} disabled for group {1} by {2} thru {3}" }
+		DisableOwnedRule          { "Rule {0} disabled by {1} thru {2}" }
+		EnableInheritedRule       { "Rule {0} enabled for group {1} by {2} thru {3}" }
+		EnableOwnedRule           { "Rule {0} enabled by {1} thru {2}" }
+		ModifyRule                { "Rule {0} modified by {1} thru {2}" }
+		DeleteRule                { "Rule {0} deleted by {1} thru {2}" }
+		AddAdmin                  { "Admin {0} added by {1}" }
+		RemoveAdmin               { "Admin {0} removed by {1}" }
+		EnableAdmin               { "Admin {0} enabled by {1}" }
+		DisableAdmin              { "Admin {0} disabled by {1}" }
+		SetAdminPermissions       { "Admin {0} permissions set by {1}" }
+		SetAdminPasswd            { "Admin {0} password set" }
+		SetAdminManagedGroups     { "Admin {0} managed groups set by {1}" }
+		SetAdminAuthLDAP          { "Admin {0} LDAP authorization set by {1}" }
+		SetAdminAuthIMSS          { "Admin {0} Trend Micro Email Security Services authorization set by {1}" }
+		LogonAdmin				  { "Admin {0} logged in thru {1}" }
+		LogoutAdmin				  { "Admin {0} logged off thru {1}" }
+		TimeoutAdmin			  { "Admin {0} session timed out" }
+		AddROOTAdmin			  { "Root privileged admin {0} added by {1}" }
+		LoginFail			      { "Admin {0} login attempt failed thru {1}" }
+		StartComponent            { "{0} started by {1}" }
+		StopComponent             { "{0} stopped by {1}" }
+		RemoveComponent           { "{0} removed by {1}" }
+		SMTP_CMD_RESP_ERR		  { "Mail Sender processing folder {0}: Smtp server responded error with: {1}" }
+		SMTP_FILE_OPEN_ERR		  { "Mail Sender processing folder {0}: Open file {1} failed" }
+		SMTP_SVR_TIMEOUT		  {	"Mail Sender processing folder {0}: Server timeout for cmd {1}" }
+		SYSTEM_ERROR_UNDEFINED	  { "System encountered underfined error" }
+    }
+	IDG_VIRUS_FILTER {
+		IDS_VACTION_PASS		  { "Pass" }
+		IDS_VACTION_CLEAN		  { "Clean" }
+		IDS_VACTION_DELETE		  { "Delete" }
+		IDS_VACTION_DELETE_ALL	  { "Delete all attachments" }
+		IDS_TOKSTR_FILENAME2	  { "{0}/{1}" }
+		IDS_TOKSTR_DETECTED		  { "{0} VIRUS FOUND in attached file {1}" }
+		IDS_FAIL_OVER_TO_CONVENTIONAL_SCAN { "Fail over to Conventional Scan"}
+	}
+	EMGR_DETECTED_TOKEN {
+		EMGR_DETECTED_MSGSIZE	  {	"Message size ({0} bytes)  is {1} limit ({2} bytes)" }
+		EMGR_DETECTED_ATTSIZE	  {	"Attachment {0} size ({1} bytes) is {2} limit ({3} bytes)" }
+		EMGR_DETECTED_ATTNUM	  {	"Message contains ({0}) attachments, which is {1} limit ({2})" }
+		EMGR_DETECTED_RCPTNUM	  {	"Recipient number ({0}) is {1} limit ({2})" }
+		EMGR_DETECTED_DATETIME	  {	"Message received at {0} matches specified time range" }
+		EMGR_DETECTED_SUBJBLANK	  {	"Message subject is blank or missing" }
+		EMGR_DETECTED_SUBJMATCH	  {	"Message subject matches expressions in listname: {0}. Expression matched: {1}" }
+		EMGR_DETECTED_SUBJNOMATCH {	"Message subject does not match any expression in listname: {0}" }
+		EMGR_DETECTED_HDRMATCH	  {	"Message header matches expressions in listname: {0}. Expression matched: {1}" }
+		EMGR_DETECTED_HDRNOMATCH  {	"Message header does not match any expression in listname: {0}" }
+		EMGR_DETECTED_BODYMATCH	  {	"Message body matches expressions in listname: {0}. Expression matched: {1}" }
+		EMGR_DETECTED_BODYNOMATCH {	"Message body does not match any expression in listname: {0}" }
+		EMGR_DETECTED_ATTMATCH	  {	"Message attachment: {0} content matches expressions in listname: {1}. Expression matched: {2}" }
+		EMGR_DETECTED_ATTNOMATCH  {	"No message attachment's content matches any expression in listname: {0}" }
+		EMGR_DETECTED_NAMEEXT     {	"Attachment: {0} matches regular expression: {1}" }
+		EMGR_DETECTED_NONAMEEXT   {	"One or more attachment's filename did not match the specified patterns" }
+		EMGR_DETECTED_MIMETYPE    {	"Attachment: {0} matches specified MIME content type: {1}" }
+		EMGR_DETECTED_NOMIMETYPE  {	"One or more attachment's MIME type did not match the specified patterns" }
+		EMGR_DETECTED_TRUETYPE    {	"Attachment: {0} matches file truetype: {1}" }
+		EMGR_DETECTED_NOTRUETYPE  {	"One or more attachment's true file type did not match the specified true file types" }
+		EMGR_DETECTED_COMPLIANCE                { "Compliance template: {0} detected" }
+		EMGR_DETECTED_COMPLIANCE_HEADER         { "Compliance: Header matches specified template: {0}" }
+		EMGR_DETECTED_COMPLIANCE_BODY           { "Compliance: Body matches specified template: {0}" }
+		EMGR_DETECTED_COMPLIANCE_ATTACHMENT     { "Compliance: Attachment: {0} matches specified template: {1}" }
+		EMGR_DETECTED_COMPLIANCE_LOCATION_HEADER     { "Message Header" }
+		EMGR_DETECTED_COMPLIANCE_LOCATION_BODY     { "Message Body" }
+		EMGR_DETECTED_COMPLIANCE_LOCATION_ATTACHMENT     { "Message Attachment" }
+	}
+	SPAM_DETECTED_TOKEN {
+		SPAM_DETECTED_SPAM		  {	"Spam message detected: category - {0} , score - {1}" }
+		SPAM_DETECTED_SUSP		  {	"Suspicious message detected by SPS filter" }
+	}
+    ScanModule {
+		timeDate                  { "{0,date} {0,time}" }
+		SmtpProtoTokenStr         { "SMTP" }
+		Pop3ProtoTokenStr         { "POP3" }
+		IncomingRuleTokenStr      { "Incoming" }
+		OutgoingRuleTokenStr      { "Outgoing" }
+		InOutRuleTokenStr         { "InOut" }
+		AllRoutesRuleTokenStr     { "All routes" }
+		SecuritySettingViolation  { "Scan Exception - Security setting violation" }
+		MalformedMsgViolation	  { "Scan Exception - Malformed message violation" }
+		PreFilterTagRuleName      { "Cloud Pre-Filter Anti-Spam Rule" }
+		DmarcFilterTagRuleName      { "DMARC verification rule" }
+		DetectedTokenStr          { "Message matches specified route" }
+		MalformedMsgException     { "Message is malformed" }
+		MaxMsgExceedException     { "Message size ({0}MB) exceeds the maximum specified message size ({1}MB)." }
+		MaxReciptsExceedException { "Message recipients {0} exceeds maximum {1}" }
+		EncryptedMsgException     { "Message is encrypted." }
+		PwdProtectedMsgException            { "Attachment {0} is a password protected file" }
+		ExceedMaxCopmressLayerException     { "Total number of embedded layers in compressed file exceeds the specified value {0}" }
+		ExceedDecompressFileSizeException   { "Total decompressed size of file exceeds the specified value {0}MB" }
+		ExceedZipFileCountException         { "Total number files in compressed file exceeds the specified value {0}" }
+		ExceedMaxEntityException            { "Total number of entities (example: attachments) in the message exceeds the specified value {0}" }
+		OtherScanErrorException             { "Complex scan error. Examples: file handling, retrieval, or permission issues during scan" }
+		DMCIssueException         { "The following attachment(s) in the message can not be scanned due to DMC content extraction issue" }
+		IBEMsgViolation           { "Scan Exception - Email Encryption violation" }
+		IBEEncSizeException       { "Email Encryption Exception - ({0}MB) exceeds the maximum encryption message size ({1}MB)" }
+		IBEDecSizeException       { "Email Encryption Exception - ({0}MB) exceeds the maximum decryption message size ({1}MB)" }
+		IBERcptExceedException    { "Email Encryption Exception - Message recipients {0} exceeds maximum {1}" }
+		IBEEncFailException       { "Email Encryption Exception - Encrypt message failure" }
+		IBEDecFailException       { "Email Encryption Exception - Decrypt message failure" }
+		IBELicenseExpireException { "Email Encryption Exception - License expired" }
+		DDAScanningException      { "Virtual Analyzer Scanning Exception" }
+		DDAScanningReasonProbableAPT      { "Probable advanced threat ({0})" }		
+		DDAScanningReasonAnalyzedAPT      { "Analyzed advanced threat ({0})" }
+		DDAScanningReasonATSE     { "ATSE" }
+		DDAScanningReasonSNAP     { "SNAP email" }
+		DDAScanningReasonAttachment       { "Attachment" }
+		EventDaemonStart          { "IMSS Daemon Service starts running ....." }
+		EventDaemonStop           { "IMSS Daemon is stopped" }
+		message_id           { "Original Message ID:" }
+		action           { "Action:" }
+		status           { "Status:" }
+		quarantine_action           { "Quarantine" }
+		block_action           { "Deleted" }
+		malform           { "Malformed email message" }
+		rep_msg	          {"POP3 Replacement Message"}
+		OPPRuleName	  { "Outbreak Prevention Policy" }
+		DaemonDescriptionName	  { "Provides Email scanning services" }
+		DeliveredFailed  {"Delivered failed"}
+		StatusMonitorMsg { "Message:" }
+		StatusMonitorSpam { "Spam:" }
+		StatusMonitorYes { " YES;" }
+		StatusMonitorNo	{ " NO;" }
+		StatusMonitorVirus { "Virus:" }
+		StatusMonitorVirusName { " YES; Virus Name:" }
+		VirusLeakPreventionViolation	  { "Scan Exception - Virus Leak Prevention Violation" }
+	}
+
+    CentralizedReport {
+        DAILY_REPORT              { "Daily Report" }
+        WEEKLY_REPORT             { "Weekly Report" }
+        MONTHLY_REPORT            { "Monthly Report" }
+        ONE_TIME_REPORT           { "One Time Report" }
+		HTML_TITLE                { "Consolidated Report" }
+		IMAGE_SUBFOLDER           { "en" }
+		EXPORT_TO_CSV             { "Export to CSV" }
+		PRINT                     { "Print" }
+		REPORT_HIGHLIGHTS         { "Report Highlights" }
+		DESCRIPTION               { "Description" }
+		INFORMATION               { "Information" }
+		CREATED_BY                { "Created by" }
+		REPORT_PERIOD_FROM        { "Report period from" }
+		TO                        { "To" }
+		TABLE_OF_CONTENTS         { "Table of Contents" }
+        SECTION_PREFILTER_TITLE   { "Cloud Pre-Filter Reports" }
+        SECTION_SUMMARY_TITLE     { "InterScan Messaging Security Virtual Appliance Summary Reports" }
+        SECTION_TOPX_TITLE        { "InterScan Messaging Security Virtual Appliance Top 10 Reports" }
+		POLICY_SUMMARY_TITLE      { "On-premises Traffic and Policy Summary" }
+		TRAFFIC_SUMMARY           { "Traffic Summary" }
+        PREFILTER_SUMMARY_TITLE   { "Cloud Pre-Filter Traffic and Threat Summary" }
+        PREFILTER_TOTAL_TRAFFIC   { "Total Traffic" }
+        PREFILTER_THREAT_SUMMARY  { "Threat Summary" }
+        PREFILTER_TOTAL_NUM       { "Total # of messages" }
+        PREFILTER_PASSED          { "Passed" }
+        PREFILTER_BLOCKED         { "Blocked" }
+        PREFILTER_THREAT_TYPE     { "Cloud Pre-Filter Violation Type" }
+        PREFILTER_DETECTION       { "Detections" }
+        PREFILTER_MSG_PERCENT     { "Message %" }
+        PREFILTER_THREAT_ERS      { "ERS" }
+        PREFILTER_THREAT_AS       { "Anti-Spam" }
+        PREFILTER_THREAT_AV       { "Anti-Virus" }
+        PREFILTER_THREAT_BL       { "Blocked List" }
+        PREFILTER_THREAT_IR       { "Recipient Check" }
+        PREFILTER_THREAT_OT       { "Other" }
+        PREFILTER_CONN            { "Zero Traffics might be caused by connectivity issue" }
+        CLICK_PROTECTION_SUMMARY_TITLE    { "Time-of-Click Protection Summary" }
+	CLICK_PROTECTION_SUMMARY_COL_COUNT    { "Count" }
+        CLICK_PROTECTION_TOTAL_CLICK      { "Total # of clicks" }
+        CLICK_PROTECTION_NOT_BLOCK        { "Allowed" }
+        CLICK_PROTECTION_FORCE_BLOCK      { "Blocked" }
+        CLICK_PROTECTION_WARN_BLOCK_NOT_THROUGH    { "Warned and stopped" }
+        CLICK_PROTECTION_CLICK_THROUGH    { "Warned but accessed" }
+		TOTAL                     { "Total" }
+		INCOMING                  { "Incoming" }
+		OUTGOING                  { "Outgoing" }
+		TOTAL_NUM_OF_MSGS         { "Total # of messages" }
+		TOTAL_SIZE_OF_MSGS        { "Total size of messages (MB)" }
+		PIE_CHART_NOTES           { "Total percentages might exceed 100% if overlapping conditions exist." }
+		POLICY_SUMMARY            { "Policy Summary" }
+		SCANNING_CONDITIONS       { "Scanning Conditions" }
+		MSG_PERCENT               { "Message %" }
+		TOTAL_MESSAGE_COUNT       { "Total message count" }
+		VIRUS_OR_MALICIOUS_CODE   { "Virus or malicious code" }
+		SPYWARE_OR_GRAYWARE       { "Spyware/grayware" }
+		SPAM                      { "Spam" }
+		PHISH                     { "Phish" }
+		ATTACHMENT                { "Attachment" }
+		SIZE                      { "Size" }
+		CONTENT                   { "Content" }
+		COMPLIANCE                { "Compliance" }
+		IBE                       {"Trend Micro Email Encryption"}
+		OTHERS                    { "Others" }
+		IP_PROFILER               { "IP Profiler" }
+		NRS                       { "Email reputation" }
+		SCANNING_EXCEPTIONS       { "Scanning exceptions" }
+		CLEAR_MESSAGE_COUNT       { "Clean email" }
+		WRS                       { "Suspicious URLs - Web Reputation" }
+		DKIM                      { "DKIM enforcement" }
+		BATV                      { "Bounce Address Tag Validation" }
+		PRE_FILTER                { "Spam Tagged by Cloud Pre-Filter" }
+		SO                        { "Suspicious Objects" }
+		QUARANTINE_SUMMARY        { "Quarantine Event Summary" }
+		QUARANTINE_TOTAL          { "Total" }
+		QUARANTINE_RELEASE        { "Release" }
+		QUARANTINE_OTHERS         { "Other" }
+		RELEASE_PERCENT           { "Release %" }
+		TOTAL_NUM_OF_QUARANTINE   { "Total event count" }        
+		BACK_TO_TOP               { "Back to Top" }
+		TOPN_RULE_TITLE           { "Top 10 Most Frequently Triggered Rules" }
+		RULE_NAME                 { "Rule Name" }
+		TRIGGERED                 { "Triggered" }
+		SPAM_SUMMARY_TITLE        { "Spam Summary" }
+		DETECTIONS                { "Detections" }
+		TOTAL_SPAMMSG_COUNT       { "Total spam message count" }
+		BY_SPAM_ENGINE            { "by Antispam Engine" }
+		BY_NRS                    { "by Email reputation" }
+		BY_IP_PROFILER            { "by IP Profiler" }
+		SPAM_BY_ACTION            { "Spam by Action" }
+		SPAM_ACTIONS              { "Spam Actions" }
+		SIZE_UNIT                 { "Size (MB)" }
+		ACTION_QUARANTINED        { "Quarantined" }
+		ACTION_DELETED            { "Deleted" }
+		ACTION_TAGGED             { "Tagged" }
+		ACTION_OTHER              { "Other" }
+		ACTION_REJECT_BY_NRS      { "Rejected by Email reputation" }
+		ACTION_REJECT_BY_IPPROF   { "Rejected by IP Profiler" }
+		TOPN_SPAM_RCPT_TITLE      { "Top 10 Spam Recipients" }
+		COL_RECIPIENT             { "Recipient" }
+		COL_TOTAL_MESSAGE_COUNT   { "Total Message Count" }
+		COL_TOTAL_SPAM_MSGS       { "Total Spam Msgs" }
+		COL_SPAM_MSGS_PERCENT     { "Spam Msgs %" }
+		COL_SPAM_SIZE_UNIT        { "Spam Size (MB)" }
+		COL_SPAM_SIZE_PERCENT     { "Spam Size %" }
+		VIRUS_SUMMARY_TITLE       { "Virus and Malicious Code Summary" }
+		TOTAL_DETECTIONS          { "Total detections" }
+		MESSAGES_DELETED          { "Messages deleted" }
+		MESSAGES_QUARANTINED      { "Messages quarantined" }
+		ATTACHMENTS_CLEANED       { "Attachments cleaned" }
+		ATTACHMENTS_DELETED       { "Messages with attachments deleted" }
+		MSGS_BLOCKED_BY_IPPROF    { "Messages blocked by IP Profiler" }
+		TOPN_VIRUS_DETECT_TITLE   { "Top 10 Virus and Malicious Code Detections" }
+		TOPN_VIRUS_RCPT_TITLE     { "Top 10 Virus Recipients" }
+		COL_TOTAL_VIRUS_MSGS      { "Total Virus Msgs" }
+		COL_VIRUS_MSGS_PERCENT    { "Virus Msgs %" }
+		COL_VIRUS_SIZE_UNIT       { "Virus Size (MB)" }
+		COL_VIRUS_SIZE_PERCENT    { "Virus Size %" }
+		TOPN_VIRUS_SENDER_TITLE   { "Top 10 Virus Senders" }
+		COL_SENDER                { "Sender" }
+		SMTP_CONN_BLOCKED_SUMMARY_TITLE         { "SMTP Traffic Throttling Blocking Summary" }
+		SMTP_CONN_TOTAL_BLOCKED      { "Total connections and email messages blocked" }
+		SMTP_CONN_BLOCKED_CONN_DROPPED              { "Blocked connections" }
+		SMTP_CONN_BLOCKED_MAIL_DROPPED              { "Blocked email messages" }
+		NRS_SUMMARY_TITLE         { "Email Reputation IP Blocking Summary" }
+		TOTAL_CONN_REACH_NRS      { "Total sender connections that reach Email Reputation" }
+		CONN_DROPPED              { "Dropped" }
+		CONN_SUCCESSFUL           { "Successful" }
+		TOPN_BLOCK_BY_NRS_TITLE   { "Top 10 Blocked IP Addresses by Email reputation" }
+		COL_IP_ADDRESS            { "IP Address" }
+		COL_IP_SENDER		  {"Sender"}
+		COL_DROPPED               { "Dropped Connections" }
+		COL_DROPPED_MSG           { "Dropped Messages" }
+		IP_PROF_SUMMARY_TITLE     { "IP Profiler Summary" }
+		TOTAL_CONN_REACH_IPPROF   { "Total sender connections that reach IP Profiler" }
+		CONN_BLOCKED              { "Blocked" }
+		IP_FILTERING_TYPE         { "Type" }
+		COL_BLOCKED               { "Blocked connections" }
+		COL_BLOCK_TYPE_PERCENT    { "Blocked % " }
+		ROW_BLOCK_TYPE_VIRUS      { "Virus" }
+		ROW_BLOCK_TYPE_SPAM       { "Spam" }
+		ROW_BLOCK_TYPE_BOUNCE     { "Bounced mail" }
+		ROW_BLOCK_TYPE_DHA        { "DHA attack" }
+		ROW_BLOCK_TYPE_MANUAL     { "Manual" }
+		TOPN_BLOCK_DHA_TITLE      { "Top 10 Blocked IP Addresses for Directory Harvest Attack" }
+		COL_DOMAIN                { "Domain" }
+		TOPN_BLOCK_BOUNCE_TITLE   { "Top 10 Blocked IP Addresses for Bounced Mail Attack" }
+		TOPN_CONN_BLOCK_IP_TITLE   { "Top 10 blocked IP addresses by SMTP Traffic Throttling" }
+		TOPN_CONN_BLOCK_SENDER_TITLE { "Top 10 blocked senders by SMTP Traffic Throttling" }
+		TOPN_BLOCK_SMARTSPAM_TITLE { "Top 10 Blocked IP Addresses for Spam" }
+		TOPN_BLOCK_SMARTVIRUS_TITLE { "Top 10 Blocked IP Addresses for Viruses or Malicious Code" }
+		TOPN_EMAIL_TRAFFIC_TITLE  { "Top 10 Email Addresses by Traffic" }
+		TOPN_WRS_SNDR_TITLE       { "Top 10 Senders of Messages with Suspicious URLs" }
+		COL_TOTAL_WRS_MSGS        { "Total Suspicious Msgs" }
+		COL_WRS_MSGS_PERCENT      { "Suspicious Msgs %" }
+		COL_EMAIL                 { "Email" }
+		COL_TOTAL_MSGS            { "Total Msgs" }
+		COL_SENT                  { "Sent" }
+		COL_RECEIVED              { "Received" }
+		CLOSE_PAGE                { "Close" }
+		NO_DATA_PROMPT            { "No data to display" }
+
+		TOPN_IBE_SENDER_TITLE     { "Top 10 Trend Micro Email Encryption Senders" }
+		TOPN_IBE_RCPT_TITLE     { "Top 10 Trend Micro Email Encryption Recipients" }
+		COL_TOTAL_IBE_MSGS      { "Total Trend Micro Email Encryption Msgs" }
+		COL_IBE_MSGS_PERCENT    { "Trend Micro Email Encryption Msgs %" }
+		COL_IBE_SIZE_UNIT       { "Trend Micro Email Encryption Size (MB)" }
+		COL_IBE_SIZE_PERCENT    { "Trend Micro Email Encryption Size %" }
+
+		TOPN_COMPLIANCE_SENDER_TITLE     { "Top 10 Compliance Senders" }
+		TOPN_COMPLIANCE_RCPT_TITLE     { "Top 10 Compliance Recipients" }
+		COL_TOTAL_COMPLIANCE_MSGS      { "Total Compliance Msgs" }
+		COL_COMPLIANCE_MSGS_PERCENT    { "Compliance Msgs %" }
+
+		DEC_ENC_SUMMARY_TITLE    { "Encryption and Decryption Summary" }
+		DEC_ENC_SUMMARY           { "Encryption and Decryption Summary" }
+		DECRYPTION                   { "Decryption" }
+		ENCRYPTION                     { "Encryption" }
+
+		SUSPICIOUS                     { "Advanced threats" }
+		DDA_SUMMARY_TITLE              { "Virtual Analyzer Analysis Summary" }
+		MESSAGES_NORISK                { "No risk" }
+		MESSAGES_LOWRISK               { "Low risk" }
+		MESSAGES_MEDRISK               { "Medium risk" }
+		MESSAGES_HIGHRISK              { "High risk" }
+		MESSAGES_NORESULT              { "Risk rating unavailable" }
+        
+        CCCA                       { "C&C email" }
+        TOPN_CCCA_RCPT_TITLE       { "Top 10 C&C Email Recipients" }
+		TOPN_CCCA_SNDR_TITLE       { "Top 10 C&C Email Senders" }
+		COL_TOTAL_CCCA_MSGS        { "C&C Email Count" }
+		COL_CCCA_MSGS_PERCENT      { "C&C Email (%)"}
+		COL_CCCA_SIZE_UNIT         { "C&C Email Size (MB)" }
+		COL_CCCA_SIZE_PERCENT	   { "C&C Email Size (%)" }
+
+        GRAYMAIL                   { "Graymail" }
+        TOPN_GRAYMAIL1_RCPT_TITLE  { "Top 10 Marketing Graymail Recipients" }
+		TOPN_GRAYMAIL1_SNDR_TITLE  { "Top 10 Marketing Graymail Senders" }
+        TOPN_GRAYMAIL2_RCPT_TITLE  { "Top 10 Social Network Graymail Recipients" }
+		TOPN_GRAYMAIL2_SNDR_TITLE  { "Top 10 Social Network Graymail Senders" }
+		COL_TOTAL_GRAYMAIL_MSGS    { "Graymail Count" }
+		COL_GRAYMAIL_MSGS_PERCENT  { "Graymail (%)"}
+		COL_GRAYMAIL_SIZE_UNIT     { "Graymail Size (MB)" }
+		COL_GRAYMAIL_SIZE_PERCENT  { "Graymail Size (%)" }
+        
+        IDS_DAILY_REPORT           { "Daily" }
+        IDS_WEEKLY_REPORT          { "Weekly" }
+        IDS_MONTHLY_REPORT         { "Monthly" }
+        IDS_ONE_TIME_REPORT        { "One-time" }        
+        REPORT_EMAIL_SUBJECT       { "IMSVA {0} Report Notification (Report Name: {1}; Server: {2})" }
+        REPORT_EMAIL_TIMEFORMAT    { "%m-%d-%Y" }
+        CONN_BLOCK                 { "SMTP Traffic Throttling" }
+        NO_VALUE                   { "N/A" }
+    }
+
+	IDG_ACTIONS {
+		IDS_COPY_OF_PREFIX		  { "Copy of " }
+	}
+
+	TagSubjectAction {
+		INFO_BAD_CHARSET          { "Unable to tag subject: unable to determine character set encoding of subject. Tag: {0}" }
+	}
+    
+    Manager {
+	  QUARANTINE_AREA_NOTIFY_TITLE    { "Quarantine Area Notification" }
+	  QUARANTINE_AREA_NOTIFY_CONTENT  { "Over {0}% of your quarantine area has been used. Expand your quarantine area or release old email messages for more space." }
+	  ARCHIVE_AREA_NOTIFY_TITLE       { "Archive Area Notification" }
+	  ARCHIVE_AREA_NOTIFY_CONTENT     { "Over {0}% of your archive area has been used. Expand your archive area or release old email messages for more space." }
+	}
+
+	PolicyServer {
+		LDAP_NOTIFY_TITLE          { "Policy Server Notification (LDAP)" }
+		LDAP_NOTIFY_CONTENT        { "Policy Server on {0} can not connect to ldap server for user and group querying, rule matching stop." }
+		DATABASE_NOTIFY_TITLE          { "Policy Server Notification (DATABASE)" }
+		DATABASE_NOTIFY_CONTENT        { "Policy Server on {0} can not connect to database server and query rules." }
+        POLICY_SERVER_DESCRIPTION          { "Caches rules for IMSS scan services" }
+		}
+	CMAgent {
+		REGISTER_SUCCESS           {"CMAgent has been registered to TMCM Server successfully"}
+		SERVICE_DESCRIPTION		   {"Provides communication with the TMCM server for management of IMSS"}
+		MSG_DOWNLOAD_ENGINE_SUCCESS         {"The entity has successfully received the command: Deploy engines."                        }
+		MSG_DOWNLOAD_PATTERN_SUCCESS        {"The entity has successfully received the command: Deploy pattern files/cleanup templates."}
+		MSG_DOWNLOAD_SPAM_PATTERN_SUCCESS   {"The entity has successfully received the command: Deploy Anti-spam rules."		        }
+		MSG_REPILCATE_SUCCESS               {"The entity has successfully received the command: Configuration Replication."             }
+		MSG_START_REDALERT_SUCCESS          {"The entity has successfully received the command: Start Outbreak Prevention Mode."        }
+		MSG_STOP_REDALERT_SUCCESS           {"The entity has successfully received the command: Stop Outbreak Prevention Mode."         }
+		MSG_START_BLOCKNOW_SUCCESS          {"The entity has successfully received the command: Start BlockingNow."                     }
+		MSG_PRRENEW_SUCCESS                 {"The entity has successfully received the command: Deploy license profile."                }
+		MSG_CHANGE_SERVER_SUCCESS           {"The entity has successfully received the command: Change Server."		                    }
+		MSG_START_REDALERT_FAILED           {"Received the startting OPP command fail."                                                 }
+		MSG_STOP_REDALERT_FAILED            {"Received the stopping OPP command fail."                                                  }
+		MSG_START_BLOCKNOW_FAILED           {"Received the startting BlockingNow command fail."                                         }
+		MSG_PRRENEW_FAILED                  {"Deploy license profile fail."                                                             }
+		MSG_REPILCATE_FAILED                {"Configuration replication fail."                                                          }
+		MSG_CHANGE_SERVER_FAILED            {"Change Server fail."		                                                                }
+		MSG_LICENSE_EXPIRED                 {"License expired."                                                                          }
+		MSG_SPS_LICENSE_EXPIRED				{"SPS License has expired."                                                                  }
+		MSG_AV_LICENSE_EXPIRED				{"Antivirus License has expired."		                                                    }
+		MSG_UP_TO_DATE                      {"No update needed, local version already up to date."		                                }
+		MSG_ERROR                           {"An event was unsuccessful. Error !"                                                       }
+		SERVICE_RUNNING						{"CMAgent Service was started"}
+		SERVICE_STOPPED						{"CMAgent Service was stopped."}
+		SERVICE_PACK						{"Service Pack"}
+		POP3_Mail_Recipient					{"POP3 Mail Recipient"}
+	}
+	FoxDNS {
+		FOXDNS_DESCRIPTION         {"Manages the IP Profiler IP address list and writes the list to the named server"}
+	}
+	MTA {
+	  MTA_DESCRIPTION         {"Controls IMSS MTA services"}
+
+		NRS_DISABLED            {"Cannot enable Email reputatio. Email reputatio has not been activated. Active Email reputatio using a valid Activation Code and try again."}
+
+		CON_ACCEPTED	        {"Connection from host[%s] accepted."}
+		MSG_DENIED_FOXHUTER	   {"Connection from host[%s] denied by IPProfiler."}
+		MSG_DENIED_NRS		   {"Connection from host[%s] denied by NRS."}
+		MSG_DENIED_RDNS		   {"Connection from host[%s] denied by RDNS checking."}
+		MSG_DENIED_BLACKLIST	   {"Connection from host[%s] denied by Connection Control."}
+
+		MSG_DENIED_MAIL_SIZE_LIMIT {"Message from host[%s] denied because of mail size limit."}
+		MSG_DENIED_NULL_SENDER	   {"Message from host[%s] denied because of null sender."}
+		MSG_DENIED_HELO_DOMAIN     {"Message from host[%s] denied because of invalid HELO domain."}
+		MSG_DENIED_SENDER_DOMAIN   {"Message from host[%s] denied because of invalid sender domain."}
+		MSG_DENIED_REJECT_DOMAIN   {"Message from host[%s] denied because recipient domain is not in the allowed domains list."}
+		MSG_DENIED_RCPT_CNT_LIMIT  {"Message from host[%s] denied because of recipient count limit."}
+		MSG_DENIED_RCPT_NOT_EXSIT  {"Message from host[%s] denied because recipient does not exist in LDAP server."}
+		MSG_DENIED_MUST_TLS	   {"Message from host[%s] denied because of TLS limit."}
+
+		MSG_ACCEPTED		       {"Message<%s> accepted from [%s] to [%s]."}
+		MSG_RELAY_SUCCESS          {"Message<%s> relayed via host[%s] successfully."}
+		MSG_RELAY_TMP_FAIL         {"Message<%s> not relayed yet."}
+		MSG_FROZEN                 {"Message<%s> could not be relayed. Moved to frozen directory%s."}
+		MSG_DELETE                 {"Message<%s> could not be relayed and was deleted%s."}
+		MSG_NDR_SENT				{", with failure notification email sent"}
+
+		STR_SENDER					{"Sender:"}
+		STR_RCPT_START_LINE         {"The following addresses had delivery problems"}
+		STR_REPLY_FROM              {"Reply from "}
+		STR_SVR_CONNECT_ERR         {"Unable to connect to "}
+		STR_SVR_NETWORK_ERR         {"Network conmunication error."}
+		STR_SVR_CONNECT_ADDR_ERR    {"Syntax of the recipient's address is invalid."}
+		STR_SVR_RELAY_DOMAIN_NOT_EXIST {"Relay domain does not exist."}
+		STR_SVR_SSL_ERR             {"Unable to finish TLS handshake."}
+		STR_SVR_8BITMIME_ERR        {"Downstream MTA does not support 8 bit MIME."}
+		STR_SVR_MAXHOP_ERR          {"Message exceeded maximum hop count."}
+		STR_SVR_INTERNAL_ERR        {"Server Internal Error."}
+		STR_SVR_DNS_QUERY_ERR		{"Unsuccessful DNS query."}
+		}
+	IMSSTask {
+		IMSSTASK_SERVICE_DESCRIPTION {"IMSS scheduled tasks, such as scheduled update, scheduled report, report log purge, and so on."}
+		IMSSMGR_SERVICE_DESCRIPTION {"Manages IMSS-related processes"}
+	}
+
+	DKIMEnforcementFilter {
+		STR_LOG_NO_DKIMSIG				{"No DKIM Signature."}
+		STR_LOG_VERIFY_FAIL				{"DKIM Signature verification unsuccessful."}
+		STR_LOG_UNABLE_VERIFY			{"Unable to verify DKIM Signature."}
+		STR_LOG_SYNC_OK					{"Synchronized DKIM configurations successfully"}
+		STR_LOG_SYNC_FAILED				{"Failed to Synchronized DKIM configurations"}
+		STR_LOG_DKIM_SERVICE_START		{"Started the DKIM service"}
+	    STR_LOG_DKIM_SERVICE_RESTART	{"Restarted the DKIM service"}
+		STR_LOG_DKIM_SERVICE_STOP		{"Stopped the DKIM service"}
+		STR_LOG_DKIM_SERVICE_RELOAD		{"Reloaded the DKIM service"}
+	}
+
+	DMARCVerificationFilter {
+		STR_LOG_SYNC_OK					{"Synchronized DMARC configurations successfully"}
+		STR_LOG_SYNC_FAILED				{"Failed to Synchronized DMARC configurations"}
+		STR_LOG_DMARC_SERVICE_START		{"Started the DMARC service"}
+		STR_LOG_DMARC_SERVICE_RESTART	{"Restarted the DMARC service"}
+		STR_LOG_DMARC_SERVICE_STOP		{"Stopped the DMARC service"}
+		STR_LOG_DMARC_SERVICE_RELOAD		{"Reloaded the DMARC service"}
+	}
+
+	EUQUtil {
+		EUQ_REMOVE_OK				{"The EUQ data in device [%s] was removed.\n"}
+		EUQ_REMOVE_ERR				{"The EUQ data removal failed for device [%s].\n    Verify that the database is online and working properly and try again.\n"}
+		EUQ_TRANSFER_OK				{"The EUQ data was redistributed from the device [%s].\n"}
+		EUQ_TRANSFER_ERR			{"The EUQ data redistribution failed for device [%s].\n    Cannot connect to database. Verify that the database is online and working properly and try again.\n"}
+		EUQ_DB_ERR					{"Unable to retrieve EUQ database information. A database error occurred. Please try again.\n"}
+	}
+	IMPEXP {
+		IMPORT_SUCCESS				{"Configuration import successfully"}
+		IMPORT_FAIL					{"Configuration import failed"}
+		EXPORT_SUCCESS				{"Configuration export successfully"}
+		EXPORT_FAIL					{"Configuration export failed"}
+	}
+    LDAPCacheServer {
+        SYNC_FAIL_NOTIFY_TITLE      {"LDAP server synchronization did not complete"}
+        SYNC_FAIL_NOTIFY_CONTENT    {"LDAP server synchronization did not complete. Check the LDAP settings and network connections."}
+    }
+
+	Migrate {
+		ENC_MSG_NOTI_NAME							{"Notification of encrypted message"}
+		DFLT_RULE_NAME_ENC_MSG						{"Default rule for encrypted message"}
+		DFLT_RULE_NAME_ENC_MSG_DESCRIPTION			{" is created from Scanning Exceptions"}
+		DFLT_RULE_NAME_PSWD_ATTCH					{"Default rule for the attachment protected by password"}
+		DFLT_RULE_NAME_PSWD_ATTCH_DESCRIPTION		{" is created from Scanning Exceptions"}
+		DFLT_RULE_NAME_DKIM_ENFRC					{"Global DKIM Enforcement rule"}
+		DFLT_RULE_NAME_DKIM_ENFRC_DESCRIPTION 		{" is set to default"}
+		DFLT_RULE_NAME_BATV							{"Global BATV rule"}
+		BATV_REMOVED_DESCRIPTION					{" is removed because NOT supported in IMSVA"}
+
+		DBD_SETTINGS_DROP							{" is dropped because there's no SmartHost in use"}
+
+		DEFAULT_QUARANTINE							{"Default Quarantine"}
+		DEFAULT_IBE_EXCEPTION_NOTIFICATION			{"Email encryption exceptions notification"}
+		DEFAULT_COMPLIANCE_QUARANTINE				{"Compliance Quarantine"}
+		DEFAULT_COMPLIANCE_NOTIFICATION      		{"Compliance violation notification"}
+
+		RULE_BLOB_ENC_MSG_NOTI_CONTENT_1			{"Notification of encrypted message"}
+		RULE_BLOB_ENC_MSG_NOTI_CONTENT_2            {"IMSS Security violation"}
+		RULE_BLOB_ENC_MSG_NOTI_CONTENT_3            {"InterScan Messaging Security Suite has detected a message which violated the security settings configured in Policy > Default rule for encrypted message. The message was quarantined. You can find out more about this event by querying the Policy Event logs for encrypted message rule.\r\n\r\nMessage details:\r\nSender: %SENDER%\r\nRecipient: %RCPTS%\r\nSubject: %SUBJECT%\r\nMessage ID: %XMAILID%"}
+
+		RULE_BLOB_DEFAULT_QUARANTINE_CONTENT_4      {"Default Quarantine"}
+
+		RULE_BLOB_DEFAULT_IBE_EXCEPTION_NOTIFICATION_COTENT_5           {"Email encryption exceptions notification"}
+		RULE_BLOB_DEFAULT_IBE_EXCEPTION_NOTIFICATION_COTENT_6           {"IMSVA Trend Micro Email Encryption exception"}
+		RULE_BLOB_DEFAULT_IBE_EXCEPTION_NOTIFICATION_COTENT_7           {"InterScan Messaging Security Virtual Appliance has detected a message which violated the encryption settings configured in Policy. The message was quarantined. You can find out more about this event by querying the Policy Event logs for encryption.\r\n\r\nMessage details:\r\nSender: %SENDER%\r\nRecipient: %RCPTS%\r\nSubject: %SUBJECT%\r\nMessage ID: %XMAILID%\r\nReason: %DETECTED%"}
+
+		RULE_BLOB_DEFAULT_COMPLIANCE_QUARANTINE_CONTENT_8               {"Compliance Quarantine"}
+
+		RULE_BLOB_DEFAULT_COMPLIANCE_NOTIFICATION_CONTENT_9           	{"Compliance violation notification"}
+		RULE_BLOB_DEFAULT_COMPLIANCE_NOTIFICATION_CONTENT_10           	{"IMSVA Compliance violation"}
+		RULE_BLOB_DEFAULT_COMPLIANCE_NOTIFICATION_CONTENT_11           	{"InterScan Messaging Security Virtual Appliance has detected a message which violated the compliance settings configured in Policy > Compliance. The message was quarantined. You can find out more about this event by querying the Policy Event logs for compliance.\r\n\r\nMessage details:\r\nSender: %SENDER%\r\nRecipient: %RCPTS%\r\nSubject: %SUBJECT%\r\nMessage ID: %XMAILID%\r\nReason: %DETECTED%\r\nAttachment: %FILENAME%"}
+
+		DEFAULT_COMPLIANCE_POLICY_NAME				{"Default compliance rule"}
+		DEFAULT_COMPLIANCE_RULE_NAME				{"Default compliance rule"}
+		DEFAULT_COMPLIANCE_HEALTH_INFO_POLICY_NAME	{"Compliance - Health Information"}
+		DEFAULT_COMPLIANCE_HEALTH_INFO_RULE_NAME	{"Compliance - Health Information"}
+		DEFAULT_COMPLIANCE_FINANCIAL_BANKING_POLICY_NAME	{"Compliance - Financial and Banking"}
+		DEFAULT_COMPLIANCE_FINANCIAL_BANKING_RULE_NAME		{"Compliance - Financial and Banking"}
+		DEFAULT_COMPLIANCE_PERSONAL_IDENTIFICATION_POLICY_NAME	{"Compliance - Personal Identification"}
+		DEFAULT_COMPLIANCE_PERSONAL_IDENTIFICATION_RULE_NAME	{"Compliance - Personal Identification"}
+		DEFAULT_COMPLIANCE_CARDHOLDER_INFO_POLICY_NAME			{"Compliance - Cardholder Information"}
+		DEFAULT_COMPLIANCE_CARDHOLDER_INFO_RULE_NAME			{"Compliance - Cardholder Information"}
+
+		DEFAULT_COMPLIANCE_TEMPLATE_GLBA							{"GLBA"}
+		DEFAULT_COMPLIANCE_TEMPLATE_HIPAA							{"HIPAA"}
+		DEFAULT_COMPLIANCE_TEMPLATE_PCIDSS							{"PCI-DSS"}
+		DEFAULT_COMPLIANCE_TEMPLATE_SB1386							{"SB-1386"}
+		DEFAULT_COMPLIANCE_TEMPLATE_USPII							{"US PII"}
+
+		DEFAULT_COMPLIANCE_TEMPLATE_GLBA_CONTENT_DESCRIPTION		{"Gramm-Leach-Bliley Financial Services Modernization Act of 1999"}
+		DEFAULT_COMPLIANCE_TEMPLATE_HIPAA_CONTENT_DESCRIPTION		{"Health Insurance Portability and Accountability Act"}
+		DEFAULT_COMPLIANCE_TEMPLATE_PCIDSS_CONTENT_DESCRIPTION		{"The Payment Card Industry Data Security Standard"}
+		DEFAULT_COMPLIANCE_TEMPLATE_SB1386_CONTENT_DESCRIPTION		{"California law regulating the privacy of personal information"}
+		DEFAULT_COMPLIANCE_TEMPLATE_USPII_CONTENT_DESCRIPTION		{"Personally Identifiable Information"}
+
+		DETAIL_REPORT_NOTE					{"Note: IMSVA only supports importing settings from the database. That means settings in the configuration files cannot be imported."}
+		DETAIL_REPORT_SUPPORT_SCOPE 				{"Supported products and versions:"}
+		DETAIL_REPORT_SUPPORT_1 					{" - IMSS 7.1 Linux Service Pack 1"}
+		DETAIL_REPORT_SUPPORT_2 					{" - IMSS for Linux 7.0 SP1+Patch3"}
+		DETAIL_REPORT_SUPPORT_3 					{" - IMSS 7.1 Windows Patch 3"}
+		DETAIL_REPORT_SUPPORT_4 					{" - IMSS for Windows 7.0 SP1+Patch3"}
+		DETAIL_REPORT_SUPPORT_6 					{" - IMSVA 8.0 Patch 2"}
+		DETAIL_REPORT_SUPPORT_7 					{" - IMSVA 7.0 Patch1"}
+		DETAIL_REPORT_SUPPORT_8 					{" - IMSA 7.0 SP1+Patch2"}
+		DETAIL_REPORT_SUPPORT_9 					{" - IMSVA 8.2 Service Pack 2 Patch 1"}
+		DETAIL_REPORT_SUPPORT_10 					{" - IMSS 7.0 Solaris Service Pack 1 Patch 4"}
+		DETAIL_REPORT_SUPPORT_11 					{" - IMSVA 8.5 Service Pack 1 Patch 1"}
+		DETAIL_REPORT_SUPPORT_12 					{" - IMSS 7.5 Windows Patch 1"}
+		DETAIL_REPORT_SUPPORT_13 					{" - IMSVA 9.0 Patch 2"}
+		DETAIL_REPORT_SUPPORT_14 					{" - IMSS 7.1 Linux Service Pack 2 Patch 1"}
+		DETAIL_REPORT_SUPPORT_15 					{" - IMSVA 9.1"}
+		DETAIL_REPORT_SUPPORT_16 					{" - IMSS 9.1 Linux"}         
+
+		DETAIL_REPORT_IMPORT_FROM 					{"For latest import procedure, the import config package is from: "}
+		DETAIL_REPORT_IMPORT_RULES_MSG 				{"The following policy rules were imported successfully:"}
+		DETAIL_REPORT_IMPORT_RULES 					{"o Imported policy rules"}
+		DETAIL_REPORT_CREAT_RULES 					{"o created/changed policy rules:"}
+		DETAIL_REPORT_REMOVE_RULES 					{"o removed policy rule:"}
+
+		DETAIL_REPORT_IMPORT_SETTINGS_MSG 			{"All settings were imported successfully, except:"}
+		DETAIL_REPORT_CMAGENT_SETTINGS 				{"o All Control Manager agent settings"}
+		DETAIL_REPORT_ADMIN_COUNT_PASSWD 			{"o Administrator account user name and password"}
+		DETAIL_REPORT_PATTERN_ENGINES 				{"o Patterns and engines"}
+		DETAIL_REPORT_INTERFACE_PORT 				{"o SMTP interface and port number"}
+		DETAIL_REPORT_INTERNAL_SETTINGS 			{"o Some internal settings that affect system performance"}
+		DETAIL_REPORT_ENCRYPTION 					{"o Encryption settings"}
+		DETAIL_REPORT_DDACONFIG 					{"o Virtual Analyzer settings"}
+		DETAIL_REPORT_TLSCONFIG 					{"o Transport Layer Security settings"}
+		DETAIL_REPORT_IPV6SETTING 					{"o IPv6 network settings"}
+		DETAIL_REPORT_MML_EXCEPTION_LIST 			{"o Email addresses in marketing message exception list"}
+						
+		DETAIL_REPORT_TLS_SETTINGS 					{"o TLS settings"}
+		DETAIL_REPORT_TLS_ADDRESS_DOMAIN 			{" - The TLS IP Address/Domain List does not migrate"}
+		DETAIL_REPORT_TRUST_CA_CERT 				{" - Trusted CA Certificate settings do not migrate"}
+
+		DETAIL_REPORT_DBD_SETTINGS 					{"o Domain-based Delivery settings"}
+		DETAIL_REPORT_RELAY_DOMAIN_SPILT 			{" - relay domains split:"}
+		DETAIL_REPORT_DBD_USE_DNS 					{" - Delivery method that use DNS query drop:"}
+		DETAIL_REPORT_DEFAULT_RELAY 				{" - default relay change to:"}
+		DETAIL_REPORT_AC							{"o Activation Code was not imported because IMSVA cannot use the Activation Code from "}
+
+		DEFAULT_MULTI_LDAP_DESCRIPTION 				{" ldap settings "}
+		DETAIL_REPORT_MULTI_ENABLE_LDAP_IMPACT_MSG 	{"The following features are disabled because of the LDAP setting change:"}
+		LDAP_SETTING_WAS_IMPACT						{"LDAP, please refer to Administration -> Connections -> LDAP for detail information"}
+		PREFILTER_RCPT_SCHEDULE_SYNC_WAS_IMPACT		{"Cloud Pre-Filter recipient check schedule synchrnization, please refer Cloud Pre-Filter -> Policy List -> Policy -> Conditions -> Valid Recipient -> Synchronize LDAP server with Cloud Pre-Filter daily  for detail information"}
+		POSTFIX_RCPT_CHECK_WAS_IMPACT				{"postfix recipient check, please refer Administration -> SMTP Routing -> Message Rule -> Relay Control -> Reject unknown recipients  for detail information"}
+		EUQ_KERBEROS_SSO_WAS_IMAPCT					{"EUQ Kerberos SSO, please refer Administration -> End-User Quarantine -> User Quarantine Access -> Single Sign On Configuration -> Enable Kerberos  for detail information"}
+        DLP_TEMPLATE_IMPORT_SUFFIX              {"(Migrate)"}
+	}
+	
+    Fox_DNS {
+        FOXDNS_SYC_DOAMINS       { "Deleted IP addresses during scheduled domain resolution " }	
+        FOXDNS_DELETE_TEMP_IP	 { "Deleted IP addresses or domains that expired " }
+    }
+    
+    DDAService {
+        DDAServerUnavailable      { "Virtual Analyzer ({0}) is unavailable for {1} seconds." }
+    }
+    
+    SmartProtection {
+        FRSUnavailable        { "File Reputation Services of Smart Protection Server ({0}) is unavailable for {1} seconds."}
+        WRSUnavailable        { "Web Reputation Services of Smart Protection Server ({0}) is unavailable for {1} seconds."}
+        File                  { "File" }
+        Web                   { "Web" }
+    }
+    SmtpTrafficThrottling {
+        InsertBlockedItem { "Added to the SMTP Traffic Throttling Blocked list in the database: " }
+        DeleteBlockedItem { "Deleted IP addresses or senders that expired: "}
+    }
+    KeepEnglishDoNotTranslate {
+        File                  { "File" }
+        Web                   { "Web" }
+        AU_CPNT_TITLE_SCAN_ENGINE  { "Virus Scan Engine" }
+        AU_CPNT_TITLE_VIRUS_PATTERN  { "Virus Pattern" }
+        AU_CPNT_TITLE_SPYWARE_PATTERN  { "Spyware Pattern" }
+        AU_CPNT_TITLE_INTELLITRAP_PATTERN  { "Intellitrap Pattern" }
+        AU_CPNT_TITLE_INTELLITRAP_EXCEPTION  { "Intellitrap Exception Pattern" }
+        AU_CPNT_TITLE_TMASE_ENGINE  { "Antispam Engine" }
+        AU_CPNT_TITLE_TMASE_PATTERN  { "Antispam Pattern" }
+        AU_CPNT_TITLE_TMASE_PATCH  { "Antispam Incremental Pattern" }
+        AU_CPNT_TITLE_TMUFE_ENGINE  { "URL Filtering Engine" }
+        AU_CPNT_TITLE_ATSE_ENGINE  { "Advanced Threat Scan Engine" }
+        AU_CPNT_TITLE_SMART_SCAN_AGENT_PATTERN  { "Smart Scan Agent Pattern" }
+        AU_MSG_SUCCESSFUL { "SUCCESSFUL" }
+        AU_MSG_FAILED { "FAILED" }
+        AU_MSG_UNKNOWN { "Unknown" }
+        AU_LOCK_FAIL { "Pattern Update: Unable to download files. Another process is currently downloading files.\n" }
+        AU_UNLOCK_FAIL { "Pattern Update: Unable to unlock the file.\n" }
+        AU_SERVER_TIMEOUT_MSG { "ActiveUpdate was unable to connect to the network. Please check whether the network connection is functional and then try again.\n" }
+        ERR_INTERNAL_FILE  { "File operation error" }
+        ERR_INTERNAL_DB    { "Database operation error" }
+        ERR_COMM_CLIENT    { "Client connection error" }
+        ERR_COMM_NETWORK   { "Network connection error" }
+        ERR_COMM_SERVER    { "Server connection error" }
+        ERR_REPORT_INVALID { "Invalid analysis report" }
+        NOTIFICATION_PREFIX  { "The following errors occur on domain" }
+    }
+}

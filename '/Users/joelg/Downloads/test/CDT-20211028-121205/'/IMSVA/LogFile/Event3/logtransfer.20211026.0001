@@ -1,0 +1,70 @@
+2021/10/26 23:00:45 GMT-05:00	[34270:4151695056] [DEBUG]Receiver STOP CMD!
+2021/10/26 23:00:45 GMT-05:00	[34270:4151695056] [NORMAL]The log transfer process finishes, will exit!
+2021/10/26 23:00:45 GMT-05:00	[34270:4151695056] [DEBUG]logtransfer: remove pid file /opt/trend/imss/bin/logtransfer.pid correctly
+2021/10/26 23:00:45 GMT-05:00	[34270:4151695056] [NORMAL]PID file removed!
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DIAGNOSTIC]The log module for logtransfer has been initialized.
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] Log Sync Interval: 30
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] Log buffer size: 100
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] monitor Interval: 30
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] rsyslog conf path: /etc/rsyslog.conf
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] imsva syslog conf path: /etc/rsyslog.d/imsva.conf
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] force rsyslog conf replace: no
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] escape control characters: off
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] queue max disk space: 200m
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] sys_log_path: /opt/trend/imss/log
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] sys_log_prefix: log.imss
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] evt_log_path: /opt/trend/imss/log
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] evt_log_prefix: sysevt.imss
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] polevt_log_path: /opt/trend/imss/log
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] polevt_log_prefix: polevt.imss
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] ers_log_path: /opt/trend/imss/log
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] ers_log_prefix: ers.imss
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] message_trace_log_path: /opt/trend/imss/log
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG][Setting] message_trace_log_prefix: msgtra.imss
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG]DualSource::getDbParams:ip:127.0.0.1,port:5432
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DIAGNOSTIC]ADMIN Database config file path: /opt/trend/imss/config/database.ini
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DIAGNOSTIC]TmDBScript is not initialized.
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DIAGNOSTIC]TmDBScript::init file_path:/opt/trend/imss/sql/postgresql/dbscript.conf 
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG]TmDBScript::getScript entered LDAPServerType:1, name:SQL_SELECT_SYSLOG_SETTINGS
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG]Get sql:select facility, logtype_list, server_list from tb_syslog_setting where status=true
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG]TmDBConnection::isDBAlive: return true
+2021/10/26 23:00:45 GMT-05:00	[77578:4151965392] [DEBUG]TmDBConnection::createOdbcEnv
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG][Setting] Syslog Settings:
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]--------------------------------------------------------------
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]enter TmDBConnPoolWrapper::returnConnection
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]TmDBConnection::close
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]DualSource::getDbParams:ip:127.0.0.1,port:5432
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]TmDBScript::getScript entered LDAPServerType:1, name:SQL_SELECT_SYSLOG_LOGPREFIX
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]Get sql:select id,logprefix from tb_syslog_logtype
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]TmDBConnection::isDBAlive: return true
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]TmDBConnection::createOdbcEnv
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]log type and prefixes:LOGTYPE_MESSAGE_TRACKING,msgtra.imss
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]log type and prefixes:LOGTYPE_POLICY_EVENT,polevt.imss
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]log type and prefixes:LOGTYPE_SYSTEM_EVENT,sysevt.imss
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]log type and prefixes:LOGTYPE_MTA_EVENT,imssdps;tlsagent
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]log type and prefixes:LOGTYPE_IP_FILTERING,foxdns.log;foxmsg;foxreport;ers.imss;foxnullmsg;connblocked.imss;smtpconnagent
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]log type and prefixes:LOGTYPE_CONTENT_SCANNING,log.imss;imssps;wrsagent;dtasagent
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]log type and prefixes:LOGTYPE_ADMINISTRATION,imssui;imssmgr;imsstasks;euqerror.imss;euqretry.imss;euqsynch.imss;msgsync.imss;msgretry.imss;Agent.log;EntityMain.log
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG][Setting] Syslog log prefix Settings:
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]--------------------------------------------------------------
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]logtype:LOGTYPE_ADMINISTRATION
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]--------------------------------------------------------------
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]logtype:LOGTYPE_CONTENT_SCANNING
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]--------------------------------------------------------------
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]logtype:LOGTYPE_IP_FILTERING
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]--------------------------------------------------------------
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]logtype:LOGTYPE_MESSAGE_TRACKING
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]--------------------------------------------------------------
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]logtype:LOGTYPE_MTA_EVENT
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]--------------------------------------------------------------
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]logtype:LOGTYPE_POLICY_EVENT
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]--------------------------------------------------------------
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]logtype:LOGTYPE_SYSTEM_EVENT
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]--------------------------------------------------------------
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]enter TmDBConnPoolWrapper::returnConnection
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]TmDBConnection::close
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]facility Server Set size is:0
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]Find it:$IncludeConfig /etc/rsyslog.d/*.conf
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DIAGNOSTIC]Begin to restart rsyslog service using cmd:service rsyslog restart >/dev/null
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [DEBUG]logtransfer: write pidfile successfully!
+2021/10/26 23:00:46 GMT-05:00	[77578:4151965392] [NORMAL]The log transfer process starts.

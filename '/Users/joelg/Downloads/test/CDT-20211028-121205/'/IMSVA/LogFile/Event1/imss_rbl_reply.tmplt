@@ -1,0 +1,2 @@
+q.mail-abuse.com 450 Service temporarily unavailable; $rbl_class [$rbl_what] blocked using Trend Micro Email Reputation Service. Please see http://www.mail-abuse.com/cgi-bin/lookup?ip_address=$rbl_what${rbl_reason?; $rbl_reason} 
+r.mail-abuse.com 550 Service unavailable; $rbl_class [$rbl_what] blocked using Trend Micro RBL+. Please see http://www.mail-abuse.com/cgi-bin/lookup?ip_address=$rbl_what${rbl_reason?; $rbl_reason} 

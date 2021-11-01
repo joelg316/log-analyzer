@@ -1,0 +1,5 @@
+# The syntax of this file is	<regular expression><TAB><action>
+.*	CHECK
+charlie@localhost	CHECK
+charlie@unknown	CHECK
+.*	DONOTCHECK

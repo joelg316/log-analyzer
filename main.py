@@ -15,7 +15,7 @@ from pprint import pprint
 # os.path.normpath() if needed for forward slashes on windows, but also works on Windows without
 workingDir = "/Users/joelg/Downloads/test/"
 # Script logging file
-logging.basicConfig(filename=workingDir + 'log_analyzer.log', level=logging.DEBUG)
+logging.basicConfig(filename=workingDir + 'log_analyzer.log', level=logging.INFO)
 
 CDTname = "CDT-20211028-121205.zip"
 CDTfolder = CDTname[:-4] + "/"
@@ -59,9 +59,10 @@ def unzip_CDT():
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
         process.wait()
         for line in process.stdout:
-            print(line)
+            print(line.decode("utf-8").strip("\n"))
     else:
-        print(f"CDT unzip destination folder {workingDir + CDTfolder} already exists")
+        #TODO: figure out why this warning is only written to log file, not to console as expected
+        logging.warning(f"{datetime.now()} CDT unzip destination folder {workingDir + CDTfolder} already exists")
 
 
 def getMaillogs():
@@ -166,7 +167,7 @@ def getIMSSLogs():
                 result = result[:(message_ends[0] + 1)]
                 # print(result)
                 logging.info(
-                    f"Message starts in {prev_IMSS_file}, and message ID was found in {file}.")
+                    f"Did not find beginning of message in {file}, checking previous file {prev_IMSS_file}.")
                 prev_result = getProcessLogsInFile(prev_IMSS_file, message.IMSSprocID, message.externalID)
                 # Using most recent message_starts since we want the last message start in previous file
                 prev_result = prev_result[message_starts[-1]:]
@@ -231,6 +232,7 @@ def findMessageByExternalID(msgID):
 
         message.maillog_files = found_in_maillog_files
         print(f"{len(maillog_result)} line(s) found containing message ID '{msgID}' in file(s): {', '.join(message.maillog_files)}")
+        logging.info(f"Maillog line(s): {maillog_result}")
 
     # Find relevant IMSS log files
     os.chdir(workingDir + CDTfolder + IMSSLogDir)
@@ -254,23 +256,26 @@ def findMessageByExternalID(msgID):
         message.IMSS_log_files = found_in_log_files
         print(
             f"{len(result)} line(s) found containing message ID '{msgID}' in file(s): {', '.join(message.IMSS_log_files)}")
-    return result
+        logging.info(f"IMSS log line(s): {result}")
+    return maillog_result, result
 
 
 if __name__ == "__main__":
-    # Gotta unzip CDT first
+    # Gotta unzip CDT before anything else, function will only run if destination folder does not already exist
     unzip_CDT()
 
     # Create new message object
     message = make_message()
     message.externalID = messageID
 
-    print(findMessageByExternalID(message.externalID))
+    findMessageByExternalID(message.externalID)
+    logging.info(
+        f"{datetime.now()} log.imss process ID: {message.IMSSprocID}, message external ID: {message.externalID}")
     message.maillogs = getMaillogs()
-    logging.info(f"Message external ID: {message.externalID}, start scan time: {message.start_scan_time}, process ID: {message.IMSSprocID}")
     message.IMSSLogs = getIMSSLogs()
-    logging.debug("".join(message.IMSSLogs))
+
+    #logging.debug("".join(message.IMSSLogs))
     message.internalIDs = getInternalIDs(message.IMSSLogs)
-    logging.info("Internal IDs: " + "".join(message.internalIDs))
+    logging.info(f"Internal IDs: {''.join(message.internalIDs)}")
     with open(workingDir + "___message___.json", "w") as f:
         pprint(message.__dict__, indent=2, stream=f)

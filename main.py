@@ -13,12 +13,13 @@ from datetime import datetime
 import logging
 import argparse
 from pprint import pprint
+import bisect
 
 # os.path.normpath() if needed for forward slashes on windows, but also works on Windows without
-# workingDir = "/Users/joelg/Downloads/test/"
+#workingDir = "/Users/joelg/Downloads/test/"
 workingDir = "C:/Users/joelg/Documents/Cases/Banco Bradesco/3056068 - IMSVA deferred issue/"  # Make sure to end name with a /
 
-# CDTname = "CDT-20211028-121205.zip"
+#CDTname = "CDT-20211028-121205.zip"
 CDTname = "CDT-20200311-101037.zip"
 CDTfolder = CDTname[:-4] + "/"
 # print(CDTfolder)
@@ -32,13 +33,11 @@ IMSSLogDir = "IMSVA/LogFile/Event3/"
 maillogDir = "IMSVA/Logfile/Event5"
 #maillogFile = "maillog"
 
-# messageID = "20211028141353.A12EBDE048@mx2.sat.gob.mx" # Test for reading previous log.imss file
+#messageID = "20211028141353.A12EBDE048@mx2.sat.gob.mx" # Test for reading previous log.imss file
 # messageID = "1635427594006111272.5604.5407009073664769857@satt.gob.mx" # Test for reading one log.imss file
-messageID = "9v_5rM_GQYq8sRirj1ghJA@ismtpd0036p1iad1.sendgrid.net"  # Test for next file in log file 41 and 42 (in normal log level)
+messageID = "9v_5rM_GQYq8sRirj1ghJA@ismtpd0036p1iad1.sendgrid.net" # Test for multiple message IDs
+#messageID = "ceb54dd543cc4ce8b2473a8e740c6d57@CRRJ01VS002.cra1.local" # Test for next file in log file 41 and 42 (in normal log level)
 
-'''logging.basicConfig(filename=workingDir + 'unzip_CDT.log',
-                    level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')'''
 
 # Set log level from cmd line args
 parser = argparse.ArgumentParser()
@@ -187,8 +186,9 @@ def getIMSSLogs():
     message_ends = []
     message_IDs = []
 
-    # Will contain all relevant process logs in current file
-    result = []
+    result = []  # Will contain all relevant process logs in current file
+    new_result = []  # result after extracting relevant time frame from process logs
+    total_result = []  # for aggregating multiple new_results into one
 
     def getProcessLogsInFile(file, IMSSprocID, msgID, np=0):
         # np variable is next/previous. If 0, read current file. If -1, read previous file, if 1, read next file
@@ -208,112 +208,135 @@ def getIMSSLogs():
             logging.info(f"{hit_count} lines with process ID {IMSSprocID} found in file {file}")
         for i, line in enumerate(lines):
             if "Start Rule Set Retrieval spent" in line:
-                message_starts.append(i)
+                # Convert log timestamp ( ‘YYYY/MM/DD HH:MM:SS GMT-00:00‘) to datetime object
+                time = datetime.strptime(' '.join(line.split()[:3]), '%Y/%m/%d %H:%M:%S %Z%z')
+                print(time)
+                message_starts.append([time, i])
+                print(line)
+
             if "Scan finished for" in line:
-                message_ends.append(i)
+                # Convert log timestamp ( ‘YYYY/MM/DD HH:MM:SS GMT-00:00‘) to datetime object
+                time = datetime.strptime(' '.join(line.split()[:3]), '%Y/%m/%d %H:%M:%S %Z%z')
+                print(time)
+                message_ends.append([time, i])
+                print(line)
+
             if msgID in line:
-                message_IDs.append(i)
+                # Convert log timestamp ( ‘YYYY/MM/DD HH:MM:SS GMT-00:00‘) to datetime object
+                time = datetime.strptime(' '.join(line.split()[:3]), '%Y/%m/%d %H:%M:%S %Z%z')
+                print(time)
+                message_IDs.append([time, i])
+                print(line)
         # print(lines)
         return lines, message_starts, message_IDs, message_ends
 
     for file in message.IMSS_log_files:
         result, message_starts, message_IDs, message_ends = getProcessLogsInFile(file, message.IMSSprocID,
                                                                                  message.externalID)
+        prev_IMSS_file = file[:-4] + str(int(file[-4:]) - 1).zfill(4)
+        next_IMSS_file = file[:-4] + str(int(file[-4:]) + 1).zfill(4)
         # print(result)
-    # print(message.IMSS_log_files)
+        # print(message.IMSS_log_files)
+        print(prev_IMSS_file)
+        print(next_IMSS_file)
 
-    prev_IMSS_file = file[:-4] + str(int(file[-4:]) - 1).zfill(4)
-    next_IMSS_file = file[:-4] + str(int(file[-4:]) + 1).zfill(4)
-    # print(prev_IMSS_file)
-    # print(next_IMSS_file)
+        if result:
+            '''The following logic checks if the message start and end is on the same log file, if not it gets the process
+            logs from the next and previous files and combines them with original log file.
+            Also creates result_start which is every log line from message start to message ID
+            and result_end which is every log line from message ID to message end. 
+            Creating start and end result lists was necessary because the logic uses line numbers from 
+            getProcessLogsInFile() and trimming the original result to only start at relevant start will 
+            modify the log lines before you can trim the end'''
 
-    if result:
-        logging.debug(f"Result before slicing: {''.join(result)}")
-        # TODO: test this logic
-        logging.debug(f"Lists of line numbers of all Message starts, Message IDs, and Message ends: {message_starts}, {message_IDs}, {message_ends}")
-        with open(outputDir + "___log.imss___.txt", "w", encoding="latin-1") as fo:
-            # If there are equal amount of starts and ends of messages,
-            # and the message ID is before the end of last message in logs
-            #print(len(message_starts), len(message_ends))
-            if len(message_starts) == len(message_ends): #and message_IDs[-1] > message_starts[-1]:
-                logging.info(f"Message found in {file}")
-                # we already know message ID is less than the end of the last message,
-                # so message will be the first (message start > message ID)
-                # Get the message that starts before the message ID from process logs
-                for i, value in enumerate(message_ends):
-                    # print(message_starts[i],message_ends[i], value)
-                    #print(i, value, message_ends[i])
-                    # If end of message occurred after the message ID in logs
-                    if message_IDs[0] < value:
-                        print(i, message_starts[i], message_IDs[0], message_ends[i], value)
+            logging.debug(f"message starts: {message_starts}")
+            logging.debug(f"message IDs: {message_IDs}")
+            logging.debug(f"message ends: {message_ends}")
 
-                        result = result[message_starts[i]:(message_ends[i] + 1)]
-                        logging.debug(''.join(result))
-                        return  # don't process more than the first result
-                fo.write("".join(result))
-            if message_IDs[-1] > message_ends[-1]:
-                # Message ends in next file
-                # Must assign result before next_result to keep message_starts indexes correct
-                # Get everything from last message start to end of file
-                next_message_ends = []
-                result = result[message_starts[-1]:]
-                logging.debug(f"Result after slicing: {result}")
-                logging.info(
-                    f"Did not find end of message in {file}, checking next file {next_IMSS_file}.")
-                next_result, next_message_starts, next_message_IDs, next_message_ends = \
-                    getProcessLogsInFile(next_IMSS_file, message.IMSSprocID, message.externalID)
+            # If there is no message start found or the first start occurs later than the first message ID
+            if not message_starts or message_starts[0][0] > message_IDs[0][0]:
+                print("Check previous file")
+                # print(result)
+                # Trim result from beginning of file to message ID
+                #TODO: figure out how to trim result by start and end without messing up line numbers
+                result_start = result[:message_IDs[0][1]]
+                # print(result)
 
-                logging.debug(f"next_result after slicing: {next_result}")
-                # Get process lines in next file from beginning of file to end of first message
-                next_result = next_result[:next_message_ends[0]]
-                logging.debug(f"next_result after slicing: {next_result}")
-                result = result + next_result
-
-                # Set message.start_scan_time based on first log line where process ID is found
-                # Convert String ( ‘YYYY/MM/DD HH:MM:SS ‘) to datetime object
-                message.start_scan_time = datetime.strptime(' '.join(result[0].split()[:2]), '%Y/%m/%d %H:%M:%S')
-                # Ditto for end scan time
-                message.end_scan_time = datetime.strptime(' '.join(result[-1].split()[:2]), '%Y/%m/%d %H:%M:%S')
-
-                fo.write("".join(result))
-            else:
-                #TODO: remove this return
-                return
-                # Message starts on previous file
-                # Must assign result before prev_result to keep message_starts indexes correct
-                # Get everything from beginning of file to first message end
-                result = result[:(message_ends[0] + 1)]
-                logging.debug(f"Result: {result}")
-                logging.info(
-                    f"Did not find beginning of message in {file}, checking previous file {prev_IMSS_file}.")
                 prev_result, prev_message_starts, prev_message_IDs, prev_message_ends = \
                     getProcessLogsInFile(prev_IMSS_file, message.IMSSprocID, message.externalID)
+                print(prev_message_starts)
 
-                # Using most recent message_starts since we want the last message start in previous file
+                message.start_scan_time = prev_message_starts[-1][0]
+
                 logging.debug(f"prev_result before slicing: {prev_result}")
-                prev_result = prev_result[message_starts[-1]:]
+
+                # get all process ID logs from previous file from last message start until end
+                prev_result = prev_result[prev_message_starts[-1][1]:]
                 logging.debug(f"prev_result after slicing: {prev_result}")
-                result = prev_result + result
 
-                # Set message.start_scan_time based on first log line where process ID is found
-                # Convert String ( ‘YYYY/MM/DD HH:MM:SS ‘) to datetime object
-                message.start_scan_time = datetime.strptime(' '.join(result[0].split()[:2]), '%Y/%m/%d %H:%M:%S')
-                # Ditto for end scan time
-                message.end_scan_time = datetime.strptime(' '.join(result[-1].split()[:2]), '%Y/%m/%d %H:%M:%S')
+                # result start is the first half of the message process logs up to the message ID
+                result_start = prev_result + result_start
 
-                fo.write("".join(result))
+            else:
+                # print(list(zip(*message_starts))[0])  # returns a list of the datetimes of all the message_starts
+                # Find the insertion point where the message ID timestamp would be inserted before next message start time stamp.
+                i = bisect.bisect_left(list(zip(*message_starts))[0], message_IDs[0][0])
+                # changed i to i-1 because bisect_left returns the insertion point for message_ID which is in next position
+                message.start_scan_time = message_starts[i-1][0]
+                result_start = result[message_starts[i-1][1]:message_IDs[0][1]]
+
+            # If there is no message end found or the last message end occurs before the last message ID
+            if not message_ends or message_ends[-1][0] < message_IDs[-1][0]:
+                print("Check next file")
+
+                # print(result)
+                # Trim result from last message ID to end of file
+                result_end = result[message_IDs[-1][1]:]
+                # print(result)
+
+                next_result, next_message_starts, next_message_IDs, next_message_ends = \
+                    getProcessLogsInFile(next_IMSS_file, message.IMSSprocID, message.externalID)
+                #print(next_message_ends)
+
+                message.end_scan_time = next_message_ends[0][0]
+
+                logging.debug(f"next_result before slicing: {next_result}")
+
+                # get all process ID logs from next file up to and including the line of the first message end.
+                next_result = next_result[:next_message_ends[0][1] + 1]
+                logging.debug(f"next_result after slicing: {next_result}")
+
+                result_end = result_end + next_result
+            else:
+                # print(list(zip(*message_ends))[0]) # returns a list of the datetimes of all the message_ends
+                # Find the insertion point where the message ID timestamp would be inserted before next message end time stamp.
+                j = bisect.bisect_left(list(zip(*message_ends))[0], message_IDs[0][0])
+                # print(j)
+                message.end_scan_time = message_ends[j][0]
+                print(message_ends[j][1])
+                # print(result[message_ends[j][1] + 1])
+                result_end = result[message_IDs[0][1]:message_ends[j][1] + 1]
+
+            new_result = result_start + result_end
+            total_result += new_result
+
             logging.info(f"Message scan start time: {message.start_scan_time}")
             logging.info(f"Message scan end time: {message.end_scan_time}")
-    else:
-        logging.warning("No lines with process ID found in files")
-    # print(message_starts, message_IDs, message_ends)
 
-    return result
+        else:
+            logging.warning(f"No lines with process ID found in file {file}")
+
+        with open(outputDir + "___log.imss___.txt", "w", encoding="latin-1") as fo:
+            '''Write relevant process logs to file'''
+            fo.write("".join(total_result))
+
+    return total_result
 
 
 def getInternalIDs(loglines):
     IDs = []
     if loglines:
+        print(loglines[-1])
         if "Scan finished for" in loglines[-1]:
             IDs.append(loglines[-1].split()[7].strip(","))
         else:
@@ -325,67 +348,72 @@ def getInternalIDs(loglines):
 
 
 def findMessageByExternalID(msgID):
-    # Find relevant maillog files
-    os.chdir(workingDir + CDTfolder + maillogDir)
-    maillog_files = glob.glob("maillog*")
-    maillog_result = []
-    found_in_maillog_files = []
-    for file in maillog_files:
-        with open(file, "r",
-                  encoding="latin-1") as f:  # Use errors="surrogateescape" or encoding="latin-1" for unicode errors
-            for line in f:
-                if f"message-id=<{msgID}" in line:
-                    maillog_result.append(line)
-                    found_in_maillog_files.append(f.name)
-                    # Keep unique entries only in case message was scanned more than once in same file
-                    found_in_maillog_files = [*{*found_in_maillog_files}]
-                    # print(line)
-    # print(maillog_result)
-    if maillog_result == []:
-        logging.warning("Message ID not found in Postfix maillogs!")
-    else:
-        # Get Postfix queue IDs from maillog lines where external ID is found
-
-        if len(maillog_result) > 1:
-            for line in maillog_result:
-                # print(line.split())
-                message.maillogQueueIDs.append(line.split()[5].strip(":"))
+    '''Find all occurrences of external message ID in both maillog and log.imss files'''
+    if msgID != "":
+        # Find relevant maillog files
+        os.chdir(workingDir + CDTfolder + maillogDir)
+        maillog_files = glob.glob("maillog*")
+        maillog_result = []
+        found_in_maillog_files = []
+        for file in maillog_files:
+            with open(file, "r",
+                      encoding="latin-1") as f:  # Use errors="surrogateescape" or encoding="latin-1" for unicode errors
+                for line in f:
+                    if f"message-id=<{msgID}" in line:
+                        maillog_result.append(line)
+                        found_in_maillog_files.append(f.name)
+                        # Keep unique entries only in case message was scanned more than once in same file
+                        found_in_maillog_files = [*{*found_in_maillog_files}]
+                        # print(line)
+        # print(maillog_result)
+        if maillog_result == []:
+            logging.warning("Message ID not found in Postfix maillogs!")
         else:
-            # Make sure to use 'maillog_result[0]' NOT 'line' which is using value from line 209 instead of 289
-            # print(maillog_result[0].split()[5].strip(":"))
-            message.maillogQueueIDs.append(maillog_result[0].split()[5].strip(":"))
+            # Get Postfix queue IDs from maillog lines where external ID is found
 
-        message.maillog_files = found_in_maillog_files
-        logging.info(
-            f"{len(maillog_result)} line(s) found containing message ID '{msgID}' in file(s): {', '.join(message.maillog_files)}")
-        logging.debug(f"Maillog line(s): {''.join(maillog_result)}")
+            if len(maillog_result) > 1:
+                for line in maillog_result:
+                    # print(line.split())
+                    message.maillogQueueIDs.append(line.split()[5].strip(":"))
+            else:
+                # Make sure to use 'maillog_result[0]' NOT 'line' which is using value from line 209 instead of 289
+                # print(maillog_result[0].split()[5].strip(":"))
+                message.maillogQueueIDs.append(maillog_result[0].split()[5].strip(":"))
 
-        logging.info(f"Maillog queue IDs: {message.maillogQueueIDs}")
+            message.maillog_files = found_in_maillog_files
+            logging.info(
+                f"{len(maillog_result)} line(s) found containing message ID '{msgID}' in file(s): {', '.join(message.maillog_files)}")
+            logging.debug(f"Maillog line(s): {''.join(maillog_result)}")
 
-    # Find relevant IMSS log files
-    os.chdir(workingDir + CDTfolder + IMSSLogDir)
-    IMSS_log_files = glob.glob("log.imss*")
-    # print(IMSS_log_files)
-    result = []  # temp list to store log lines
-    found_in_log_files = []  # store relevant log files
-    for file in IMSS_log_files:
-        with open(file, "r",
-                  encoding="latin-1") as f:  # Use errors="surrogateescape" or encoding="latin-1" for unicode errors
-            for line in f:
-                if msgID in line:
-                    result.append(line)
-                    found_in_log_files.append(f.name)
-                    # Keep unique entries only in case message was scanned more than once in same file
-                    found_in_log_files = [*{*found_in_log_files}]
-    if result == []:
-        logging.warning("Message ID not found in IMSS logs!")
+            logging.info(f"Maillog queue IDs: {message.maillogQueueIDs}")
+
+        # Find relevant IMSS log files
+        os.chdir(workingDir + CDTfolder + IMSSLogDir)
+        IMSS_log_files = glob.glob("log.imss*")
+        # print(IMSS_log_files)
+        result = []  # temp list to store log lines
+        found_in_log_files = []  # store relevant log files
+        for file in IMSS_log_files:
+            with open(file, "r",
+                      encoding="latin-1") as f:  # Use errors="surrogateescape" or encoding="latin-1" for unicode errors
+                for line in f:
+                    if msgID in line:
+                        result.append(line)
+                        found_in_log_files.append(f.name)
+                        # Keep unique entries only in case message was scanned more than once in same file
+                        found_in_log_files = [*{*found_in_log_files}]
+        if result == []:
+            logging.warning("Message ID not found in IMSS logs!")
+        else:
+            message.IMSSprocID = result[0].split()[3]
+            message.IMSS_log_files = found_in_log_files
+            logging.info(
+                f"{len(result)} line(s) found containing message ID '{msgID}' in file(s): {', '.join(message.IMSS_log_files)}")
+            #logging.debug(f"IMSS log line(s): {''.join(result)}")
+        print(message.IMSSprocID)
     else:
-        message.IMSSprocID = result[0].split()[3]
-        message.IMSS_log_files = found_in_log_files
-        logging.info(
-            f"{len(result)} line(s) found containing message ID '{msgID}' in file(s): {', '.join(message.IMSS_log_files)}")
-        #logging.debug(f"IMSS log line(s): {''.join(result)}")
-    print(message.IMSSprocID)
+        logging.error("Please enter message ID and try again")
+        exit(2)
     return maillog_result, result
 
 

@@ -1,5 +1,5 @@
 #!python
-# Used to get all log lines related to a specific message ID from IMSx product logs
+# Gets all log lines related to a specific message ID from IMSx product logs
 # Date: 10/29/21
 # Version 1.0
 

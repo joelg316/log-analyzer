@@ -110,17 +110,19 @@ class Message(object):
     def __init__(self):
         pass
 
-    def add(self, **other):
-        """        :type other: object
-        """
+    def addMaillogs(self, other):
+        '''
+        Related object "other" will be the one that occurs first
+        :param other: message object with same message ID as self
+        :return: None; add maillogs
+        '''
         if self.externalID != other.externalID:
             raise ValueError("Message objects do not have the same external ID")
-        return Message(
-            self.externalID,
-            other.relatedQueueIDs,)
+        else:
+            self.maillogs = other.maillogs + list("----------- sent to IMSS ------------\n") + self.maillogs
 
 class Maillog_Message(Message):
-    def __init__(self):
+    def __init__(self, **kwargs):
         pass
 
 class IMSS_Message(Message):
@@ -171,6 +173,39 @@ def updateLogger():
     log.addHandler(logging.StreamHandler(sys.stdout)) # stream log output to console
     #logging.debug("Test")
 
+def combineMaillogMessages():
+    count = 0
+    if maillog_messages:
+        for message in maillog_messages:
+            for i, line in enumerate(message.maillogs):
+                if "relay=" in line and line.split()[5].strip(":") != message.maillogQueueIDs:
+                    print(line.split()[5].strip(":"))
+                    print(message.maillogQueueIDs)
+
+                    # Example for related queue 935162C03E with primary queue D89812C044
+                    # 'Nov  5 13:12:19 IMSVA9-1chile postfix/smtp[24767]: 935162C03E: to=<joelg@joelg.com>,
+                    #    relay=localhost[127.0.0.1]:10025, delay=3.5, delays=0.86/0.2/0.37/2.1, dsn=2.0.0,
+                    #    status=sent (250 2.0.0 Ok: queued as D89812C044)
+                    # 'Nov  5 13:12:20 IMSVA9-1chile postfix/smtp[24794]: D89812C044: Used TLS for 192.168.1.21[192.168.1.21]:25
+
+                    message.relatedQueueIDs = line.split()[5].strip(":")
+                    logging.debug(f"Found related queue ID: {message.relatedQueueIDs}")
+                    print(i, line)
+                    message.maillogs.pop(i)
+
+            for new_message in maillog_messages:
+                if message.relatedQueueIDs == new_message.maillogQueueIDs:
+                    count += 1
+                    print("Yes")
+                    # merged_messages.append()
+                    message.addMaillogs(new_message)
+                    message.id = count
+                    merged_messages.append(message)
+        return merged_messages
+    else:
+        logging.error("Could not find maillog messages to combine")
+        return None
+
 def getMaillogs(message):
     os.chdir(workingDir + CDTfolder + maillogDir)
     result = []
@@ -210,29 +245,7 @@ def getMaillogs(message):
 
     return result
 
-def combineMaillogMessages():
-    if maillog_messages:
-        for message in maillog_messages:
-            for line in message.maillogs:
-                if "relay=" in line and line.split()[5].strip(":") != message.maillogQueueIDs:
-                    print(line.split()[5].strip(":"))
-                    print(message.maillogQueueIDs)
 
-                    # Example for related queue 935162C03E with primary queue D89812C044
-                    # 'Nov  5 13:12:19 IMSVA9-1chile postfix/smtp[24767]: 935162C03E: to=<joelg@joelg.com>,
-                    #    relay=localhost[127.0.0.1]:10025, delay=3.5, delays=0.86/0.2/0.37/2.1, dsn=2.0.0,
-                    #    status=sent (250 2.0.0 Ok: queued as D89812C044)
-                    # 'Nov  5 13:12:20 IMSVA9-1chile postfix/smtp[24794]: D89812C044: Used TLS for 192.168.1.21[192.168.1.21]:25
-
-                    message.relatedQueueIDs = line.split()[5].strip(":")
-                    logging.debug(f"Found related queue ID: {message.relatedQueueIDs}")
-
-                    for new_message in maillog_messages:
-                        if message.relatedQueueIDs == new_message.maillogQueueIDs:
-                            print("Yes")
-                            merged_messages.append(message.add(new_message))
-
-    return merged_messages
 
 def getIMSSLogs(message):
     '''Returns all the related process lines in a file for a given external message ID and process ID'''
@@ -535,20 +548,28 @@ if __name__ == "__main__":
 
     logging.info("<---Begin log search--->")
 
-    # Will create multiple message objects if message ID is found multiple times in log.imss
+    # Create message object each time message ID is found in log.imss
     findMessagesinIMSSlogs(messageID)
+
+    # Create message object each time message ID is found in maillogs
     findMessagesinMaillogs(messageID)
     print(maillog_result)
 
+    # Get all maillogs by queue ID for each maillog message found
     for m in maillog_messages:
         m.maillogs = getMaillogs(m)
 
-    # TODO: Compare maillog_messages and combine the ones that are related by queue IDs
+    # Compare maillog_messages and combine the maillogs for the ones related by queue IDs
+    # Example: postfix/smtp[28130]: 7E0072C049: to=<joelg@joelg.com>, relay=localhost[127.0.0.1]:10025,
+    # delay=1.1, delays=0.38/0.02/0.06/0.61, dsn=2.0.0, status=sent (250 2.0.0 Ok: queued as B60FC2C04C)
+    # Queue ID was originally 7E0072C049 then was queued as B60FC2C04C, so B60FC2C04C is related to 7E0072C049
     merged_messages = combineMaillogMessages()
-    # with open(outputDir + "___merged_messages___.json", "w") as f:
-    #     for message in merged_messages:
-    #         f.write(f"--- Message #{message.id} ---\n")
-    #         pprint(message.__dict__, indent=2, stream=f)
+
+    with open(outputDir + "___merged_messages___.json", "w") as f:
+        for message in merged_messages:
+            f.write(f"\n-------- Message #{message.id} --------\n\n")
+            f.write("".join(message.maillogs))
+            # pprint(message.__dict__, indent=2, stream=f)
 
     # TODO: Try to correlate maillog_messages with messages list, not really needed
 

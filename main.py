@@ -17,9 +17,10 @@ import bisect
 import re
 
 # os.path.normpath() if needed for forward slashes on windows, but also works on Windows without
+# Make sure to end name with a /
 #workingDir = "/Users/joelg/Downloads/test/"
-#workingDir = "C:/Users/joelg/Documents/Cases/Banco Bradesco/3056068 - IMSVA deferred issue/"  # Make sure to end name with a /
-workingDir = "C:/Users/joelg/Documents/Cases/"
+#workingDir = "C:/Users/joelg/Documents/Cases/Banco Bradesco/3056068 - IMSVA deferred issue/"
+workingDir = "C:/Users/joelg/Documents/Lab/"
 
 #CDTname = "CDT-20211028-121205.zip"
 #CDTname = "CDT-20200311-101037.zip"
@@ -109,17 +110,26 @@ class Message(object):
     def __init__(self):
         pass
 
-    def __add__(self, other):
+    def add(self, **other):
+        """        :type other: object
+        """
         if self.externalID != other.externalID:
             raise ValueError("Message objects do not have the same external ID")
         return Message(
             self.externalID,
             other.relatedQueueIDs,)
 
+class Maillog_Message(Message):
+    def __init__(self):
+        pass
 
-def make_message():
-    message = Message()
-    return message
+class IMSS_Message(Message):
+    def __init__(self):
+        pass
+#
+# def make_message():
+#     message = Message()
+#     return message
 
 def unzip_CDT():
     os.chdir(workingDir)
@@ -192,7 +202,7 @@ def getMaillogs(message):
         logging.error("No maillog files found")
     # print(f"Result {result}")
     if result:
-        total_maillog_result += [f"Message #{message.id}"]
+        total_maillog_result += [f"Message #{message.id}\n"]
         total_maillog_result += result
 
     else:
@@ -205,7 +215,9 @@ def combineMaillogMessages():
         for message in maillog_messages:
             for line in message.maillogs:
                 if "relay=" in line and line.split()[5].strip(":") != message.maillogQueueIDs:
-                    #print(line.split()[5].strip(":"))
+                    print(line.split()[5].strip(":"))
+                    print(message.maillogQueueIDs)
+
                     # Example for related queue 935162C03E with primary queue D89812C044
                     # 'Nov  5 13:12:19 IMSVA9-1chile postfix/smtp[24767]: 935162C03E: to=<joelg@joelg.com>,
                     #    relay=localhost[127.0.0.1]:10025, delay=3.5, delays=0.86/0.2/0.37/2.1, dsn=2.0.0,
@@ -218,7 +230,8 @@ def combineMaillogMessages():
                     for new_message in maillog_messages:
                         if message.relatedQueueIDs == new_message.maillogQueueIDs:
                             print("Yes")
-                            merged_messages.append(message + new_message)
+                            merged_messages.append(message.add(new_message))
+
     return merged_messages
 
 def getIMSSLogs(message):
@@ -368,7 +381,7 @@ def getIMSSLogs(message):
             result_end = result[message_IDs[0][1]:message_ends[j][1] + 1]
 
         new_result = result_start + result_end
-        total_result += [f"Message #{message.id}"]
+        total_result += [f"Message #{message.id}\n"]
         total_result += new_result
 
         logging.info(f"Message scan start time: {message.start_scan_time}")
@@ -426,7 +439,7 @@ def findMessagesinMaillogs(msgID):
         message_count = 0
         for line in maillog_result:
             message_count += 1
-            message = make_message()
+            message = Message()
             message.id = message_count
             message.externalID = line[0].split()[6].strip("message-id=<>")
             message.maillog_file = line[1]
@@ -474,7 +487,7 @@ def findMessagesinIMSSlogs(msgID):
                         # found_in_log_files.append(f.name)
                         # Keep unique entries only in case message was scanned more than once in same file
                         # found_in_log_files = [*{*found_in_log_files}]
-                        message = make_message()
+                        message = Message()
                         message.id = message_count
                         message.externalID = line.split()[7].strip("<>")
                         message.IMSSprocID = line.split()[3]
@@ -532,10 +545,10 @@ if __name__ == "__main__":
 
     # TODO: Compare maillog_messages and combine the ones that are related by queue IDs
     merged_messages = combineMaillogMessages()
-    with open(outputDir + "___merged_messages___.json", "w") as f:
-        for message in merged_messages:
-            f.write(f"--- Message #{message.id} ---\n")
-            pprint(message.__dict__, indent=2, stream=f)
+    # with open(outputDir + "___merged_messages___.json", "w") as f:
+    #     for message in merged_messages:
+    #         f.write(f"--- Message #{message.id} ---\n")
+    #         pprint(message.__dict__, indent=2, stream=f)
 
     # TODO: Try to correlate maillog_messages with messages list, not really needed
 

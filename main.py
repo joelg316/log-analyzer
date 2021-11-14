@@ -1,6 +1,5 @@
 #!python
 # Used to get all log lines related to a specific message ID from IMSx product logs
-# Author: Joel Ginsberg joel_ginsberg@trendmicro.com
 # Date: 10/29/21
 # Version 1.0
 
@@ -19,7 +18,6 @@ import re
 # os.path.normpath() if needed for forward slashes on windows, but also works on Windows without
 # Make sure to end name with a /
 #workingDir = "/Users/joelg/Downloads/test/"
-#workingDir = "C:/Users/joelg/Documents/Cases/Banco Bradesco/3056068 - IMSVA deferred issue/"
 workingDir = "C:/Users/joelg/Documents/Lab/"
 
 #CDTname = "CDT-20211028-121205.zip"
